@@ -1,0 +1,58 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="d782978a-a970-410e-9e57-9a2d94b39568">
+    <Build>
+      <Settings AssemblyName="GPGnetClientLib" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="GPGnetCommunicationsLib" AssemblyName="GPGnetCommunicationsLib" />
+        <Reference Name="System" AssemblyName="System" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\IClientHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\JoinRoom.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\JoinGatheringResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\Lobby\Lobby.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\Lobby\Gatherings.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\Lobby\ChatroomMessage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\Lobby\PrivateMessage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\ChangePassword.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\ChangePasswordResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\SQLData.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\SQLDataResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageUser.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageUserResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageRoom.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\EmailUsername.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\EmailUsernameResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\SQLExecute.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\SQLExecuteResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\UDPStunClient.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\StunResults.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\Login.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\LoginResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\CreateRoom.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\CreateGatheringResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\Lobby\SQL.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\Lobby\Authentication.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\MessageBroker.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\AdhocSQL.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\AdhocSQLResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\LeaveRoom.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\LeaveGatheringResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\ResetPassword.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\ResetPasswordResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\CreateLogin.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientHandlers\CreateLoginResponse.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\ClientManager.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPGnetClientLib\LogDelegate.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
