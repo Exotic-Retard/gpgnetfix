@@ -1,0 +1,55 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="79e6d9b4-75fb-4ea0-b735-99bdc70dc772">
+    <Build>
+      <Settings AssemblyName="GPG.Multiplayer.Game" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="GPG.Multiplayer.Quazal" AssemblyName="GPG.Multiplayer.Quazal" />
+        <Reference Name="GPG" AssemblyName="GPG" />
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\UdpState.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\SupcomGameInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\PlayerInformation.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\PacketData.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\TrafficManager.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\NewPlayer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\RemovePlayer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\SupcomPlayerInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\SupcomUnitInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\BaseConnection.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\UpdGathering.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\ChildConnection.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\StateObject.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\NetListener.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\StringMessage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\ByteMessage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\IGameManager.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\SupComGameManager.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\StatsXML.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\ArgTypeCode.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\Driver.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\ConnectionManager.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\CommandLineArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\INetConnection.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\SupcomTCPConnection.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\GameState.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\StatsWatcher.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\ReceiveMessage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\SupremeCommander\SupcomStdInOut.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\NetMessageTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\NetMessage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\NetworkUtils.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Game\Network\UdpConnection.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
