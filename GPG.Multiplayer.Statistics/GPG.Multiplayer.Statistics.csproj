@@ -1,0 +1,36 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="6cd68ed8-03f0-44e8-9e4b-4c6fa7aadb72">
+    <Build>
+      <Settings AssemblyName="GPG.Multiplayer.Statistics" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="GPG" AssemblyName="GPG" />
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="GPG.Multiplayer.Quazal" AssemblyName="GPG.Multiplayer.Quazal" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\Award.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\PlayerAward.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\AwardSet.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\AwardCategory.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\PlayerAvatar.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\Avatar.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\Properties\Settings.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\AwardImages.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\AvatarImages.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\Properties\Resources.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Statistics\PlayerDisplayAwards.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG.Multiplayer.Statistics.AvatarImages.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.Multiplayer.Statistics.AwardImages.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.Multiplayer.Statistics.Properties.Resources.resources" BuildAction="EmbeddedResource" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
