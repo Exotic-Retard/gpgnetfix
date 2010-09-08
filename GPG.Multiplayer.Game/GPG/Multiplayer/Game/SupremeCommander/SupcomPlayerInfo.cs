@@ -85,9 +85,9 @@
             set
             {
                 this.mArmy = value;
-                if (this.mArmyChanged != null)
+                if (this.ArmyChanged != null)
                 {
-                    this.mArmyChanged(this, new PropertyChangedEventArgs("Army"));
+                    this.ArmyChanged(this, new PropertyChangedEventArgs("Army"));
                 }
             }
         }
@@ -102,9 +102,9 @@
             set
             {
                 this.mBuilt = value;
-                if (this.mBuiltChanged != null)
+                if (this.BuiltChanged != null)
                 {
-                    this.mBuiltChanged(this, new PropertyChangedEventArgs("Built"));
+                    this.BuiltChanged(this, new PropertyChangedEventArgs("Built"));
                 }
             }
         }
@@ -118,9 +118,9 @@
             set
             {
                 this.mColor = value;
-                if (this.mColorChanged != null)
+                if (this.ColorChanged != null)
                 {
-                    this.mColorChanged(this, new PropertyChangedEventArgs("Color"));
+                    this.ColorChanged(this, new PropertyChangedEventArgs("Color"));
                 }
             }
         }
@@ -135,9 +135,9 @@
             set
             {
                 this.mDamageDone = value;
-                if (this.mDamageDoneChanged != null)
+                if (this.DamageDoneChanged != null)
                 {
-                    this.mDamageDoneChanged(this, new PropertyChangedEventArgs("DamageDone"));
+                    this.DamageDoneChanged(this, new PropertyChangedEventArgs("DamageDone"));
                 }
             }
         }
@@ -152,9 +152,9 @@
             set
             {
                 this.mDamageReceived = value;
-                if (this.mDamageReceivedChanged != null)
+                if (this.DamageReceivedChanged != null)
                 {
-                    this.mDamageReceivedChanged(this, new PropertyChangedEventArgs("DamageReceived"));
+                    this.DamageReceivedChanged(this, new PropertyChangedEventArgs("DamageReceived"));
                 }
             }
         }
@@ -169,9 +169,9 @@
             set
             {
                 this.mEnergyConsumed = value;
-                if (this.mEnergyConsumedChanged != null)
+                if (this.EnergyConsumedChanged != null)
                 {
-                    this.mEnergyConsumedChanged(this, new PropertyChangedEventArgs("EnergyConsumed"));
+                    this.EnergyConsumedChanged(this, new PropertyChangedEventArgs("EnergyConsumed"));
                 }
             }
         }
@@ -186,9 +186,9 @@
             set
             {
                 this.mEnergyProduced = value;
-                if (this.mEnergyProducedChanged != null)
+                if (this.EnergyProducedChanged != null)
                 {
-                    this.mEnergyProducedChanged(this, new PropertyChangedEventArgs("EnergyProduced"));
+                    this.EnergyProducedChanged(this, new PropertyChangedEventArgs("EnergyProduced"));
                 }
             }
         }
@@ -202,9 +202,9 @@
             set
             {
                 this.mFaction = value;
-                if (this.mFactionChanged != null)
+                if (this.FactionChanged != null)
                 {
-                    this.mFactionChanged(this, new PropertyChangedEventArgs("Faction"));
+                    this.FactionChanged(this, new PropertyChangedEventArgs("Faction"));
                 }
             }
         }
@@ -219,9 +219,9 @@
             set
             {
                 this.mKills = value;
-                if (this.mKillsChanged != null)
+                if (this.KillsChanged != null)
                 {
-                    this.mKillsChanged(this, new PropertyChangedEventArgs("Kills"));
+                    this.KillsChanged(this, new PropertyChangedEventArgs("Kills"));
                 }
             }
         }
@@ -236,9 +236,9 @@
             set
             {
                 this.mLost = value;
-                if (this.mLostChanged != null)
+                if (this.LostChanged != null)
                 {
-                    this.mLostChanged(this, new PropertyChangedEventArgs("Lost"));
+                    this.LostChanged(this, new PropertyChangedEventArgs("Lost"));
                 }
             }
         }
@@ -253,9 +253,9 @@
             set
             {
                 this.mMassConsumed = value;
-                if (this.mMassConsumedChanged != null)
+                if (this.MassConsumedChanged != null)
                 {
-                    this.mMassConsumedChanged(this, new PropertyChangedEventArgs("MassConsumed"));
+                    this.MassConsumedChanged(this, new PropertyChangedEventArgs("MassConsumed"));
                 }
             }
         }
@@ -270,9 +270,9 @@
             set
             {
                 this.mMassProduced = value;
-                if (this.mMassProducedChanged != null)
+                if (this.MassProducedChanged != null)
                 {
-                    this.mMassProducedChanged(this, new PropertyChangedEventArgs("MassProduced"));
+                    this.MassProducedChanged(this, new PropertyChangedEventArgs("MassProduced"));
                 }
             }
         }
@@ -286,9 +286,9 @@
             set
             {
                 this.mPlayerID = value;
-                if (this.mPlayerIDChanged != null)
+                if (this.PlayerIDChanged != null)
                 {
-                    this.mPlayerIDChanged(this, new PropertyChangedEventArgs("PlayerID"));
+                    this.PlayerIDChanged(this, new PropertyChangedEventArgs("PlayerID"));
                 }
             }
         }
@@ -302,9 +302,9 @@
             set
             {
                 this.mPlayerName = value;
-                if (this.mPlayerNameChanged != null)
+                if (this.PlayerNameChanged != null)
                 {
-                    this.mPlayerNameChanged(this, new PropertyChangedEventArgs("PlayerName"));
+                    this.PlayerNameChanged(this, new PropertyChangedEventArgs("PlayerName"));
                 }
             }
         }
@@ -318,9 +318,9 @@
             set
             {
                 this.mStartSpot = value;
-                if (this.mStartSpotChanged != null)
+                if (this.StartSpotChanged != null)
                 {
-                    this.mStartSpotChanged(this, new PropertyChangedEventArgs("StartSpot"));
+                    this.StartSpotChanged(this, new PropertyChangedEventArgs("StartSpot"));
                 }
             }
         }
@@ -334,9 +334,9 @@
             set
             {
                 this.mStatus = value;
-                if (this.mStatusChanged != null)
+                if (this.StatusChanged != null)
                 {
-                    this.mStatusChanged(this, new PropertyChangedEventArgs("Status"));
+                    this.StatusChanged(this, new PropertyChangedEventArgs("Status"));
                 }
             }
         }
@@ -350,9 +350,9 @@
             set
             {
                 this.mTeam = value;
-                if (this.mTeamChanged != null)
+                if (this.TeamChanged != null)
                 {
-                    this.mTeamChanged(this, new PropertyChangedEventArgs("Team"));
+                    this.TeamChanged(this, new PropertyChangedEventArgs("Team"));
                 }
             }
         }

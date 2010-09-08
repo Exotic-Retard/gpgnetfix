@@ -87,9 +87,9 @@
             set
             {
                 this.mMap = value;
-                if (this.mMapChanged != null)
+                if (this.MapChanged != null)
                 {
-                    this.mMapChanged(this, new PropertyChangedEventArgs("Map"));
+                    this.MapChanged(this, new PropertyChangedEventArgs("Map"));
                 }
             }
         }
@@ -103,9 +103,9 @@
             set
             {
                 this.mPlayers = value;
-                if (this.mPlayersChanged != null)
+                if (this.PlayersChanged != null)
                 {
-                    this.mPlayersChanged(this, new PropertyChangedEventArgs("Players"));
+                    this.PlayersChanged(this, new PropertyChangedEventArgs("Players"));
                 }
             }
         }
@@ -119,9 +119,9 @@
             set
             {
                 this.mStartTime = value;
-                if (this.mStartTimeChanged != null)
+                if (this.StartTimeChanged != null)
                 {
-                    this.mStartTimeChanged(this, new PropertyChangedEventArgs("StartTime"));
+                    this.StartTimeChanged(this, new PropertyChangedEventArgs("StartTime"));
                 }
             }
         }
