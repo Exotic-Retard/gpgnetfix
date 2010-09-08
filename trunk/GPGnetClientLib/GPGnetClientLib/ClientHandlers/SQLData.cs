@@ -14,8 +14,8 @@
         {
             if (OnSqlData != null)
             {
-                object[] params = message.GetParams();
-                OnSqlData((List<string>) params[0], (List<List<object>>) params[1]);
+                object[] msgParams = message.GetParams();
+                OnSqlData((List<string>)msgParams[0], (List<List<object>>)msgParams[1]);
             }
         }
 

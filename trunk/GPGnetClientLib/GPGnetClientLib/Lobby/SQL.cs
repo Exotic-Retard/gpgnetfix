@@ -28,7 +28,7 @@
             sGettingAdhocSQL = true;
             sAdhocRows = new List<List<object>>();
             sAdhocColumns = new List<string>();
-            GPGnetClientLib.ClientHandlers.AdhocSQL.OnAdhocSQL += new AdhocSQLResponse(SQL.AdhocSQL_OnAdhocSQL);
+            GPGnetClientLib.ClientHandlers.AdhocSQL.OnAdhocSQL += new AdhocSQLResponse(GPGnetClientLib.Lobby.SQL.AdhocSQL_OnAdhocSQL);
             ClientManager.GetManager().MessageServer(command);
             int tickCount = Environment.TickCount;
             while (sGettingAdhocSQL && ((tickCount + GPGnetClientLib.Lobby.Lobby.Timeout) > Environment.TickCount))

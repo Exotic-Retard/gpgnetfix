@@ -13,8 +13,8 @@
         {
             if (OnLeaveGathering != null)
             {
-                object[] params = message.GetParams();
-                OnLeaveGathering((bool) params[0]);
+                object[] msgParams = message.GetParams();
+                OnLeaveGathering((bool)msgParams[0]);
             }
         }
 

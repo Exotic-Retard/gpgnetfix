@@ -13,8 +13,8 @@
         {
             if (OnEmailUsername != null)
             {
-                object[] params = message.GetParams();
-                OnEmailUsername((bool) params[0]);
+                object[] msgParams = message.GetParams();
+                OnEmailUsername((bool)msgParams[0]);
             }
         }
 

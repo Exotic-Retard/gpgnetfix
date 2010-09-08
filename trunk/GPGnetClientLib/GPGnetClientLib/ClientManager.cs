@@ -7,6 +7,7 @@
     using System.Reflection;
     using System.Runtime.CompilerServices;
     using System.Threading;
+    using System.Net;
 
     public class ClientManager
     {
@@ -63,10 +64,10 @@
         private void MessageBroker_OnCommandMessage(int connectionID, CommandMessage message)
         {
             LogData(Thread.CurrentThread.ManagedThreadId.ToString() + " Server request to client: " + message.CommandName.ToString());
-            object[] params = message.GetParams();
-            if (params != null)
+            object[] msgParams = message.GetParams();
+            if (msgParams != null)
             {
-                foreach (object obj2 in params)
+                foreach (object obj2 in msgParams)
                 {
                     LogData(obj2.ToString());
                 }
@@ -86,10 +87,10 @@
         public void MessageServer(CommandMessage command)
         {
             LogData(Thread.CurrentThread.ManagedThreadId.ToString() + " Client request to server: " + command.CommandName.ToString());
-            object[] params = command.GetParams();
-            if (params != null)
+            object[] msgParams = command.GetParams();
+            if (msgParams != null)
             {
-                foreach (object obj2 in params)
+                foreach (object obj2 in msgParams)
                 {
                     LogData(obj2.ToString());
                 }

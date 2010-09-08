@@ -13,8 +13,8 @@
         {
             if (OnLogin != null)
             {
-                object[] params = message.GetParams();
-                OnLogin((bool) params[0], (Credentials) params[1]);
+                object[] msgParams = message.GetParams();
+                OnLogin((bool)msgParams[0], (Credentials)msgParams[1]);
             }
         }
 

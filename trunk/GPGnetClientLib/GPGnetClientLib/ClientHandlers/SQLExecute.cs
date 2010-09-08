@@ -13,8 +13,8 @@
         {
             if (OnSQLExecute != null)
             {
-                object[] params = message.GetParams();
-                OnSQLExecute((int) params[0]);
+                object[] msgParams = message.GetParams();
+                OnSQLExecute((int)msgParams[0]);
             }
         }
 

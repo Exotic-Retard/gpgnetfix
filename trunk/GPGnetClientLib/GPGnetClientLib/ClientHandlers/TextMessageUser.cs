@@ -13,8 +13,8 @@
         {
             if (OnTextUserMessage != null)
             {
-                object[] params = message.GetParams();
-                OnTextUserMessage((string) params[0], (Credentials) params[1]);
+                object[] msgParams = message.GetParams();
+                OnTextUserMessage((string)msgParams[0], (Credentials)msgParams[1]);
             }
         }
 

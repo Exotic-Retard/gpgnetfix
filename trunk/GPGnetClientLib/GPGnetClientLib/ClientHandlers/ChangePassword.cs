@@ -13,8 +13,8 @@
         {
             if (OnChangePassword != null)
             {
-                object[] params = message.GetParams();
-                OnChangePassword((bool) params[0]);
+                object[] msgParams = message.GetParams();
+                OnChangePassword((bool)msgParams[0]);
             }
         }
 

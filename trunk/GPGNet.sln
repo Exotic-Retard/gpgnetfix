@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPGnetCommunicationsLib", "GPGnetCommunicationsLib\GPGnetCommunicationsLib.csproj", "{C9300D83-2D93-4BA9-ABCD-1883DA4DE6EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPGnetClientLib", "GPGnetClientLib\GPGnetClientLib.csproj", "{5D328F95-7230-47E7-B1B9-DA459A9F8C14}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C9300D83-2D93-4BA9-ABCD-1883DA4DE6EE} = {C9300D83-2D93-4BA9-ABCD-1883DA4DE6EE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
