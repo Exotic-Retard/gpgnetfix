@@ -6,6 +6,7 @@
     using DevExpress.XtraEditors.Repository;
     using DevExpress.XtraGrid.Columns;
     using DevExpress.XtraGrid.Views.Grid;
+    using DevExpress.XtraGrid.Views.Base;
     using DevExpress.XtraVerticalGrid;
     using GPG;
     using GPG.Logging;
@@ -415,7 +416,7 @@
                 {
                     try
                     {
-                        sLog.BeginInvoke(delegate (object innermessage, object innerclassification, object innerdata) {
+                        sLog.BeginInvoke((VGen3)delegate (object innermessage, object innerclassification, object innerdata) {
                             try
                             {
                                 LogData item = new LogData {

@@ -72,9 +72,9 @@
                     value = 60;
                 }
                 this.mAwayTimeout = value;
-                if (this.mAwayTimeoutChanged != null)
+                if (this.AwayTimeoutChanged != null)
                 {
-                    this.mAwayTimeoutChanged(this, new PropertyChangedEventArgs("AwayTimeout"));
+                    this.AwayTimeoutChanged(this, new PropertyChangedEventArgs("AwayTimeout"));
                 }
             }
         }
@@ -89,9 +89,9 @@
             set
             {
                 this.mChatHistoryLength = value;
-                if (this.mChatHistoryLengthChanged != null)
+                if (this.ChatHistoryLengthChanged != null)
                 {
-                    this.mChatHistoryLengthChanged(this, new PropertyChangedEventArgs("ChatHistoryLength"));
+                    this.ChatHistoryLengthChanged(this, new PropertyChangedEventArgs("ChatHistoryLength"));
                 }
             }
         }
@@ -153,9 +153,9 @@
                     value = 300;
                 }
                 this.mPopupTimeout = value;
-                if (this.mPopupTimeoutChanged != null)
+                if (this.PopupTimeoutChanged != null)
                 {
-                    this.mPopupTimeoutChanged(this, new PropertyChangedEventArgs("PopupTimeout"));
+                    this.PopupTimeoutChanged(this, new PropertyChangedEventArgs("PopupTimeout"));
                 }
             }
         }
@@ -170,9 +170,9 @@
             set
             {
                 this.mProfanityFilter = value;
-                if (this.mProfanityFilterChanged != null)
+                if (this.ProfanityFilterChanged != null)
                 {
-                    this.mProfanityFilterChanged(this, new PropertyChangedEventArgs("ProfanityFilter"));
+                    this.ProfanityFilterChanged(this, new PropertyChangedEventArgs("ProfanityFilter"));
                 }
             }
         }
@@ -187,9 +187,9 @@
             set
             {
                 this.mShowSpeaking = value;
-                if (this.mShowSpeakingChanged != null)
+                if (this.ShowSpeakingChanged != null)
                 {
-                    this.mShowSpeakingChanged(this, new PropertyChangedEventArgs("ShowSpeaking"));
+                    this.ShowSpeakingChanged(this, new PropertyChangedEventArgs("ShowSpeaking"));
                 }
             }
         }
@@ -208,9 +208,9 @@
             set
             {
                 this.mSpamInterval2 = value;
-                if (this.mSpamIntervalChanged != null)
+                if (this.SpamIntervalChanged != null)
                 {
-                    this.mSpamIntervalChanged(this, new PropertyChangedEventArgs("SpamInterval"));
+                    this.SpamIntervalChanged(this, new PropertyChangedEventArgs("SpamInterval"));
                 }
             }
         }
@@ -233,9 +233,9 @@
                     value = (this.AwayTimeout * 60) - 5;
                 }
                 this.mSpeakingTimeout = value;
-                if (this.mSpeakingTimeoutChanged != null)
+                if (this.SpeakingTimeoutChanged != null)
                 {
-                    this.mSpeakingTimeoutChanged(this, new PropertyChangedEventArgs("SpeakingTimeout"));
+                    this.SpeakingTimeoutChanged(this, new PropertyChangedEventArgs("SpeakingTimeout"));
                 }
             }
         }

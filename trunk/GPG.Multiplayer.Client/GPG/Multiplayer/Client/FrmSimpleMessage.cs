@@ -80,7 +80,7 @@
         {
             if (mClickDelegate != null)
             {
-                mMessage.Invoke(delegate {
+                mMessage.Invoke((VGen0)delegate {
                     mClickDelegate.DynamicInvoke(ClickArgs);
                 });
             }

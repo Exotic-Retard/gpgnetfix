@@ -193,7 +193,7 @@
                                 {
                                     return;
                                 }
-                                base.Invoke(delegate {
+                                base.Invoke((VGen0)delegate {
                                     try
                                     {
                                         PictureBox control = new PictureBox {
@@ -226,7 +226,7 @@
                                 {
                                     return;
                                 }
-                                base.Invoke(delegate {
+                                base.Invoke((VGen0)delegate {
                                     try
                                     {
                                         PictureBox control = new PictureBox {

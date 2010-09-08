@@ -170,9 +170,9 @@
                 CheckWebIni("http://replay.gaspowered.com/qaservers.txt", ref servers);
             }
             bool flag = false;
-            foreach (QuazalServerInfo info in servers)
+            foreach (QuazalServerInfo curinfo in servers)
             {
-                if (info.Address == "supcomfabeta.quazal.net")
+                if (curinfo.Address == "supcomfabeta.quazal.net")
                 {
                     flag = true;
                 }

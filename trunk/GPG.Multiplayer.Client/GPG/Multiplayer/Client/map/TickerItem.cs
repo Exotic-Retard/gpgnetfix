@@ -40,9 +40,9 @@
             set
             {
                 this.mLogTime = value;
-                if (this.mLogTimeChanged != null)
+                if (this.LogTimeChanged != null)
                 {
-                    this.mLogTimeChanged(this, new PropertyChangedEventArgs("LogTime"));
+                    this.LogTimeChanged(this, new PropertyChangedEventArgs("LogTime"));
                 }
             }
         }
@@ -57,9 +57,9 @@
             set
             {
                 this.mLoseFaction = value;
-                if (this.mLoseFactionChanged != null)
+                if (this.LoseFactionChanged != null)
                 {
-                    this.mLoseFactionChanged(this, new PropertyChangedEventArgs("LoseFaction"));
+                    this.LoseFactionChanged(this, new PropertyChangedEventArgs("LoseFaction"));
                 }
             }
         }
@@ -74,9 +74,9 @@
             set
             {
                 this.mLoser = value;
-                if (this.mLoserChanged != null)
+                if (this.LoserChanged != null)
                 {
-                    this.mLoserChanged(this, new PropertyChangedEventArgs("Loser"));
+                    this.LoserChanged(this, new PropertyChangedEventArgs("Loser"));
                 }
             }
         }
@@ -91,9 +91,9 @@
             set
             {
                 this.mWinFaction = value;
-                if (this.mWinFactionChanged != null)
+                if (this.WinFactionChanged != null)
                 {
-                    this.mWinFactionChanged(this, new PropertyChangedEventArgs("WinFaction"));
+                    this.WinFactionChanged(this, new PropertyChangedEventArgs("WinFaction"));
                 }
             }
         }
@@ -108,9 +108,9 @@
             set
             {
                 this.mWinner = value;
-                if (this.mWinnerChanged != null)
+                if (this.WinnerChanged != null)
                 {
-                    this.mWinnerChanged(this, new PropertyChangedEventArgs("Winner"));
+                    this.WinnerChanged(this, new PropertyChangedEventArgs("Winner"));
                 }
             }
         }
@@ -125,9 +125,9 @@
             set
             {
                 this.mWitty = value;
-                if (this.mWittyChanged != null)
+                if (this.WittyChanged != null)
                 {
-                    this.mWittyChanged(this, new PropertyChangedEventArgs("Witty"));
+                    this.WittyChanged(this, new PropertyChangedEventArgs("Witty"));
                 }
             }
         }

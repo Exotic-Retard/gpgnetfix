@@ -243,7 +243,7 @@
             }
             ThreadQueue.QueueUserWorkItem(delegate (object s) {
                 MappedObjectList<VolunteerEffort> efforts = DataAccess.GetObjects<VolunteerEffort>("GetActiveVolunteerEfforts", new object[0]);
-                base.BeginInvoke(delegate {
+                base.BeginInvoke((VGen0)delegate {
                     this.Populate(efforts);
                 });
             }, new object[0]);

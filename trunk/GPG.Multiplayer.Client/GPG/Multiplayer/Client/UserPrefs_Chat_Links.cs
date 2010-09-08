@@ -73,13 +73,13 @@
             set
             {
                 this.mChatColor = value;
-                if (this.mChatColorChanged != null)
+                if (this.ChatColorChanged != null)
                 {
-                    this.mChatColorChanged(this, new PropertyChangedEventArgs("ChatColor"));
+                    this.ChatColorChanged(this, new PropertyChangedEventArgs("ChatColor"));
                 }
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("ChatColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("ChatColor"));
                 }
             }
         }
@@ -94,13 +94,13 @@
             set
             {
                 this.mClanColor = value;
-                if (this.mClanColorChanged != null)
+                if (this.ClanColorChanged != null)
                 {
-                    this.mClanColorChanged(this, new PropertyChangedEventArgs("ClanColor"));
+                    this.ClanColorChanged(this, new PropertyChangedEventArgs("ClanColor"));
                 }
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("ClanColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("ClanColor"));
                 }
             }
         }
@@ -115,9 +115,9 @@
             set
             {
                 this.mContentColor = value;
-                if (this.mContentColorChanged != null)
+                if (this.ContentColorChanged != null)
                 {
-                    this.mContentColorChanged(this, new PropertyChangedEventArgs("ContentColor"));
+                    this.ContentColorChanged(this, new PropertyChangedEventArgs("ContentColor"));
                 }
             }
         }
@@ -132,13 +132,13 @@
             set
             {
                 this.mEmailColor = value;
-                if (this.mEmailColorChanged != null)
+                if (this.EmailColorChanged != null)
                 {
-                    this.mEmailColorChanged(this, new PropertyChangedEventArgs("EmailColor"));
+                    this.EmailColorChanged(this, new PropertyChangedEventArgs("EmailColor"));
                 }
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("EmailColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("EmailColor"));
                 }
             }
         }
@@ -153,13 +153,13 @@
             set
             {
                 this.mEmoteColor = value;
-                if (this.mEmoteColorChanged != null)
+                if (this.EmoteColorChanged != null)
                 {
-                    this.mEmoteColorChanged(this, new PropertyChangedEventArgs("EmoteColor"));
+                    this.EmoteColorChanged(this, new PropertyChangedEventArgs("EmoteColor"));
                 }
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("EmoteColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("EmoteColor"));
                 }
             }
         }
@@ -174,13 +174,13 @@
             set
             {
                 this.mGameColor = value;
-                if (this.mGameColorChanged != null)
+                if (this.GameColorChanged != null)
                 {
-                    this.mGameColorChanged(this, new PropertyChangedEventArgs("GameColor"));
+                    this.GameColorChanged(this, new PropertyChangedEventArgs("GameColor"));
                 }
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("GameColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("GameColor"));
                 }
             }
         }
@@ -195,9 +195,9 @@
             set
             {
                 this.mHelpColor = value;
-                if (this.mHelpColorChanged != null)
+                if (this.HelpColorChanged != null)
                 {
-                    this.mHelpColorChanged(this, new PropertyChangedEventArgs("HelpColor"));
+                    this.HelpColorChanged(this, new PropertyChangedEventArgs("HelpColor"));
                 }
             }
         }
@@ -212,9 +212,9 @@
             set
             {
                 this.mLinkFont = value;
-                if (this.mLinkFontChanged != null)
+                if (this.LinkFontChanged != null)
                 {
-                    this.mLinkFontChanged(this, new PropertyChangedEventArgs("LinkFont"));
+                    this.LinkFontChanged(this, new PropertyChangedEventArgs("LinkFont"));
                 }
             }
         }
@@ -229,13 +229,13 @@
             set
             {
                 this.mPlayerColor = value;
-                if (this.mPlayerColorChanged != null)
+                if (this.PlayerColorChanged != null)
                 {
-                    this.mPlayerColorChanged(this, new PropertyChangedEventArgs("PlayerColor"));
+                    this.PlayerColorChanged(this, new PropertyChangedEventArgs("PlayerColor"));
                 }
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("PlayerColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("PlayerColor"));
                 }
             }
         }
@@ -250,9 +250,9 @@
             set
             {
                 this.mReplayColor = value;
-                if (this.mReplayColorChanged != null)
+                if (this.ReplayColorChanged != null)
                 {
-                    this.mReplayColorChanged(this, new PropertyChangedEventArgs("ReplayColor"));
+                    this.ReplayColorChanged(this, new PropertyChangedEventArgs("ReplayColor"));
                 }
             }
         }
@@ -267,9 +267,9 @@
             set
             {
                 this.mShowChatLinks = value;
-                if (this.mShowChatLinksChanged != null)
+                if (this.ShowChatLinksChanged != null)
                 {
-                    this.mShowChatLinksChanged(this, new PropertyChangedEventArgs("ShowChatLinks"));
+                    this.ShowChatLinksChanged(this, new PropertyChangedEventArgs("ShowChatLinks"));
                 }
             }
         }
@@ -284,9 +284,9 @@
             set
             {
                 this.mSolutionColor = value;
-                if (this.mSolutionColorChanged != null)
+                if (this.SolutionColorChanged != null)
                 {
-                    this.mSolutionColorChanged(this, new PropertyChangedEventArgs("SolutionColor"));
+                    this.SolutionColorChanged(this, new PropertyChangedEventArgs("SolutionColor"));
                 }
             }
         }
@@ -301,13 +301,13 @@
             set
             {
                 this.mWebColor = value;
-                if (this.mWebColorChanged != null)
+                if (this.WebColorChanged != null)
                 {
-                    this.mWebColorChanged(this, new PropertyChangedEventArgs("WebColor"));
+                    this.WebColorChanged(this, new PropertyChangedEventArgs("WebColor"));
                 }
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("WebColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("WebColor"));
                 }
             }
         }

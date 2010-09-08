@@ -5,6 +5,7 @@
     using DevExpress.XtraEditors.Repository;
     using DevExpress.XtraGrid.Columns;
     using DevExpress.XtraGrid.Views.Grid;
+    using DevExpress.XtraGrid.Views.Base;
     using GPG;
     using GPG.Multiplayer.Quazal;
     using GPG.Multiplayer.UI.Controls;
@@ -655,7 +656,7 @@
 
         private void StatusTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            base.BeginInvoke(delegate {
+            base.BeginInvoke((VGen0)delegate {
                 if (!(base.Disposing || base.IsDisposed))
                 {
                     this.lStatus.Text = this.lStatus.Text + ".";

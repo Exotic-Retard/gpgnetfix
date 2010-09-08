@@ -118,7 +118,7 @@
             }
             else if (cmd == CustomCommands.TournamentEndMatch)
             {
-                main.Invoke(delegate {
+                main.Invoke((VGen0)delegate {
                     try
                     {
                         SupcomAutomatch.GetSupcomAutomatch().GetManager().ForceCloseGame(Loc.Get("<LOC>The Tournament Director has ended your game."));

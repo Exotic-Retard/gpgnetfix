@@ -84,13 +84,13 @@
                         if (queryData.Count > 0)
                         {
                             string names = "";
-                            string str = "";
+                            string curstr = "";
                             foreach (DataRecord record in queryData)
                             {
-                                names = names + str + record["name"];
-                                str = ", ";
+                                names = names + curstr + record["name"];
+                                curstr = ", ";
                             }
-                            mainForm.Invoke(delegate {
+                            mainForm.Invoke((VGen0)delegate {
                                 try
                                 {
                                     DlgMessage.ShowDialog(Loc.Get("<LOC>We have detected that you have other accounts with the same email that already have CD keys attached.  You may want to quit, and relog into GPGnet under one of these accounts to get the full functionality out of your games.  These accounts are: ") + names);

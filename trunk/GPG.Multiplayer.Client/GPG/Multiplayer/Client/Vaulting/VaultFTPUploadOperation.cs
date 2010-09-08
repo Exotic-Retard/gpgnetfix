@@ -44,7 +44,7 @@
             this.mWorkThread = null;
             this.mChksum = "";
             this.mOutCount = 0;
-            this.mStatusChanged = null;
+            this.StatusChanged = null;
             this.mContent = content;
             this.mPosition = position;
             VaultUploadOperation.ActiveOperations.Insert(0, this);
@@ -238,7 +238,7 @@
         public void SetStatus(string status, int timeout, params object[] args)
         {
             VGen0 method = null;
-            if (this.mStatusChanged != null)
+            if (this.StatusChanged != null)
             {
                 if ((args != null) && (args.Length > 0))
                 {
@@ -250,14 +250,14 @@
                     if (method == null)
                     {
                         method = delegate {
-                            this.mStatusChanged(this, status);
+                            this.StatusChanged(this, status);
                         };
                     }
                     Program.MainForm.BeginInvoke(method);
                 }
                 else if (!(Program.MainForm.Disposing || Program.MainForm.IsDisposed))
                 {
-                    this.mStatusChanged(this, status);
+                    this.StatusChanged(this, status);
                 }
             }
         }
@@ -266,7 +266,7 @@
         {
             this.SetStatus("Creating Upload File", new object[0]);
             string contentfile = this.mContent.CreateUploadFile();
-            Program.MainForm.Invoke(delegate {
+            Program.MainForm.Invoke((VGen0)delegate {
                 Clipboard.SetText(contentfile);
                 this.DoWork();
                 this.CompleteUpload();

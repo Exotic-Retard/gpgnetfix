@@ -49,7 +49,7 @@
 
         private void DlgStatsTest_OnStatsXML(string xml)
         {
-            base.Invoke(delegate (object innerxml) {
+            base.Invoke((VGen1)delegate (object innerxml) {
                 this.txtStats.Text = innerxml.ToString();
             }, new object[] { xml });
         }

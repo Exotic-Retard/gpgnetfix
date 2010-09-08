@@ -21,9 +21,9 @@
             set
             {
                 this.mShowWebVersions = value;
-                if (this.mShowWebVersionsChanged != null)
+                if (this.ShowWebVersionsChanged != null)
                 {
-                    this.mShowWebVersionsChanged(this, new PropertyChangedEventArgs("ShowWebVersions"));
+                    this.ShowWebVersionsChanged(this, new PropertyChangedEventArgs("ShowWebVersions"));
                 }
             }
         }

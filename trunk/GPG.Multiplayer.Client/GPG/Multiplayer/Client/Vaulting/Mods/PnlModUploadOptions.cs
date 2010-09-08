@@ -408,7 +408,7 @@
                         if ((requirement != null) && (requirement.Length >= 1))
                         {
                             GPG.Multiplayer.Client.Vaulting.Mods.Mod reqMod = new QuazalQuery("GetModByGuid", new object[] { requirement }).GetObject<GPG.Multiplayer.Client.Vaulting.Mods.Mod>();
-                            base.Invoke(delegate {
+                            base.Invoke((VGen0)delegate {
                                 GPGLabel label = new GPGLabel {
                                     AutoSize = true
                                 };
@@ -436,7 +436,7 @@
                         if ((conflict != null) && (conflict.Length >= 1))
                         {
                             GPG.Multiplayer.Client.Vaulting.Mods.Mod conflictMod = new QuazalQuery("GetModByGuid", new object[] { conflict }).GetObject<GPG.Multiplayer.Client.Vaulting.Mods.Mod>();
-                            base.Invoke(delegate {
+                            base.Invoke((VGen0)delegate {
                                 GPGLabel label = new GPGLabel {
                                     AutoSize = true
                                 };

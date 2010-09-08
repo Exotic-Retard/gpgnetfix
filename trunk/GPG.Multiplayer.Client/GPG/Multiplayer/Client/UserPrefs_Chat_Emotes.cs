@@ -45,9 +45,9 @@
             set
             {
                 this.mAnimateEmotes = value;
-                if (this.mAnimateEmotesChanged != null)
+                if (this.AnimateEmotesChanged != null)
                 {
-                    this.mAnimateEmotesChanged(this, new PropertyChangedEventArgs("AnimateEmotes"));
+                    this.AnimateEmotesChanged(this, new PropertyChangedEventArgs("AnimateEmotes"));
                 }
             }
         }
@@ -70,9 +70,9 @@
                     value = 0x3e8;
                 }
                 this.mAnimationThreshhold = value;
-                if (this.mAnimationThreshholdChanged != null)
+                if (this.AnimationThreshholdChanged != null)
                 {
-                    this.mAnimationThreshholdChanged(this, new PropertyChangedEventArgs("AnimationThreshhold"));
+                    this.AnimationThreshholdChanged(this, new PropertyChangedEventArgs("AnimationThreshhold"));
                 }
             }
         }
@@ -87,9 +87,9 @@
             set
             {
                 this.mAutoShareEmotes = value;
-                if (this.mAutoShareEmotesChanged != null)
+                if (this.AutoShareEmotesChanged != null)
                 {
-                    this.mAutoShareEmotesChanged(this, new PropertyChangedEventArgs("AutoShareEmotes"));
+                    this.AutoShareEmotesChanged(this, new PropertyChangedEventArgs("AutoShareEmotes"));
                 }
             }
         }
@@ -104,9 +104,9 @@
             set
             {
                 this.mEmoteImageDir = value;
-                if (this.mEmoteImageDirChanged != null)
+                if (this.EmoteImageDirChanged != null)
                 {
-                    this.mEmoteImageDirChanged(this, new PropertyChangedEventArgs("EmoteImageDir"));
+                    this.EmoteImageDirChanged(this, new PropertyChangedEventArgs("EmoteImageDir"));
                 }
             }
         }
@@ -121,9 +121,9 @@
             set
             {
                 this.mShowCreateWarning = value;
-                if (this.mShowCreateWarningChanged != null)
+                if (this.ShowCreateWarningChanged != null)
                 {
-                    this.mShowCreateWarningChanged(this, new PropertyChangedEventArgs("ShowCreateWarning"));
+                    this.ShowCreateWarningChanged(this, new PropertyChangedEventArgs("ShowCreateWarning"));
                 }
             }
         }
@@ -138,9 +138,9 @@
             set
             {
                 this.mShowEmotes = value;
-                if (this.mShowEmotesChanged != null)
+                if (this.ShowEmotesChanged != null)
                 {
-                    this.mShowEmotesChanged(this, new PropertyChangedEventArgs("ShowEmotes"));
+                    this.ShowEmotesChanged(this, new PropertyChangedEventArgs("ShowEmotes"));
                 }
             }
         }
@@ -155,9 +155,9 @@
             set
             {
                 this.mShowViewWarning = value;
-                if (this.mShowViewWarningChanged != null)
+                if (this.ShowViewWarningChanged != null)
                 {
-                    this.mShowViewWarningChanged(this, new PropertyChangedEventArgs("ShowViewWarning"));
+                    this.ShowViewWarningChanged(this, new PropertyChangedEventArgs("ShowViewWarning"));
                 }
             }
         }

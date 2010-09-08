@@ -423,14 +423,14 @@
                             if (method == null)
                             {
                                 method = delegate {
-                                    GPG.Multiplayer.Client.Vaulting.Mods.Mod mod;
+                                    GPG.Multiplayer.Client.Vaulting.Mods.Mod curmod;
                                     GPGLabel label = new GPGLabel {
                                         AutoSize = true
                                     };
                                     if (MyMods.ContainsKey(requirement))
                                     {
-                                        mod = MyMods[requirement];
-                                        label.Text = string.Format("Name: {0}, UID: {1}", mod.Name, mod.Guid);
+                                        curmod = MyMods[requirement];
+                                        label.Text = string.Format("Name: {0}, UID: {1}", curmod.Name, curmod.Guid);
                                         label.TextStyle = TextStyles.Default;
                                     }
                                     else
@@ -439,12 +439,12 @@
                                         {
                                             GPG.Multiplayer.Client.Vaulting.Mods.Mod.CachedModLookups[requirement] = new QuazalQuery("GetModByGuid", new object[] { requirement }).GetObject<GPG.Multiplayer.Client.Vaulting.Mods.Mod>();
                                         }
-                                        mod = GPG.Multiplayer.Client.Vaulting.Mods.Mod.CachedModLookups[requirement];
-                                        if (mod != null)
+                                        curmod = GPG.Multiplayer.Client.Vaulting.Mods.Mod.CachedModLookups[requirement];
+                                        if (curmod != null)
                                         {
-                                            label.Text = string.Format("Click here to download mod: {0}, UID: {1}", mod.Name, mod.Guid);
+                                            label.Text = string.Format("Click here to download mod: {0}, UID: {1}", curmod.Name, curmod.Guid);
                                             label.TextStyle = TextStyles.Link;
-                                            label.TabIndex = mod.ID;
+                                            label.TabIndex = curmod.ID;
                                             label.Click += delegate (object sender, EventArgs e1) {
                                                 AdditionalContent.DownloadContent((int) (sender as Control).Tag);
                                             };
@@ -474,14 +474,14 @@
                             if (gen2 == null)
                             {
                                 gen2 = delegate {
-                                    GPG.Multiplayer.Client.Vaulting.Mods.Mod mod;
+                                    GPG.Multiplayer.Client.Vaulting.Mods.Mod curmod;
                                     GPGLabel label = new GPGLabel {
                                         AutoSize = true
                                     };
                                     if (MyMods.ContainsKey(conflict))
                                     {
-                                        mod = MyMods[conflict];
-                                        label.Text = string.Format("Conflicting mod found: {0}, UID: {1}", mod.Name, mod.Guid);
+                                        curmod = MyMods[conflict];
+                                        label.Text = string.Format("Conflicting mod found: {0}, UID: {1}", curmod.Name, curmod.Guid);
                                         label.TextStyle = TextStyles.ColoredBold;
                                         label.ForeColor = Color.Red;
                                     }
@@ -491,10 +491,10 @@
                                         {
                                             GPG.Multiplayer.Client.Vaulting.Mods.Mod.CachedModLookups[conflict] = new QuazalQuery("GetModByGuid", new object[] { conflict }).GetObject<GPG.Multiplayer.Client.Vaulting.Mods.Mod>();
                                         }
-                                        mod = GPG.Multiplayer.Client.Vaulting.Mods.Mod.CachedModLookups[conflict];
-                                        if (mod != null)
+                                        curmod = GPG.Multiplayer.Client.Vaulting.Mods.Mod.CachedModLookups[conflict];
+                                        if (curmod != null)
                                         {
-                                            label.Text = string.Format("Name: {0}, UID: {1}", mod.Name, mod.Guid);
+                                            label.Text = string.Format("Name: {0}, UID: {1}", curmod.Name, curmod.Guid);
                                             label.TextStyle = TextStyles.Default;
                                         }
                                         else

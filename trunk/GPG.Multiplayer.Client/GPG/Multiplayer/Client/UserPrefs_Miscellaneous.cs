@@ -21,9 +21,9 @@
             set
             {
                 this.mAutoCloseDownloadDialog = value;
-                if (this.mAutoCloseDownloadDialogChanged != null)
+                if (this.AutoCloseDownloadDialogChanged != null)
                 {
-                    this.mAutoCloseDownloadDialogChanged(this, new PropertyChangedEventArgs("AutoCloseDownloadDialog"));
+                    this.AutoCloseDownloadDialogChanged(this, new PropertyChangedEventArgs("AutoCloseDownloadDialog"));
                 }
             }
         }

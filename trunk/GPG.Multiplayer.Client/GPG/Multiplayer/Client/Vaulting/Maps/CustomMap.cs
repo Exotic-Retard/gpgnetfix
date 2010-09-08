@@ -1195,9 +1195,9 @@
                         this.mPreviewImage128 = null;
                         this.mPreviewImage256 = Image.FromStream(stream);
                     }
-                    if (_PreviewImageLoaded != null)
+                    if (PreviewImageLoaded != null)
                     {
-                        _PreviewImageLoaded(this, EventArgs.Empty);
+                        PreviewImageLoaded(this, EventArgs.Empty);
                     }
                     if (Program.Settings.Content.Download.CachePreviewImages)
                     {

@@ -220,9 +220,9 @@
                 this.SaveSkin();
                 this.mSkinName = value;
                 this.LoadSkin();
-                if (this.mSkinNameChanged != null)
+                if (this.SkinNameChanged != null)
                 {
-                    this.mSkinNameChanged(this, new PropertyChangedEventArgs("SkinName"));
+                    this.SkinNameChanged(this, new PropertyChangedEventArgs("SkinName"));
                 }
             }
         }

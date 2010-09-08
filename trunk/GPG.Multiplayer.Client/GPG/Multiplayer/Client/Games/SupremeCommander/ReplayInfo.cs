@@ -79,7 +79,7 @@
             this.mPlayerName = "";
             this.mCreateDate = "";
             this.mVersion = "";
-            this.mDownloadsChanged = null;
+            this.DownloadsChanged = null;
             this.mDownloads = 0;
             this.mRatingTotal = 0f;
             this.mRatingCount = 0;
@@ -184,7 +184,7 @@
 
         private static void ReceieveReplay(string filename)
         {
-            Exception exception;
+            //Exception exception;
             VGen0 method = null;
             try
             {
@@ -210,14 +210,13 @@
                     }
                     catch (Exception exception1)
                     {
-                        exception = exception1;
-                        ErrorLog.WriteLine(exception);
+                        ErrorLog.WriteLine(exception1);
                     }
                 }
                 if (method == null)
                 {
                     method = delegate {
-                        Exception exception;
+                        //Exception exception;
                         WaitCallback callBack = null;
                         DlgOpenSaveReplay replay = new DlgOpenSaveReplay(filename);
                         switch (replay.ShowDialog())
@@ -235,8 +234,7 @@
                                         }
                                         catch (Exception exception1)
                                         {
-                                            exception = exception1;
-                                            ErrorLog.WriteLine(exception);
+                                            ErrorLog.WriteLine(exception1);
                                         }
                                         break;
 
@@ -284,8 +282,7 @@
                                 }
                                 catch (Exception exception2)
                                 {
-                                    exception = exception2;
-                                    ErrorLog.WriteLine(exception);
+                                    ErrorLog.WriteLine(exception2);
                                 }
                                 break;
                         }
@@ -295,8 +292,7 @@
             }
             catch (Exception exception2)
             {
-                exception = exception2;
-                ErrorLog.WriteLine(exception);
+                ErrorLog.WriteLine(exception2);
             }
         }
 
@@ -325,9 +321,9 @@
             set
             {
                 this.mDownloads = value;
-                if (this.mDownloadsChanged != null)
+                if (this.DownloadsChanged != null)
                 {
-                    this.mDownloadsChanged(this, EventArgs.Empty);
+                    this.DownloadsChanged(this, EventArgs.Empty);
                 }
             }
         }

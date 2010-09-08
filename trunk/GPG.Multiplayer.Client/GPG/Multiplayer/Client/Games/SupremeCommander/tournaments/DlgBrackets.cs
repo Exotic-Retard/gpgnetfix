@@ -295,7 +295,7 @@
                         base.Invoke(method);
                     }
                 }
-                base.Invoke(delegate {
+                base.Invoke((VGen0)delegate {
                     this.gpgBracketGrid1.SetupRounds();
                     this.gpgBracketGrid1.Invalidate();
                     base.SetStatus(Loc.Get("<LOC>Viewing tournament results."), new object[0]);
@@ -305,7 +305,7 @@
 
         private void SetRoundLinks(int numrounds)
         {
-            base.Invoke(delegate (object o) {
+            base.Invoke((VGen1)delegate (object o) {
                 SkinLabel label;
                 int num = Convert.ToInt32(o);
                 this.mMaxRound = num;
@@ -320,7 +320,6 @@
                         DrawEdges = false,
                         Size = new Size(width, this.linkRounds.Height),
                         TextAlign = ContentAlignment.MiddleCenter,
-                        DrawEdges = false,
                         Location = new Point(x, 0),
                         Tag = j,
                         Text = "Round " + j.ToString()
@@ -342,7 +341,6 @@
                     SkinBasePath = @"Controls\BackgroundLabel\BlackBar",
                     DrawEdges = false,
                     Size = new Size(0x640, this.linkRounds.Height),
-                    DrawEdges = false,
                     Location = new Point(x, 0)
                 };
                 this.linkRounds.Controls.Add(label);

@@ -57,9 +57,9 @@
             set
             {
                 this.mFadeWindows = value;
-                if (this.mFadeWindowsChanged != null)
+                if (this.FadeWindowsChanged != null)
                 {
-                    this.mFadeWindowsChanged(this, new PropertyChangedEventArgs("FadeWindows"));
+                    this.FadeWindowsChanged(this, new PropertyChangedEventArgs("FadeWindows"));
                 }
             }
         }
@@ -100,9 +100,9 @@
             set
             {
                 this.mStartLocation = value;
-                if (this.mStartLocationChanged != null)
+                if (this.StartLocationChanged != null)
                 {
-                    this.mStartLocationChanged(this, new PropertyChangedEventArgs("StartLocation"));
+                    this.StartLocationChanged(this, new PropertyChangedEventArgs("StartLocation"));
                 }
             }
         }
@@ -117,9 +117,9 @@
             set
             {
                 this.mStartSize = value;
-                if (this.mStartSizeChanged != null)
+                if (this.StartSizeChanged != null)
                 {
-                    this.mStartSizeChanged(this, new PropertyChangedEventArgs("StartSize"));
+                    this.StartSizeChanged(this, new PropertyChangedEventArgs("StartSize"));
                 }
             }
         }
@@ -172,9 +172,9 @@
                     value = 100;
                 }
                 this.mWindowMoveTransparency = value;
-                if (this.mWindowMoveTransparencyChanged != null)
+                if (this.WindowMoveTransparencyChanged != null)
                 {
-                    this.mWindowMoveTransparencyChanged(this, new PropertyChangedEventArgs("WindowMoveTransparency"));
+                    this.WindowMoveTransparencyChanged(this, new PropertyChangedEventArgs("WindowMoveTransparency"));
                 }
             }
         }

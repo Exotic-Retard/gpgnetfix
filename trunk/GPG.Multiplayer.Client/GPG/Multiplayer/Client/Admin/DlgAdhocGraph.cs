@@ -114,7 +114,7 @@
                 {
                     ErrorLog.WriteLine(exception);
                 }
-                base.Invoke(delegate {
+                base.Invoke((VGen0)delegate {
                     this.btnExecute.Enabled = true;
                 });
             }, new object[0]);

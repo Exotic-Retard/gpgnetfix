@@ -381,7 +381,7 @@
 
         private void StatusTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            base.BeginInvoke(delegate {
+            base.BeginInvoke((VGen0)delegate {
                 if (!(base.Disposing || base.IsDisposed))
                 {
                     this.lStatus.Text = this.lStatus.Text + ".";

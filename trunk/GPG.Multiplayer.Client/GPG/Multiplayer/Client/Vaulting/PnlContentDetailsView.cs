@@ -1130,7 +1130,7 @@
                                     dependencyState = DependencyState.NotInVault;
                                 }
                             }
-                            base.Invoke(delegate {
+                            base.Invoke((VGen0)delegate {
                                 GPGLabel label = new GPGLabel {
                                     AutoSize = true
                                 };

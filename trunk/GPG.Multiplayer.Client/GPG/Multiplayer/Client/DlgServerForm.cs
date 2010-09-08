@@ -3,6 +3,7 @@
     using DevExpress.XtraEditors.Controls;
     using DevExpress.XtraEditors.Repository;
     using DevExpress.XtraGrid.Views.Grid;
+    using DevExpress.XtraGrid.Views.Base;
     using GPG;
     using GPG.DataAccess;
     using GPG.Multiplayer.Client.Controls;
@@ -71,9 +72,9 @@
                 foreach (DataRecord record in list)
                 {
                     row = table.NewRow();
-                    foreach (DataColumn column in table.Columns)
+                    foreach (DataColumn curcolumn in table.Columns)
                     {
-                        row[column] = record[column.ColumnName];
+                        row[curcolumn] = record[curcolumn.ColumnName];
                     }
                     table.Rows.Add(row);
                 }

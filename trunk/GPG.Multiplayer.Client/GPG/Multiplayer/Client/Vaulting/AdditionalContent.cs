@@ -448,7 +448,7 @@
                                 if (missing.Count > 0)
                                 {
                                     DialogResult result = DialogResult.No;
-                                    Program.MainForm.Invoke(delegate {
+                                    Program.MainForm.Invoke((VGen0)delegate {
                                         result = new DlgYesNoCancel("<LOC>Content Dependency", string.Format(Loc.Get("<LOC>The requested {0} is dependent on {1} additional vaulted download(s) that you do not have and may not operate properly without them. GPGnet can download these for you now, or you can manually download them later. Do you want GPGnet to download these dependencies now?"), content.ContentType.SingularDisplayName.ToLower(), missing.Count)).ShowDialog();
                                     });
                                     switch (result)

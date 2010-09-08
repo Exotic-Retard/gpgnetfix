@@ -33,9 +33,9 @@
             set
             {
                 this.mDefaultDownloadAction = value;
-                if (this.mDefaultDownloadActionChanged != null)
+                if (this.DefaultDownloadActionChanged != null)
                 {
-                    this.mDefaultDownloadActionChanged(this, new PropertyChangedEventArgs("DefaultDownloadAction"));
+                    this.DefaultDownloadActionChanged(this, new PropertyChangedEventArgs("DefaultDownloadAction"));
                 }
             }
         }
@@ -50,9 +50,9 @@
             set
             {
                 this.mRememberDownloadAction = value;
-                if (this.mRememberDownloadActionChanged != null)
+                if (this.RememberDownloadActionChanged != null)
                 {
-                    this.mRememberDownloadActionChanged(this, new PropertyChangedEventArgs("RememberDownloadAction"));
+                    this.RememberDownloadActionChanged(this, new PropertyChangedEventArgs("RememberDownloadAction"));
                 }
             }
         }
@@ -67,9 +67,9 @@
             set
             {
                 this.mReplaysDirectory = value;
-                if (this.mReplaysDirectoryChanged != null)
+                if (this.ReplaysDirectoryChanged != null)
                 {
-                    this.mReplaysDirectoryChanged(this, new PropertyChangedEventArgs("ReplaysDirectory"));
+                    this.ReplaysDirectoryChanged(this, new PropertyChangedEventArgs("ReplaysDirectory"));
                 }
             }
         }
@@ -84,9 +84,9 @@
             set
             {
                 this.mShowReplayDialog = value;
-                if (this.mShowReplayDialogChanged != null)
+                if (this.ShowReplayDialogChanged != null)
                 {
-                    this.mShowReplayDialogChanged(this, new PropertyChangedEventArgs("ShowReplayDialog"));
+                    this.ShowReplayDialogChanged(this, new PropertyChangedEventArgs("ShowReplayDialog"));
                 }
             }
         }

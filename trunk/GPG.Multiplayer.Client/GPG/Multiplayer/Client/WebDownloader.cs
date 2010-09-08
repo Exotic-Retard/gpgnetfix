@@ -25,7 +25,7 @@
                     {
                         if (showprogress)
                         {
-                            Program.MainForm.Invoke(delegate (object objclient) {
+                            Program.MainForm.Invoke((VGen1)delegate (object objclient) {
                                 try
                                 {
                                     new DlgDownloadProgress(Loc.Get("<LOC>Downloading"), objclient as WebClient).Show();

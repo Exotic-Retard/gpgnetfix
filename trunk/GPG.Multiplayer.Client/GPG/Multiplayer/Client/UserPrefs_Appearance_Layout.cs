@@ -40,9 +40,9 @@
             set
             {
                 this.mRememberLayout = value;
-                if (this.mRememberLayoutChanged != null)
+                if (this.RememberLayoutChanged != null)
                 {
-                    this.mRememberLayoutChanged(this, new PropertyChangedEventArgs("RememberLayout"));
+                    this.RememberLayoutChanged(this, new PropertyChangedEventArgs("RememberLayout"));
                 }
             }
         }

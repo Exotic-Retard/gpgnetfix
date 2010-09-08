@@ -21,9 +21,9 @@
             set
             {
                 this.mEmbedBrowser = value;
-                if (this.mEmbedBrowserChanged != null)
+                if (this.EmbedBrowserChanged != null)
                 {
-                    this.mEmbedBrowserChanged(this, new PropertyChangedEventArgs("EmbedBrowser"));
+                    this.EmbedBrowserChanged(this, new PropertyChangedEventArgs("EmbedBrowser"));
                 }
             }
         }

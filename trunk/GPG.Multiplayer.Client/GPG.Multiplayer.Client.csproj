@@ -1,540 +1,1377 @@
-<VisualStudioProject>
-  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="42b9e5b4-efd7-494d-b0d7-b5316d206021">
-    <Build>
-      <Settings AssemblyName="GPG.Multiplayer.Client" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="WinExe">
-        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
-        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
-      </Settings>
-      <References>
-        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
-        <Reference Name="GPG" AssemblyName="GPG" />
-        <Reference Name="GPG.UI" AssemblyName="GPG.UI" />
-        <Reference Name="GPG.Multiplayer.Plugin" AssemblyName="GPG.Multiplayer.Plugin" />
-        <Reference Name="GPG.Multiplayer.LadderService" AssemblyName="GPG.Multiplayer.LadderService" />
-        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
-        <Reference Name="System" AssemblyName="System" />
-        <Reference Name="System.Web.Services" AssemblyName="System.Web.Services" />
-        <Reference Name="GPG.Multiplayer.Quazal" AssemblyName="GPG.Multiplayer.Quazal" />
-        <Reference Name="DevExpress.Utils.v6.3" AssemblyName="DevExpress.Utils.v6.3" />
-        <Reference Name="DevExpress.XtraTreeList.v6.3" AssemblyName="DevExpress.XtraTreeList.v6.3" />
-        <Reference Name="DevExpress.XtraEditors.v6.3" AssemblyName="DevExpress.XtraEditors.v6.3" />
-        <Reference Name="GPG.Multiplayer.Game" AssemblyName="GPG.Multiplayer.Game" />
-        <Reference Name="DevExpress.XtraGrid.v6.3" AssemblyName="DevExpress.XtraGrid.v6.3" />
-        <Reference Name="GPG.Multiplayer.Statistics" AssemblyName="GPG.Multiplayer.Statistics" />
-        <Reference Name="DevExpress.XtraPivotGrid.v6.3" AssemblyName="DevExpress.XtraPivotGrid.v6.3" />
-        <Reference Name="System.Data" AssemblyName="System.Data" />
-        <Reference Name="DevExpress.Data.v6.3" AssemblyName="DevExpress.Data.v6.3" />
-        <Reference Name="DevExpress.XtraBars.v6.3" AssemblyName="DevExpress.XtraBars.v6.3" />
-        <Reference Name="DevExpress.XtraVerticalGrid.v6.3" AssemblyName="DevExpress.XtraVerticalGrid.v6.3" />
-        <Reference Name="DevExpress.XtraScheduler.v6.3" AssemblyName="DevExpress.XtraScheduler.v6.3" />
-        <Reference Name="DevExpress.XtraCharts.v6.3" AssemblyName="DevExpress.XtraCharts.v6.3" />
-        <Reference Name="DevExpress.XtraCharts.v6.3.UI" AssemblyName="DevExpress.XtraCharts.v6.3.UI" />
-        <Reference Name="System.Xml" AssemblyName="System.Xml" />
-        <Reference Name="DevExpress.XtraPivotGrid.v6.3.Core" AssemblyName="DevExpress.XtraPivotGrid.v6.3.Core" />
-        <Reference Name="vjslib" AssemblyName="vjslib" />
-        <Reference Name="GPG.ImageConverter" AssemblyName="GPG.ImageConverter" />
-        <Reference Name="System.Deployment" AssemblyName="System.Deployment" />
-        <Reference Name="BugSplat.Net" AssemblyName="BugSplat.Net" />
-        <Reference Name="DevExpress.BonusSkins.v6.3" AssemblyName="DevExpress.BonusSkins.v6.3" />
-      </References>
-    </Build>
-    <Files>
-      <Include>
-        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FrmBase.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgBase.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomStatsWatcher.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\DlgGameUpdate.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Friends\FriendRequestPicker.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSearchReplays.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentRegistration.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\PnlBase.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Mods\PnlModDownloadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Mods\PnlModDetailsView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\DlgContentAdmin.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentList.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentListTypes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Security\DlgACLPicker.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentParticipants.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgBrackets.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgAdjustHonorPoints.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\PnlLobbyParticipant.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\PnlCharacterDisplay.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\GameLobbyMessages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\DlgManageGames.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgChangePassword.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\StatusTextLine.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\DlgAwardSetDetails.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\DlgClanRequests!1.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Admin\Plugins.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Admin\PluginInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomStats.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgCreateUser.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgUDPSniffer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgResetPwd.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgReplayList.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgOpenSaveReplay.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayDownloadActions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Tools\PnlToolUploadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Tools\PnlToolDetailsView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\AdditionalContent.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\IAdditionalContent.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\IContentTypeProvider.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Replays\Replay.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Mods\Mod.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\DlgContentManager.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentDependency.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentVaultTabs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\SearchViews.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Applications\PnlApplicationUploadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Applications\DlgGameVersionManager.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentResults.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\TournamentPlayer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\TournamentMatchup.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\DlgJoinGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\IGameLobby.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\DlgGameLobby.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\DlgCharacterSelect.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgPlayerProfileEx.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgReportIssue.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgPrizeWinner.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\ISkinControl.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinControl.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinButton.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinStatusButton.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinGroupPanel.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\DlgAssignAvatars.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Admin\DlgViewGraph.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\WelcomePage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\WebLinkClick.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\FrmStatsLadder.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FrmPrivateChat.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FrmMain.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgSaveQuery.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgPlayerProfile.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgSelectChannel.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Registration\DlgRegisterSupcom.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomLookups.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Volunteering\DlgVolunteer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\DlgContentDetailsView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentType.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Ladders\DlgLadderHistory.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgYesNoCancel.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgEmotes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgEmailUsername.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinLabel.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\PnlAwardSetDetails.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\DlgClanProfileEx.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanAbility.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserActionCommands.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SolutionsLib\DlgSolutionLink.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SolutionsLib\DlgSolution.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgLogin.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Emote.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\EmoteLengthComparer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SolutionsLib\DlgSearchResults.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SolutionsLib\DlgKeywordSearch.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ActivityMonitor.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\GPGnetGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\GPGnetGameParticipant.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\GamePositionStates.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgAskQuestion.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\PnlAwardDegree.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\DlgClanInvite.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\IUserRequest.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanRequest.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanAbilityDictionary.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ChatEffect\ChatEffectBase.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ChatEffect\Canadian.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMaps.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\icons\SupremeCommanderIcons.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgLocateExe.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\map\TickerItem.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Volunteering\DlgViewVolunteers.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Volunteering\DlgActiveEfforts.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Videos\PnlVideoDetailsView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\LuaUtil.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\IFTPInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Applications\CustomApplication.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FrmSplash.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgDownloadProgress.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\DlgClanProfile.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserList\UserListImages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\DlgCreateClan.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserActionArgument.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserAction.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\StatusIcons.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Program.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\PatchCallback.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Emotes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgTermsOfService.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\map\DlgWorldMap.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgTeamGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Videos\PnlVideoUploadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Mods\PnlModUploadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Maps\PnlMapDownloadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\DlgVaultQuickSearch.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\DlgVaultOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\VaultOptionTabs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Security\DlgAddMember.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgManageTournament.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgConnectionsGraph.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgChangeName.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserStatus.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserRequestEventArgs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\QuazalServerInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\GameInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\LadderMenuItemSorter.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Friends\DlgFriendRequests.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgYesNoLater.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgServerForm.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayList.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSubmitReplay.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgReplayInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\IVaultOperation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Security\DlgCreateNewACL.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\TournamentCommands.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\PlayerCharacter.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinStatusStrip.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinControlState.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanRanking.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SolutionsLib\SearchResultEntry.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgStatsTest.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\DlgNoBetaKey.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FrmNotify.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FrmSimpleMessage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgYesNo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentComment.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeLobbyMessages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\HostedGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\UserRequestEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanImages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Admin\DlgAdhocGraph.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgSelectGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgLogWatcher.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\LogData.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgMessage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgPostComment.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Videos\PnlVideoDownloadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\PnlContentDetailsView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Maps\PnlMapUploadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Maps\DlgPreviewMap.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Ladders\DlgLadderReport.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMapList.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMap.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\PnlReplayComment.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeGameParticipant.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\DlgHostGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgGameKeys.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\TimePoint.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FLASHWINFO.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserList\UserListRow.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\IconStats.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinDropDown.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\AwardSetImage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\AwardImageTypes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanInvite.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Properties\Settings.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMapInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\PlayerView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgUserFeedback.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Volunteering\DlgCreateVolunteerEffort.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\VaultUploadOperation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Tools\PnlToolDownloadOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Applications\FTPInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Ladders\SupcomParamsProvider.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentCreation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgSetResults.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgCreateChannel.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgAdhocSQL.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\IGatheringDisplay.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinGatheringDisplay.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Appearance.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\FormLayout.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Appearance_Layout.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Appearance_Menus.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Appearance_Text.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Awards.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Chat.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Chat_Appearance.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Chat_Appearance_PrivateChat.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Chat_Emotes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Chat_Filters.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Chat_Links.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Content.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Content_Download.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Content_Upload.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Login.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Miscellaneous.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Profiles.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Sound.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_Sound_Speech.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\UserPrefs_WebBrowsing.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\__AdditionalLocStrings.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Profanity.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\PopulationIcons.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\GatheringDropDown.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\GatheringEntry.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgHostGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgPictureView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\PnlTeamGameMember.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\VaultImages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\DependencyState.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Maps\PnlMapDetailsView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Security\DlgManageACLs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserList\PnlUserList.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\GroupPanelImages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgAbout.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\SkinMenuItem.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\SeniorityComparer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanRequestPicker.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\Clan.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ChatEffect\None.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SelfTest.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\BaseFormEvent.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomMapOptions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\GameKey.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\RECT.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\WINDOWINFO.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SystemMetrics.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomFactions.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Tools\Tool.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Ladders\LadderParticipantComment.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayComment.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeImages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\DlgLocPatches.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\ScalingModes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\AwardsImages.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ChatLink.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ContentLinkMask.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\TournamentLinkMask.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\EmoteLinkMask.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\EmailService\Service.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\EmailService\SendEmailCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\EmailService\ReportErrorCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ProfanityResources.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\PnlContentComment.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Ladders\FrmLadderView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserList\UserListStyles.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanView.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserList\UserListCategory.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserList\CategoryRowEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserList\UserListCategories.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\ChatPanel.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\UserEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\ChatLineStyleEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\DlgAwardPicker.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SolutionsLib\Solution.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\SkinManager.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Properties\Resources.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\PopupPrefs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Location.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\LocationTypes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomTeamSelection.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\VaultDownloadOperation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\VaultDirectDownloadOperation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Maps\CustomMap.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\DlgCreateCharacter.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\GameInformation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\WebDownloader.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Volunteering\VolunteerEffort.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Volunteering\Volunteer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\StylePrefs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Friends\FriendRequest.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\TeamGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\ExtractIcon.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\ControlRes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Controls\Awards\DlgAvatarPicker.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanMember.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ChatEffects.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Admin\PersistentData.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\FactionPicker.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomFactionEventArgs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Maps\DlgMapDiagnostics.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Applications\AppUtils.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentOperationCallback.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\ContentOperationCallbackArgs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Clans\ClanRankingDictionary.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ChatLinkEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\LocationIcons.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomPrefs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\UserPrefs_Games_Supcom_Replays.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\UserPrefs_Games_Supcom_RankedGames.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomAutoState.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomAutomatch.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\AutomatchPlayers.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\LaunchGameDelegate.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SupremeCommander\AutomatchStatsDelegate.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\PacketInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\Videos\Video.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\VaultFTPUploadOperation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Vaulting\PackagingMethods.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\Games\SpaceSiege\LobbyParticipantEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Multiplayer\Client\ChatEffect\Chicken.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG.Multiplayer.Client.profanity.gpg" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.SupcomFactions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSubmitReplay.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Videos.PnlVideoDownloadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Tools.PnlToolDownloadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.DlgContentDetailsView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.DlgGameLobby.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.DlgCharacterSelect.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomStatsWatcher.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Friends.FriendRequestPicker.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.ControlRes.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Clans.DlgClanProfile.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgReplayList.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Maps.PnlMapUploadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Security.DlgManageACLs.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Security.DlgAddMember.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Ladders.DlgLadderHistory.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgUserFeedback.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgBase.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomTeamSelection.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.SolutionsLib.DlgSearchResults.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Mods.PnlModDownloadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgAdjustHonorPoints.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.PnlCharacterDisplay.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgLocPatches.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.Awards.DlgAwardPicker.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgPictureView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.SolutionsLib.SearchResultEntry.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgYesNoCancel.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgPrizeWinner.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgCreateUser.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgYesNoLater.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgMessage.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgAskQuestion.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Clans.ClanImages.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.ProfanityResources.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.DlgVaultOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Security.DlgCreateNewACL.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Ladders.FrmLadderView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgSetResults.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.UserList.PnlUserList.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Properties.Resources.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgUDPSniffer.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgHostGame.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgGameKeys.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgConnectionsGraph.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgAdhocSQL.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Clans.DlgClanInvite.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.map.DlgWorldMap.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentResults.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.Awards.DlgAssignAvatars.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.LocationIcons.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Properties.app.manifest" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgTeamGame.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgPostComment.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Volunteering.DlgViewVolunteers.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.VaultImages.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.DlgContentManager.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Applications.DlgGameVersionManager.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.Awards.DlgAvatarPicker.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.FrmPrivateChat.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgLogin.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.PnlTeamGameMember.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Volunteering.DlgActiveEfforts.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.PnlContentDetailsView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.PnlReplayComment.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.ChatPanel.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Admin.DlgViewGraph.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Admin.DlgAdhocGraph.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.FrmStatsLadder.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.DlgNoBetaKey.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Emotes.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgYesNo.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Clans.ClanRequestPicker.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSearchReplays.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgOpenSaveReplay.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Mods.PnlModUploadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Maps.PnlMapDownloadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.DlgContentAdmin.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.DlgHostGame.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.FrmSplash.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.Awards.AwardsImages.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.SupcomMaps.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgSelectGame.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgPlayerProfile.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgAbout.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.icons.SupremeCommanderIcons.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgReplayInfo.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Volunteering.DlgVolunteer.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Videos.PnlVideoUploadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.DlgVaultQuickSearch.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Security.DlgACLPicker.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Ladders.DlgLadderReport.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.DlgJoinGame.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgReportIssue.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.UserList.UserListImages.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.Awards.DlgAwardSetDetails.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.FrmMain.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.SolutionsLib.DlgKeywordSearch.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Volunteering.DlgCreateVolunteerEffort.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Maps.DlgMapDiagnostics.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgDownloadProgress.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.Awards.PnlAwardDegree.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Clans.DlgClanProfileEx.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.WelcomePage.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.PopulationIcons.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgTermsOfService.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.PnlContentComment.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentRegistration.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.ActivityMonitor.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.PnlBase.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.FrmSimpleMessage.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.FrmNotify.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgChangePassword.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.SolutionsLib.DlgSolution.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgChangeName.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentCreation.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgBrackets.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.SpaceSiegeImages.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomMapOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgResetPwd.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgEmotes.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomStats.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Tools.PnlToolUploadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Maps.DlgPreviewMap.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.GroupPanelImages.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgManageTournament.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.DlgManageGames.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.Awards.PnlAwardSetDetails.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.DlgStatsTest.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.FrmBase.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Videos.PnlVideoDetailsView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.DlgCreateCharacter.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Friends.DlgFriendRequests.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgSaveQuery.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Clans.DlgClanRequests.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.SolutionsLib.DlgSolutionLink.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Tools.PnlToolDetailsView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Mods.PnlModDetailsView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Maps.PnlMapDetailsView.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Vaulting.Applications.PnlApplicationUploadOptions.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentParticipants.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgPlayerProfileEx.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.DlgGameUpdate.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgLogWatcher.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgSelectChannel.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgLocateExe.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.exe.licenses" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Registration.DlgRegisterSupcom.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Games.SpaceSiege.PnlLobbyParticipant.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgEmailUsername.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Controls.SkinGroupPanel.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.StatusIcons.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgServerForm.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.DlgCreateChannel.resources" BuildAction="EmbeddedResource" />
-        <File RelPath="GPG.Multiplayer.Client.Clans.DlgCreateClan.resources" BuildAction="EmbeddedResource" />
-      </Include>
-    </Files>
-  </CSHARP>
-</VisualStudioProject>
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D37D04C-8171-4828-BABF-FF9EAD629F49}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>GPG.Multiplayer.Client</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugSplat.Net">
+      <Name>BugSplat.Net</Name>
+      <HintPath>..\libraries\BugSplat.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v6.3">
+      <Name>DevExpress.BonusSkins.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.BonusSkins.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v6.3">
+      <Name>DevExpress.Data.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.Data.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.3">
+      <Name>DevExpress.Utils.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.Utils.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.3">
+      <Name>DevExpress.XtraBars.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraBars.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v6.3">
+      <Name>DevExpress.XtraCharts.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraCharts.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v6.3.UI">
+      <Name>DevExpress.XtraCharts.v6.3.UI</Name>
+      <HintPath>..\libraries\DevExpress.XtraCharts.v6.3.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.3">
+      <Name>DevExpress.XtraEditors.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraEditors.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.3">
+      <Name>DevExpress.XtraGrid.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraGrid.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v6.3">
+      <Name>DevExpress.XtraPivotGrid.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraPivotGrid.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v6.3.Core">
+      <Name>DevExpress.XtraPivotGrid.v6.3.Core</Name>
+      <HintPath>..\libraries\DevExpress.XtraPivotGrid.v6.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v6.3">
+      <Name>DevExpress.XtraScheduler.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraScheduler.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v6.3">
+      <Name>DevExpress.XtraTreeList.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraTreeList.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v6.3">
+      <Name>DevExpress.XtraVerticalGrid.v6.3</Name>
+      <HintPath>..\libraries\DevExpress.XtraVerticalGrid.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG">
+      <Name>GPG</Name>
+      <HintPath>..\GPG\bin\Debug\GPG.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG.ImageConverter">
+      <Name>GPG.ImageConverter</Name>
+      <HintPath>..\GPG.ImageConverter\bin\Debug\GPG.ImageConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG.Multiplayer.Game">
+      <Name>GPG.Multiplayer.Game</Name>
+      <HintPath>..\GPG.Multiplayer.Game\bin\Debug\GPG.Multiplayer.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG.Multiplayer.LadderService">
+      <Name>GPG.Multiplayer.LadderService</Name>
+      <HintPath>..\GPG.Multiplayer.LadderService\bin\Debug\GPG.Multiplayer.LadderService.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG.Multiplayer.Plugin">
+      <Name>GPG.Multiplayer.Plugin</Name>
+      <HintPath>..\GPG.Multiplayer.Plugin\bin\Debug\GPG.Multiplayer.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG.Multiplayer.Quazal">
+      <Name>GPG.Multiplayer.Quazal</Name>
+      <HintPath>..\GPG.Multiplayer.Quazal\bin\Debug\GPG.Multiplayer.Quazal.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG.Multiplayer.Statistics">
+      <Name>GPG.Multiplayer.Statistics</Name>
+      <HintPath>..\GPG.Multiplayer.Statistics\bin\Debug\GPG.Multiplayer.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="GPG.UI">
+      <Name>GPG.UI</Name>
+      <HintPath>..\GPG.UI\bin\Debug\GPG.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Name>System.Deployment</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+    <Reference Include="vjslib">
+      <Name>vjslib</Name>
+      <HintPath>..\libraries\vjslib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Admin\DlgAdhocGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Admin\DlgViewGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Admin\PersistentData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Admin\PluginInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Admin\Plugins.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\BaseFormEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ChatEffects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ChatEffect\Canadian.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ChatEffect\ChatEffectBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ChatEffect\Chicken.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ChatEffect\None.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ChatLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ChatLinkEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\Clan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanAbility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanAbilityDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanInvite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanMember.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanRanking.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanRankingDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanRequestPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\ClanView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\DlgClanInvite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\DlgClanProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\DlgClanProfileEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\DlgClanRequests!1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\DlgCreateClan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\SeniorityComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Clans\UserRequestEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ContentLinkMask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\AwardImageTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\AwardSetImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\AwardsImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\DlgAssignAvatars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\DlgAvatarPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\DlgAwardPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\DlgAwardSetDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\PnlAwardDegree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\Awards\PnlAwardSetDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\ChatLineStyleEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\ChatPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\ControlRes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\GatheringDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\GatheringEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\IconStats.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\IGatheringDisplay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\ISkinControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\PnlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\ScalingModes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinControlState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinGatheringDisplay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinGroupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinStatusButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\SkinStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\StatusTextLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserList\CategoryRowEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserList\PnlUserList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserList\UserListCategories.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserList\UserListCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserList\UserListImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserList\UserListRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Controls\UserList\UserListStyles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgAdhocSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgAskQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgChangeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgConnectionsGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgCreateChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgDownloadProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgEmailUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgEmotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgGameKeys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgHostGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgLocateExe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgLocPatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgLogWatcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgPictureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgPlayerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgPlayerProfileEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgPostComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgPrizeWinner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgReportIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgResetPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgSaveQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgSelectChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgSelectGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgTermsOfService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgUDPSniffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgUserFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgYesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgYesNoCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\DlgYesNoLater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\EmailService\ReportErrorCompletedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\EmailService\SendEmailCompletedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\EmailService\Service.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Emote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\EmoteLengthComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\EmoteLinkMask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Emotes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FLASHWINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FormLayout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Friends\DlgFriendRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Friends\FriendRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Friends\FriendRequestPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FrmNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FrmPrivateChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FrmSimpleMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\GameInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\DlgGameUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\DlgManageGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\DlgNoBetaKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\ExtractIcon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\FrmStatsLadder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\GameInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\GameKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\GameLobbyMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\GamePositionStates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\GPGnetGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\GPGnetGameParticipant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\IGameLobby.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\DlgCharacterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\DlgCreateCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\DlgGameLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\DlgHostGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\DlgJoinGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\HostedGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\LobbyParticipantEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\PlayerCharacter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\PnlCharacterDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\PnlLobbyParticipant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeGameParticipant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SpaceSiege\SpaceSiegeLobbyMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\AutomatchPlayers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\AutomatchStatsDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgOpenSaveReplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgReplayInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgReplayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSearchReplays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgStatsTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSubmitReplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomMapOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomStatsWatcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgSupcomTeamSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\DlgTeamGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\FactionPicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\icons\SupremeCommanderIcons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\LaunchGameDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\PnlReplayComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\PnlTeamGameMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayDownloadActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\ReplayList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomAutomatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomAutoState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomFactionEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomFactions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomLookups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMapInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMapList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomMaps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\SupcomPrefs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\TeamGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgAdjustHonorPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgBrackets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgManageTournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgSetResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentParticipants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\DlgTournamentResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\TournamentCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\TournamentMatchup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\tournaments\TournamentPlayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\UserPrefs_Games_Supcom_RankedGames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Games\SupremeCommander\UserPrefs_Games_Supcom_Replays.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\GroupPanelImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\IUserRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\LadderMenuItemSorter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Ladders\DlgLadderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Ladders\DlgLadderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Ladders\FrmLadderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Ladders\LadderParticipantComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Ladders\SupcomParamsProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Location.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\LocationIcons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\LocationTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\LogData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\map\DlgWorldMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\map\TickerItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\PacketInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\PatchCallback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\PlayerView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\PopulationIcons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\PopupPrefs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Profanity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\ProfanityResources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Properties\Resources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Properties\Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\QuazalServerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\RECT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Registration\DlgRegisterSupcom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Security\DlgACLPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Security\DlgAddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Security\DlgCreateNewACL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Security\DlgManageACLs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SelfTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SkinManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SolutionsLib\DlgKeywordSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SolutionsLib\DlgSearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SolutionsLib\DlgSolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SolutionsLib\DlgSolutionLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SolutionsLib\SearchResultEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SolutionsLib\Solution.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\StatusIcons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\StylePrefs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\SystemMetrics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\TimePoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\TournamentLinkMask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserActionArgument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserActionCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Appearance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Appearance_Layout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Appearance_Menus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Appearance_Text.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Awards.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Chat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Chat_Appearance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Chat_Appearance_PrivateChat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Chat_Emotes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Chat_Filters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Chat_Links.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Content.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Content_Download.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Content_Upload.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Login.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Miscellaneous.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Profiles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Sound.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_Sound_Speech.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserPrefs_WebBrowsing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserRequestEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\UserStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ActivityMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\AdditionalContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Applications\AppUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Applications\CustomApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Applications\DlgGameVersionManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Applications\FTPInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Applications\PnlApplicationUploadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentDependency.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentListTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentOperationCallback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentOperationCallbackArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\ContentVaultTabs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\DependencyState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\DlgContentAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\DlgContentDetailsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\DlgContentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\DlgVaultOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\DlgVaultQuickSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\IAdditionalContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\IContentTypeProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\IFTPInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\IVaultOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\LuaUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Maps\CustomMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Maps\DlgMapDiagnostics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Maps\DlgPreviewMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Maps\PnlMapDetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Maps\PnlMapDownloadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Maps\PnlMapUploadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Mods\Mod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Mods\PnlModDetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Mods\PnlModDownloadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Mods\PnlModUploadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\PackagingMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\PnlContentComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\PnlContentDetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Replays\Replay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\SearchViews.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Tools\PnlToolDetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Tools\PnlToolDownloadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Tools\PnlToolUploadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Tools\Tool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\VaultDirectDownloadOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\VaultDownloadOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\VaultFTPUploadOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\VaultImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\VaultOptionTabs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\VaultUploadOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Videos\PnlVideoDetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Videos\PnlVideoDownloadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Videos\PnlVideoUploadOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Vaulting\Videos\Video.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Volunteering\DlgActiveEfforts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Volunteering\DlgCreateVolunteerEffort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Volunteering\DlgViewVolunteers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Volunteering\DlgVolunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Volunteering\Volunteer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\Volunteering\VolunteerEffort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\WebDownloader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\WebLinkClick.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\WINDOWINFO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Multiplayer\Client\__AdditionalLocStrings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Admin.DlgAdhocGraph.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Admin.DlgViewGraph.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Clans.ClanImages.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Clans.ClanRequestPicker.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Clans.DlgClanInvite.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Clans.DlgClanProfile.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Clans.DlgClanProfileEx.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Clans.DlgClanRequests.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Clans.DlgCreateClan.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.Awards.AwardsImages.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.Awards.DlgAssignAvatars.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.Awards.DlgAvatarPicker.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.Awards.DlgAwardPicker.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.Awards.DlgAwardSetDetails.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.Awards.PnlAwardDegree.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.Awards.PnlAwardSetDetails.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.ChatPanel.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.ControlRes.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.PnlBase.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.SkinGroupPanel.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.UserList.PnlUserList.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Controls.UserList.UserListImages.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgAbout.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgAdhocSQL.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgAskQuestion.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgBase.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgChangeName.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgChangePassword.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgConnectionsGraph.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgCreateChannel.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgCreateUser.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgDownloadProgress.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgEmailUsername.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgEmotes.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgGameKeys.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgHostGame.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgLocateExe.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgLocPatches.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgLogin.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgLogWatcher.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgMessage.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgPictureView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgPlayerProfile.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgPlayerProfileEx.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgPostComment.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgPrizeWinner.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgReportIssue.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgResetPwd.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgSaveQuery.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgSelectChannel.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgSelectGame.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgServerForm.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgTermsOfService.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgUDPSniffer.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgUserFeedback.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgYesNo.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgYesNoCancel.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.DlgYesNoLater.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Emotes.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.exe.licenses" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Friends.DlgFriendRequests.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Friends.FriendRequestPicker.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.FrmBase.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.FrmMain.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.FrmNotify.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.FrmPrivateChat.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.FrmSimpleMessage.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.FrmSplash.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.DlgGameUpdate.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.DlgManageGames.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.DlgNoBetaKey.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.FrmStatsLadder.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.DlgCharacterSelect.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.DlgCreateCharacter.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.DlgGameLobby.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.DlgHostGame.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.DlgJoinGame.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.PnlCharacterDisplay.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.PnlLobbyParticipant.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SpaceSiege.SpaceSiegeImages.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgOpenSaveReplay.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgReplayInfo.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgReplayList.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSearchReplays.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgStatsTest.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSubmitReplay.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomMapOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomStats.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomStatsWatcher.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgSupcomTeamSelection.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.DlgTeamGame.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.icons.SupremeCommanderIcons.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.PnlReplayComment.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.PnlTeamGameMember.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.SupcomFactions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.SupcomMaps.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgAdjustHonorPoints.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgBrackets.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgManageTournament.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgSetResults.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentCreation.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentParticipants.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentRegistration.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Games.SupremeCommander.tournaments.DlgTournamentResults.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.GroupPanelImages.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Ladders.DlgLadderHistory.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Ladders.DlgLadderReport.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Ladders.FrmLadderView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.LocationIcons.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.map.DlgWorldMap.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.PopulationIcons.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.profanity.gpg" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.ProfanityResources.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Properties.app.manifest" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Properties.Resources.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Registration.DlgRegisterSupcom.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Security.DlgACLPicker.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Security.DlgAddMember.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Security.DlgCreateNewACL.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Security.DlgManageACLs.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.SolutionsLib.DlgKeywordSearch.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.SolutionsLib.DlgSearchResults.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.SolutionsLib.DlgSolution.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.SolutionsLib.DlgSolutionLink.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.SolutionsLib.SearchResultEntry.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.StatusIcons.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.ActivityMonitor.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Applications.DlgGameVersionManager.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Applications.PnlApplicationUploadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.DlgContentAdmin.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.DlgContentDetailsView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.DlgContentManager.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.DlgVaultOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.DlgVaultQuickSearch.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Maps.DlgMapDiagnostics.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Maps.DlgPreviewMap.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Maps.PnlMapDetailsView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Maps.PnlMapDownloadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Maps.PnlMapUploadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Mods.PnlModDetailsView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Mods.PnlModDownloadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Mods.PnlModUploadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.PnlContentComment.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.PnlContentDetailsView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Tools.PnlToolDetailsView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Tools.PnlToolDownloadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Tools.PnlToolUploadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.VaultImages.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Videos.PnlVideoDetailsView.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Videos.PnlVideoDownloadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Vaulting.Videos.PnlVideoUploadOptions.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Volunteering.DlgActiveEfforts.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Volunteering.DlgCreateVolunteerEffort.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Volunteering.DlgViewVolunteers.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.Volunteering.DlgVolunteer.resources" />
+    <EmbeddedResource Include="GPG.Multiplayer.Client.WelcomePage.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -5,6 +5,7 @@
     using DevExpress.XtraEditors.Repository;
     using DevExpress.XtraGrid.Columns;
     using DevExpress.XtraGrid.Views.Grid;
+    using DevExpress.XtraGrid.Views.Base;
     using GPG;
     using GPG.DataAccess;
     using GPG.Logging;

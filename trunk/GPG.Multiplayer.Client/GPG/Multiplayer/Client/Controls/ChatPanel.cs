@@ -2480,13 +2480,14 @@
                     this.HistoryIndex = -1;
                     if (this.textBoxMsg.Text.StartsWith("/"))
                     {
+                        UserAction action;
                         string[] sourceArray = this.textBoxMsg.Text.TrimEnd(new char[] { ' ' }).Split(new char[] { ' ' });
                         this.textBoxMsg.Text = "";
                         if (sourceArray[0] == "/?")
                         {
-                            foreach (UserAction action in UserAction.AllActions)
+                            foreach (UserAction curaction in UserAction.AllActions)
                             {
-                                this.SystemMessage(action.ToString(), new object[0]);
+                                this.SystemMessage(curaction.ToString(), new object[0]);
                             }
                         }
                         else if (!UserAction.TryGetByPartialName(sourceArray[0], out action))
@@ -2587,13 +2588,14 @@
                     this.HistoryIndex = -1;
                     if (msg.StartsWith("/"))
                     {
+                        UserAction action;
                         string[] sourceArray = msg.TrimEnd(new char[] { ' ' }).Split(new char[] { ' ' });
                         msg = "";
                         if (sourceArray[0] == "/?")
                         {
-                            foreach (UserAction action in UserAction.AllActions)
+                            foreach (UserAction curaction in UserAction.AllActions)
                             {
-                                this.SystemMessage(action.ToString(), new object[0]);
+                                this.SystemMessage(curaction.ToString(), new object[0]);
                             }
                         }
                         else if (!UserAction.TryGetByPartialName(sourceArray[0], out action))
