@@ -113,7 +113,7 @@
                 Address = Marshal.PtrToStringAnsi(ptr.Address),
                 Port = ptr.Port,
                 MessageSize = ptr.MessageSize,
-                Message = new byte[message.MessageSize]
+                Message = new byte[ptr.MessageSize]
             };
             Marshal.Copy(ptr.Message, message.Message, 0, message.MessageSize);
             return message;

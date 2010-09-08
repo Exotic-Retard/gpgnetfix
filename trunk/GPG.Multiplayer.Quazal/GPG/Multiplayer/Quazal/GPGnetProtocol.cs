@@ -80,13 +80,13 @@
         public bool AdhocExecuteCommand(string SQL)
         {
             this.mRowIndex = 0;
-            return SQL.AdhocSQL(SQL, out this.mColumns, out this.mRows);
+            return GPGnetClientLib.Lobby.SQL.AdhocSQL(SQL, out this.mColumns, out this.mRows);
         }
 
         public bool AdhocExecuteReader(string SQL)
         {
             this.mRowIndex = 0;
-            return SQL.AdhocSQL(SQL, out this.mColumns, out this.mRows);
+            return GPGnetClientLib.Lobby.SQL.AdhocSQL(SQL, out this.mColumns, out this.mRows);
         }
 
         public bool ChangePassword(string password)

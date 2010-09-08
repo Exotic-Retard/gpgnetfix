@@ -9,9 +9,9 @@
     {
         [MarshalAs(UnmanagedType.LPStr)]
         private string mPlayerName = "";
-        private EventHandler PlayerNameChanged;
+        //private EventHandler PlayerNameChanged;
         private int mWonGame;
-        private EventHandler WonGameChanged;
+        //private EventHandler WonGameChanged;
         public string PlayerName
         {
             get
