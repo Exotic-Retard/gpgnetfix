@@ -1,36 +1,114 @@
-<VisualStudioProject>
-  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="67bb2fe8-9bb4-4efd-99e8-88d8143d00e1">
-    <Build>
-      <Settings AssemblyName="GPGnetCommunicationsLib" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
-        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
-        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
-      </Settings>
-      <References>
-        <Reference Name="System" AssemblyName="System" />
-      </References>
-    </Build>
-    <Files>
-      <Include>
-        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\StateObject.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\ICommandMessage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\CommandMessage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\CommandMessageDelegate.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\Credentials.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\Room.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\UDPState.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\TestSerializer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\SupcomInfo\ReportSucpomPlayerInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\SupcomInfo\GameReporting.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\Utils\FormatData.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\DistributedObjects\DistributedObject.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\Commands.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\ParamTypes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\SupcomInfo\ReportSupcomUnitInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\InputType.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetCommunicationsLib\InputCleanser.cs" SubType="Code" BuildAction="Compile" />
-      </Include>
-    </Files>
-  </CSHARP>
-</VisualStudioProject>
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>67bb2fe8-9bb4-4efd-99e8-88d8143d00e1</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>GPGnetCommunicationsLib</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\CommandMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\CommandMessageDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\Commands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\Credentials.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\DistributedObjects\DistributedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\ICommandMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\InputCleanser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\InputType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\ParamTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\Room.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\StateObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\SupcomInfo\GameReporting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\SupcomInfo\ReportSucpomPlayerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\SupcomInfo\ReportSupcomUnitInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\TestSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\UDPState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetCommunicationsLib\Utils\FormatData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
