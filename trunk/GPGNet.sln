@@ -12,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPGnetClientLib", "GPGnetCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPG", "GPG\GPG.csproj", "{6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPG.ImageConverter", "GPG.ImageConverter\GPG.ImageConverter.csproj", "{2C36A0E0-7B15-4938-849F-5B7DC5DD315F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E} = {6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +39,10 @@ Global
 		{6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C36A0E0-7B15-4938-849F-5B7DC5DD315F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C36A0E0-7B15-4938-849F-5B7DC5DD315F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C36A0E0-7B15-4938-849F-5B7DC5DD315F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C36A0E0-7B15-4938-849F-5B7DC5DD315F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
