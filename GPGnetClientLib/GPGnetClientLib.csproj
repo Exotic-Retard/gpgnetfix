@@ -1,58 +1,180 @@
-<VisualStudioProject>
-  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="d782978a-a970-410e-9e57-9a2d94b39568">
-    <Build>
-      <Settings AssemblyName="GPGnetClientLib" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
-        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
-        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
-      </Settings>
-      <References>
-        <Reference Name="GPGnetCommunicationsLib" AssemblyName="GPGnetCommunicationsLib" />
-        <Reference Name="System" AssemblyName="System" />
-      </References>
-    </Build>
-    <Files>
-      <Include>
-        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\IClientHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\JoinRoom.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\JoinGatheringResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\Lobby\Lobby.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\Lobby\Gatherings.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\Lobby\ChatroomMessage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\Lobby\PrivateMessage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\ChangePassword.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\ChangePasswordResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\SQLData.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\SQLDataResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageUser.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageUserResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageRoom.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\TextMessageResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\EmailUsername.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\EmailUsernameResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\SQLExecute.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\SQLExecuteResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\UDPStunClient.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\StunResults.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\Login.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\LoginResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\CreateRoom.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\CreateGatheringResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\Lobby\SQL.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\Lobby\Authentication.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\MessageBroker.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\AdhocSQL.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\AdhocSQLResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\LeaveRoom.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\LeaveGatheringResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\ResetPassword.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\ResetPasswordResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\CreateLogin.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientHandlers\CreateLoginResponse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\ClientManager.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPGnetClientLib\LogDelegate.cs" SubType="Code" BuildAction="Compile" />
-      </Include>
-    </Files>
-  </CSHARP>
-</VisualStudioProject>
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d782978a-a970-410e-9e57-9a2d94b39568</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>GPGnetClientLib</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GPGnetCommunicationsLib">
+      <Name>GPGnetCommunicationsLib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\AdhocSQL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\AdhocSQLResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\ChangePassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\ChangePasswordResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\CreateGatheringResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\CreateLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\CreateLoginResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\CreateRoom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\EmailUsername.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\EmailUsernameResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\IClientHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\JoinGatheringResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\JoinRoom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\LeaveGatheringResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\LeaveRoom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\Login.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\LoginResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\ResetPassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\ResetPasswordResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\SQLData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\SQLDataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\SQLExecute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\SQLExecuteResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\TextMessageResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\TextMessageRoom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\TextMessageUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientHandlers\TextMessageUserResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\ClientManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\Lobby\Authentication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\Lobby\ChatroomMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\Lobby\Gatherings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\Lobby\Lobby.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\Lobby\PrivateMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\Lobby\SQL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\LogDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\MessageBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\StunResults.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPGnetClientLib\UDPStunClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
