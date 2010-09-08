@@ -24,7 +24,7 @@
         [FieldMap("player_id")]
         private int mPlayerID;
         [FieldMap("name")]
-        private string .mPlayerName = "";
+        private string mPlayerName = "";
 
         public ContentComment(DataRecord record) : base(record)
         {
