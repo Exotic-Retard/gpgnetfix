@@ -3,7 +3,7 @@
     <ProjectType>local</ProjectType>
     <ProjectVersion>7.10.3077</ProjectVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>67bb2fe8-9bb4-4efd-99e8-88d8143d00e1</ProjectGuid>
+    <ProjectGuid>{C9300D83-2D93-4BA9-ABCD-1883DA4DE6EE}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <AssemblyName>GPGnetCommunicationsLib</AssemblyName>

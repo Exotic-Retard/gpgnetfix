@@ -1371,7 +1371,7 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy /Y /D /E "$(SolutionDir)data\*" "$(TargetDir)"
+exit 0</PostBuildEvent>
   </PropertyGroup>
 </Project>
