@@ -1,0 +1,41 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="0de1a331-28ac-4740-8db0-f3d9c7adfab6">
+    <Build>
+      <Settings AssemblyName="GPG.Multiplayer.LadderService" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="GPG" AssemblyName="GPG" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="GPG.UI" AssemblyName="GPG.UI" />
+        <Reference Name="GPG.Multiplayer.Quazal" AssemblyName="GPG.Multiplayer.Quazal" />
+        <Reference Name="System" AssemblyName="System" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderParticipant.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderDegradation.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderGameSession.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\RatingsReport.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\RatingsReportOutcomes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderService.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderInstance.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\ReportResolver.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\SuicideLadderReportResolver.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderGameReport.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderGameOutcomes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderImages.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\SwapLadderReportResolver.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderGameResult.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\GameParamsProvider.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\LadderDefinition.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\LadderService\HardcoreLadderReportResolver.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG.Multiplayer.LadderService.LadderImages.resources" BuildAction="EmbeddedResource" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
