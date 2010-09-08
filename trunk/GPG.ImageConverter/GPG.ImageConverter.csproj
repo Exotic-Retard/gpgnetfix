@@ -1,0 +1,42 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="3ecae66b-a2fa-49f3-b17d-5c0923aa5728">
+    <Build>
+      <Settings AssemblyName="GPG.ImageConverter" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="GPG" AssemblyName="GPG" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\RGBQUAD.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\RGBTRIPLE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FIRGB16.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FIRGBA16.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FIRGBF.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FIRGBAF.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FICOMPLEX.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\ICCFlags.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FIICCPROFILE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\LoadSaveFlags.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_FORMAT.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_TYPE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_COLOR_TYPE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_QUANTIZE.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_DITHER.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_JPEG_OPERATION.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_TMO.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_FILTER.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FREE_IMAGE_COLOR_CHANNEL.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FreeImage_OutputMessageFunction.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="FreeImageAPI\FreeImage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\ImageConverter\ConvertDDS.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
