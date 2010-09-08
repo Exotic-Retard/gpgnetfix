@@ -13,8 +13,8 @@
         {
             if (OnResetPassword != null)
             {
-                object[] params = message.GetParams();
-                OnResetPassword((bool) params[0]);
+                object[] msgParams = message.GetParams();
+                OnResetPassword((bool)msgParams[0]);
             }
         }
 

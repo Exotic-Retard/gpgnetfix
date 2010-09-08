@@ -13,8 +13,8 @@
         {
             if (OnJoinGathering != null)
             {
-                object[] params = message.GetParams();
-                OnJoinGathering((bool) params[0]);
+                object[] msgParams = message.GetParams();
+                OnJoinGathering((bool)msgParams[0]);
             }
         }
 

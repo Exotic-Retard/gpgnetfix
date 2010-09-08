@@ -13,8 +13,8 @@
         {
             if (OnCreateGathering != null)
             {
-                object[] params = message.GetParams();
-                OnCreateGathering((bool) params[0]);
+                object[] msgParams = message.GetParams();
+                OnCreateGathering((bool)msgParams[0]);
             }
         }
 

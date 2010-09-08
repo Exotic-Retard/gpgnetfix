@@ -14,8 +14,8 @@
         {
             if (OnAdhocSQL != null)
             {
-                object[] params = message.GetParams();
-                OnAdhocSQL((List<string>) params[0], (List<List<object>>) params[1]);
+                object[] msgParams = message.GetParams();
+                OnAdhocSQL((List<string>)msgParams[0], (List<List<object>>)msgParams[1]);
             }
         }
 
