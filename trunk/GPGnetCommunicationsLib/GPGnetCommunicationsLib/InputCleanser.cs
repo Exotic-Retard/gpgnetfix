@@ -23,7 +23,7 @@
             switch (matchString)
             {
                 case null:
-                case string.Empty:
+                case "":
                     return string.Empty;
 
                 default:
