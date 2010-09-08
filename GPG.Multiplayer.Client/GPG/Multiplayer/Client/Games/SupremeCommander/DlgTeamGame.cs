@@ -226,7 +226,7 @@
             {
                 TeamGame.TeamGameMember member = new TeamGame.TeamGameMember(this.Team, name, id);
                 Messaging.SendCustomCommand(this.Team.GetOtherMemberNames(), CustomCommands.TeamGameMember, new object[] { member.ToDataString() });
-                base.Invoke(delegate {
+                base.Invoke((VGen0)delegate {
                     this.UpdateMember(member);
                     this.MainForm.RefreshPMWindows();
                 });
@@ -2638,7 +2638,7 @@
             }
             ThreadPool.QueueUserWorkItem(delegate (object s) {
                 Thread.Sleep(0xbb8);
-                base.BeginInvoke(delegate {
+                base.BeginInvoke((VGen0)delegate {
                     this.Team.GetSelf().IsReady = false;
                     this.OnMemberChanged(this.Team.GetSelf());
                     this.UpdateMember(this.Team.GetSelf());

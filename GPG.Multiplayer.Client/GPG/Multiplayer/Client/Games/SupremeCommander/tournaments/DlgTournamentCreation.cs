@@ -878,20 +878,20 @@
                     if (method == null)
                     {
                         method = delegate (object p) {
-                            DataRecord record = p as DataRecord;
-                            this.tbName.Text = record["name"];
-                            this.tbDescription.Text = record["description"];
-                            this.tbLegal.Text = record["legal"];
-                            this.cbType.Text = record["kind"];
-                            this.tbWebURL.Text = record["url"];
-                            this.cbDate.EditValue = DlgTournamentRegistration.MySQLToDateTime(record["tournament_date"]);
-                            this.cbNumberOfRounds.Text = record["round_count"];
-                            this.cbRoundLength.Text = record["round_length"] + " minutes";
-                            this.cbFaction.Text = record["faction"];
-                            this.cbMap.Text = record["map"];
-                            if ((record["custom_filter_query_name"].Trim() != "") && (record["custom_filter_query_name"].ToUpper() != "(NULL)"))
+                            DataRecord currecord = p as DataRecord;
+                            this.tbName.Text = currecord["name"];
+                            this.tbDescription.Text = currecord["description"];
+                            this.tbLegal.Text = currecord["legal"];
+                            this.cbType.Text = currecord["kind"];
+                            this.tbWebURL.Text = currecord["url"];
+                            this.cbDate.EditValue = DlgTournamentRegistration.MySQLToDateTime(currecord["tournament_date"]);
+                            this.cbNumberOfRounds.Text = currecord["round_count"];
+                            this.cbRoundLength.Text = currecord["round_length"] + " minutes";
+                            this.cbFaction.Text = currecord["faction"];
+                            this.cbMap.Text = currecord["map"];
+                            if ((record["custom_filter_query_name"].Trim() != "") && (currecord["custom_filter_query_name"].ToUpper() != "(NULL)"))
                             {
-                                this.cbRestriction.Text = record["custom_filter_query_name"];
+                                this.cbRestriction.Text = currecord["custom_filter_query_name"];
                             }
                             else
                             {
@@ -983,7 +983,7 @@
                             }
                             else
                             {
-                                base.BeginInvoke(delegate {
+                                base.BeginInvoke((VGen0)delegate {
                                     DlgMessage.ShowDialog(Loc.Get("<LOC>An error occured when trying to save the tournament."));
                                 });
                             }
@@ -1016,7 +1016,7 @@
                             }
                             catch
                             {
-                                base.BeginInvoke(delegate {
+                                base.BeginInvoke((VGen0)delegate {
                                     DlgMessage.ShowDialog(Loc.Get("<LOC>An error occured when trying to save the tournament."));
                                 });
                             }

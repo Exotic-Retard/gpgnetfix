@@ -14,9 +14,6 @@
         {
             this.mLocationType = type;
             this.mValue = value;
-            switch (this.LocationType)
-            {
-            }
         }
 
         public string Description

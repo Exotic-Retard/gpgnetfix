@@ -251,7 +251,7 @@
                 TreeNode[] nodes = this.NodeMyUploads.Nodes.Find(this.TreeNodeName(e.Content), true);
                 if (!base.Disposing && !base.IsDisposed)
                 {
-                    base.BeginInvoke(delegate {
+                    base.BeginInvoke((VGen0)delegate {
                         Predicate<IAdditionalContent> match = null;
                         Predicate<IAdditionalContent> predicate2 = null;
                         string localFilePath = e.Content.LocalFilePath;
@@ -511,7 +511,7 @@
                     }
                     if (!base.Disposing && !base.IsDisposed)
                     {
-                        base.Invoke(delegate {
+                        base.Invoke((VGen0)delegate {
                             if (newRoot)
                             {
                                 category.Nodes.Add(root);
@@ -3457,7 +3457,7 @@
                 this.NodeAvailableUploads.Tag = Loc.Get("<LOC>Available Uploads displays files that the vault has found on your computer that are candidates to be submitted as content. To change the location(s) that the vault searches go to the uploads page of the vault options located on the toolstrip below.");
                 if (!base.Disposing && !base.IsDisposed)
                 {
-                    base.Invoke(delegate {
+                    base.Invoke((VGen0)delegate {
                         this.treeViewUpload.Nodes.Add(this.NodeUploadSearch);
                         this.treeViewUpload.Nodes.Add(this.NodeMyUploads);
                         this.treeViewUpload.Nodes.Add(this.NodeAvailableUploads);
@@ -3700,7 +3700,7 @@
                                     {
                                         return;
                                     }
-                                    base.Invoke(delegate {
+                                    base.Invoke((VGen0)delegate {
                                         siblings.Add(node);
                                         if (node.Parent != null)
                                         {
@@ -3719,7 +3719,7 @@
                             {
                                 return;
                             }
-                            base.Invoke(delegate {
+                            base.Invoke((VGen0)delegate {
                                 lastNode.Nodes.Add(listNode);
                                 if (listNode.Parent != null)
                                 {
@@ -3825,7 +3825,7 @@
                             {
                                 return;
                             }
-                            base.Invoke(delegate {
+                            base.Invoke((VGen0)delegate {
                                 this.treeViewMyContent.Nodes.Add(contentRoot);
                                 if (!contentRoot.IsExpanded)
                                 {
@@ -3964,7 +3964,7 @@
                             {
                                 if (!this.UploadMonitors.ContainsKey(str))
                                 {
-                                    watcher = new FileSystemWatcher(str);
+                                    FileSystemWatcher watcher = new FileSystemWatcher(str);
                                     watcher.BeginInit();
                                     watcher.EnableRaisingEvents = true;
                                     watcher.IncludeSubdirectories = true;
@@ -4007,7 +4007,7 @@
                                         {
                                             return;
                                         }
-                                        base.Invoke(delegate (object s) {
+                                        base.Invoke((VGen1)delegate (object s) {
                                             (s as TreeNode).Remove();
                                         }, new object[] { node });
                                         continue;
@@ -4031,7 +4031,7 @@
                                 }
                                 if ((!this.CancelUploadSearch && (result.IsCompleted || result.AsyncWaitHandle.WaitOne(0x7d0, true))) && ((!this.CancelUploadSearch && !base.Disposing) && !base.IsDisposed))
                                 {
-                                    base.BeginInvoke(delegate {
+                                    base.BeginInvoke((VGen0)delegate {
                                         this.PreviousUploadStatus = Loc.Get(string.Format(Loc.Get("<LOC>Found {0} content files."), total));
                                         if (!AdditionalContent.UploadingContent)
                                         {
@@ -4124,7 +4124,6 @@
             {
                 if (((node != null) && (node.Tag != null)) && (node.Tag is IAdditionalContent))
                 {
-                    IAdditionalContent content;
                     VGen0 method = null;
                     IAdditionalContent content = node.Tag as IAdditionalContent;
                     if ((((content.LocalFilePath == file) || (content.LocalFilePath == Path.GetDirectoryName(file))) && content.ContentType.IsValidUploadFile(file)) && content.ContentType.CreateInstance().FromLocalFile(file, out content))
@@ -4624,7 +4623,7 @@
                                     {
                                         return false;
                                     }
-                                    base.Invoke(delegate {
+                                    base.Invoke((VGen0)delegate {
                                         nodes[0].ImageIndex = type.ImageIndex;
                                         nodes[0].SelectedImageIndex = type.ImageIndex;
                                         foreach (TreeNode node in nodes[0].Nodes)

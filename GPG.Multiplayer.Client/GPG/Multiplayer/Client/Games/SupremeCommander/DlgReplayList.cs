@@ -3,6 +3,7 @@
     using DevExpress.Utils;
     using DevExpress.XtraGrid.Columns;
     using DevExpress.XtraGrid.Views.Grid;
+    using DevExpress.XtraGrid.Views.Base;
     using GPG;
     using GPG.DataAccess;
     using GPG.Logging;
@@ -98,7 +99,7 @@
                         {
                             ErrorLog.WriteLine(exception);
                         }
-                        base.BeginInvoke(delegate {
+                        base.BeginInvoke((VGen0)delegate {
                             base.Close();
                         });
                     };

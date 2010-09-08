@@ -25,9 +25,9 @@
             set
             {
                 this.mDuration = value;
-                if (this.mDurationChanged != null)
+                if (this.DurationChanged != null)
                 {
-                    this.mDurationChanged(this, new PropertyChangedEventArgs("Duration"));
+                    this.DurationChanged(this, new PropertyChangedEventArgs("Duration"));
                 }
             }
         }
@@ -50,9 +50,9 @@
                     throw new ArgumentException("The fade time must be <= 0.5)");
                 }
                 this.mFadeTimePercent = value;
-                if (this.mFadeTimePercentChanged != null)
+                if (this.FadeTimePercentChanged != null)
                 {
-                    this.mFadeTimePercentChanged(this, new PropertyChangedEventArgs("FadeTimePercent"));
+                    this.FadeTimePercentChanged(this, new PropertyChangedEventArgs("FadeTimePercent"));
                 }
             }
         }

@@ -1382,7 +1382,7 @@
                 }
                 else
                 {
-                    this.Invoke(delegate {
+                    this.Invoke((VGen0)delegate {
                         DlgMessage.ShowDialog(Loc.Get("<LOC>This is not a valid player name."));
                     });
                 }
@@ -1391,7 +1391,6 @@
 
         private void LaunchGames()
         {
-            Exception exception;
             WaitCallback callback2 = null;
             try
             {
@@ -1402,8 +1401,7 @@
             }
             catch (Exception exception1)
             {
-                exception = exception1;
-                ErrorLog.WriteLine(exception);
+                ErrorLog.WriteLine(exception1);
             }
             WaitCallback callBack = null;
             foreach (GPGDragItem item in this.dragPlayers.Items)
@@ -1443,14 +1441,14 @@
                                     {
                                         string recipient = (o as object[])[0].ToString();
                                         string str2 = (o as object[])[1].ToString();
-                                        int num = Convert.ToInt32((o as object[])[2]);
+                                        int curnum = Convert.ToInt32((o as object[])[2]);
                                         if (ConfigSettings.GetBool("Get Tourn Map Old Way", false))
                                         {
-                                            Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, num.ToString(), this.mDetails["faction"], this.mDetails["map"] });
+                                            Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, curnum.ToString(), this.mDetails["faction"], this.mDetails["map"] });
                                         }
                                         else
                                         {
-                                            Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, num.ToString(), this.mDetails["faction"], this.cbMap.SelectedItem.ToString() });
+                                            Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, curnum.ToString(), this.mDetails["faction"], this.cbMap.SelectedItem.ToString() });
                                         }
                                     }
                                     catch (Exception exception)
@@ -1466,8 +1464,7 @@
                 }
                 catch (Exception exception2)
                 {
-                    exception = exception2;
-                    ErrorLog.WriteLine(exception);
+                    ErrorLog.WriteLine(exception2);
                 }
             }
         }
@@ -1509,14 +1506,14 @@
                             callback3 = delegate (object o) {
                                 string recipient = (o as object[])[0].ToString();
                                 string str2 = (o as object[])[1].ToString();
-                                int num = Convert.ToInt32((o as object[])[2]);
+                                int curnum = Convert.ToInt32((o as object[])[2]);
                                 if (ConfigSettings.GetBool("Get Tourn Map Old Way", false))
                                 {
-                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, num.ToString(), this.mDetails["faction"], this.mDetails["map"] });
+                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, curnum.ToString(), this.mDetails["faction"], this.mDetails["map"] });
                                 }
                                 else
                                 {
-                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, num.ToString(), this.mDetails["faction"], this.cbMap.SelectedItem.ToString() });
+                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, curnum.ToString(), this.mDetails["faction"], this.cbMap.SelectedItem.ToString() });
                                 }
                             };
                         }
@@ -1533,14 +1530,14 @@
                             callback4 = delegate (object o) {
                                 string recipient = (o as object[])[0].ToString();
                                 string str2 = (o as object[])[1].ToString();
-                                int num = Convert.ToInt32((o as object[])[2]);
+                                int curnum = Convert.ToInt32((o as object[])[2]);
                                 if (ConfigSettings.GetBool("Get Tourn Map Old Way", false))
                                 {
-                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, num.ToString(), this.mDetails["faction"], this.mDetails["map"] });
+                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, curnum.ToString(), this.mDetails["faction"], this.mDetails["map"] });
                                 }
                                 else
                                 {
-                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, num.ToString(), this.mDetails["faction"], this.cbMap.SelectedItem.ToString() });
+                                    Messaging.SendCustomCommand(recipient, CustomCommands.TournamentLaunchGame, new object[] { str2, this.mTournamentID, curnum.ToString(), this.mDetails["faction"], this.cbMap.SelectedItem.ToString() });
                                 }
                             };
                         }
@@ -1566,7 +1563,7 @@
                     VGen1 gen = null;
                     DataList queryData = DataAccess.GetQueryData("Tournament Details", new object[] { this.mTournamentID });
                     this.mDetails = queryData[0];
-                    using (IEnumerator enumerator = this.cbMap.Items.GetEnumerator())
+                    using (IEnumerator<object> enumerator = (IEnumerator<object>)this.cbMap.Items.GetEnumerator())
                     {
                         VGen0 gen2 = null;
                         while (enumerator.MoveNext())
@@ -1615,8 +1612,8 @@
                             if (gen3 == null)
                             {
                                 gen3 = delegate (object oitem) {
-                                    GPGDragItem item = oitem as GPGDragItem;
-                                    this.dragPlayers.Items.Add(item);
+                                    GPGDragItem curitem = oitem as GPGDragItem;
+                                    this.dragPlayers.Items.Add(curitem);
                                 };
                             }
                             gen = gen3;
@@ -1687,7 +1684,7 @@
                     exception = exception2;
                     ErrorLog.WriteLine(exception);
                 }
-                this.Invoke(delegate {
+                this.Invoke((VGen0)delegate {
                     this.Text = Loc.Get("<LOC>Tournament Manager") + ": " + this.mDetails["name"];
                     this.dragPlayers.Invalidate();
                     this.SetButtonState();
@@ -2090,7 +2087,7 @@
 
         public void UpdateStats(int principalid, string status)
         {
-            base.Invoke(delegate {
+            base.Invoke((VGen0)delegate {
                 DataRecord record;
                 if (ConfigSettings.GetBool("IgnoreTourneyNoReports", true))
                 {

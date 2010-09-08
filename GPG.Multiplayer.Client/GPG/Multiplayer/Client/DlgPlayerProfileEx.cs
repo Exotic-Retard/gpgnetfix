@@ -182,7 +182,7 @@
                 {
                     PlayerDisplayAwards awards = new PlayerDisplayAwards(player);
                     Image avatar = awards.Avatar.Image;
-                    this.Invoke(delegate {
+                    this.Invoke((VGen0)delegate {
                         this.gpgPictureBoxAvatar.Image = avatar;
                         if (((player.Description == null) || (player.Description == "")) || (player.Description == "(null)"))
                         {
@@ -1197,7 +1197,7 @@
                     {
                         img = AwardsImages.award_empty;
                     }
-                    base.Invoke(delegate {
+                    base.Invoke((VGen0)delegate {
                         this.gpgPictureBoxAward1.Image = img;
                         if (awards.Award1Specified)
                         {
@@ -1219,7 +1219,7 @@
                             this.gpgPictureBoxAward1.Click -= new EventHandler(this.DisplayAwardClick);
                         }
                     });
-                    Image img = null;
+                    img = null;
                     if (awards.Award2Specified)
                     {
                         img = awards.Award2.SmallImage;
@@ -1228,7 +1228,7 @@
                     {
                         img = AwardsImages.award_empty;
                     }
-                    base.Invoke(delegate {
+                    base.Invoke((VGen0)delegate {
                         this.gpgPictureBoxAward2.Image = img;
                         if (awards.Award2Specified)
                         {
@@ -1250,7 +1250,7 @@
                             this.gpgPictureBoxAward2.Click -= new EventHandler(this.DisplayAwardClick);
                         }
                     });
-                    Image img = null;
+                    img = null;
                     if (awards.Award3Specified)
                     {
                         img = awards.Award3.SmallImage;
@@ -1259,7 +1259,7 @@
                     {
                         img = AwardsImages.award_empty;
                     }
-                    base.Invoke(delegate {
+                    base.Invoke((VGen0)delegate {
                         this.gpgPictureBoxAward3.Image = img;
                         if (awards.Award3Specified)
                         {
@@ -1337,7 +1337,7 @@
                                         {
                                             return;
                                         }
-                                        base.Invoke(delegate {
+                                        base.Invoke((VGen0)delegate {
                                             PictureBox box = new PictureBox {
                                                 Size = new Size(0x30, 0x30),
                                                 SizeMode = PictureBoxSizeMode.AutoSize,
@@ -1347,7 +1347,7 @@
                                             this.gpgPanelAwards.Controls.Add(box);
                                             box.MouseEnter += delegate (object s1, EventArgs e1) {
                                                 int awardDegree;
-                                                PictureBox box = s1 as PictureBox;
+                                                PictureBox curbox = s1 as PictureBox;
                                                 KeyValuePair<AwardSet, Award> tag = (KeyValuePair<AwardSet, Award>) (s1 as Control).Tag;
                                                 if (tag.Value == null)
                                                 {
@@ -1362,7 +1362,7 @@
                                                     DlgAwardSetDetails.Singleton = new DlgAwardSetDetails();
                                                 }
                                                 DlgAwardSetDetails.Singleton.BindToAward(tag.Key, awardDegree);
-                                                Point point = this.gpgPanelAwards.PointToScreen(box.Location);
+                                                Point point = this.gpgPanelAwards.PointToScreen(curbox.Location);
                                                 point.Offset(0, -(DlgAwardSetDetails.Singleton.Height + 4));
                                                 DlgAwardSetDetails.Singleton.Location = point;
                                                 DlgAwardSetDetails.Singleton.FadeIn();

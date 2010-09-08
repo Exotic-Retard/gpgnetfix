@@ -57,14 +57,14 @@
             this.Progress = 0;
             this.SubmittingChunk = false;
             this.UploadFile = null;
-            this.mProgressChanged = null;
-            this.mFinished = null;
-            this.mStatusChanged = null;
+            this.ProgressChanged = null;
+            this.Finished = null;
+            this.StatusChanged = null;
             this.mIsDisposed = false;
             this.mLastStatus = "<LOC>Idle";
             this.mIsProgressFinished = false;
             this.mIsOperationFinished = false;
-            this.mOperationFinished = null;
+            this.OperationFinished = null;
             this.mContent = content;
             this.mPosition = position;
             ActiveOperations.Insert(0, this);
@@ -123,7 +123,7 @@
         public void SetStatus(string status, int timeout, params object[] args)
         {
             VGen0 method = null;
-            if (this.mStatusChanged != null)
+            if (this.StatusChanged != null)
             {
                 if ((args != null) && (args.Length > 0))
                 {
@@ -135,14 +135,14 @@
                     if (method == null)
                     {
                         method = delegate {
-                            this.mStatusChanged(this, status);
+                            this.StatusChanged(this, status);
                         };
                     }
                     Program.MainForm.BeginInvoke(method);
                 }
                 else if (!(Program.MainForm.Disposing || Program.MainForm.IsDisposed))
                 {
-                    this.mStatusChanged(this, status);
+                    this.StatusChanged(this, status);
                 }
             }
         }
@@ -162,9 +162,9 @@
             this.SubmittingChunk = false;
             Program.MainForm.FormClosing -= new FormClosingEventHandler(this.MainForm_FormClosing);
             this.mIsOperationFinished = true;
-            if (this.mOperationFinished != null)
+            if (this.OperationFinished != null)
             {
-                this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
+                this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
             }
         }
 
@@ -193,9 +193,9 @@
                 if ((this.UploadFile == null) || !File.Exists(this.UploadFile))
                 {
                     this.SetStatus("<LOC>Upload operation failed: unable to locate upload file at location {0}, ensure it exists and is not in use.", new object[] { this.UploadFile });
-                    if (this.mOperationFinished != null)
+                    if (this.OperationFinished != null)
                     {
-                        this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
+                        this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
                     }
                 }
                 stream = File.OpenRead(this.UploadFile);
@@ -306,9 +306,9 @@
                                 this.SetStatus("<LOC>Upload complete.", new object[0]);
                                 Program.MainForm.FormClosing -= new FormClosingEventHandler(this.MainForm_FormClosing);
                                 this.mIsOperationFinished = true;
-                                if (this.mOperationFinished != null)
+                                if (this.OperationFinished != null)
                                 {
-                                    this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, true, new object[0]));
+                                    this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, true, new object[0]));
                                 }
                             }
                         }
@@ -354,18 +354,18 @@
                     if (userState)
                     {
                         this.mIsProgressFinished = true;
-                        if (this.mFinished != null)
+                        if (this.Finished != null)
                         {
-                            this.mFinished(this, EventArgs.Empty);
+                            this.Finished(this, EventArgs.Empty);
                         }
                         this.OnUploadComplete();
                     }
                     else
                     {
                         this.Progress = (int) ((((float) this.Position) / ((float) this.FileLength)) * 100f);
-                        if (this.mProgressChanged != null)
+                        if (this.ProgressChanged != null)
                         {
-                            this.mProgressChanged(this, this.Progress);
+                            this.ProgressChanged(this, this.Progress);
                         }
                         this.SubmitNextChunk();
                     }

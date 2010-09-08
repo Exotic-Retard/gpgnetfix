@@ -50,7 +50,6 @@
 
         public void ShowMessage()
         {
-            Exception exception;
             VGen0 gen = null;
             VGen0 gen2 = null;
             try
@@ -84,17 +83,15 @@
                     }
                     catch (Exception exception1)
                     {
-                        exception = exception1;
-                        ErrorLog.WriteLine(exception);
+                        ErrorLog.WriteLine(exception1);
                         return;
                     }
                 }
                 if (gen2 == null)
                 {
                     gen2 = delegate {
-                        Exception exception;
                         VGen1 method = null;
-                        VGen0 gen2 = null;
+                        VGen0 curgen2 = null;
                         try
                         {
                             int tickCount = Environment.TickCount;
@@ -115,14 +112,14 @@
                                                 try
                                                 {
                                                     double num = 1.0;
-                                                    double num2 = (double) objopacity;
-                                                    if (num2 < Program.Settings.PopupPreferences.FadeTimePercent)
+                                                    double curnum2 = (double) objopacity;
+                                                    if (curnum2 < Program.Settings.PopupPreferences.FadeTimePercent)
                                                     {
-                                                        num = num2 / Program.Settings.PopupPreferences.FadeTimePercent;
+                                                        num = curnum2 / Program.Settings.PopupPreferences.FadeTimePercent;
                                                     }
-                                                    else if (num2 > (1.0 - Program.Settings.PopupPreferences.FadeTimePercent))
+                                                    else if (curnum2 > (1.0 - Program.Settings.PopupPreferences.FadeTimePercent))
                                                     {
-                                                        num = (1.0 - num2) / Program.Settings.PopupPreferences.FadeTimePercent;
+                                                        num = (1.0 - curnum2) / Program.Settings.PopupPreferences.FadeTimePercent;
                                                     }
                                                     base.Opacity = num;
                                                 }
@@ -136,8 +133,7 @@
                                     }
                                     catch (Exception exception1)
                                     {
-                                        exception = exception1;
-                                        ErrorLog.WriteLine(exception);
+                                        ErrorLog.WriteLine(exception1);
                                         return;
                                     }
                                 }
@@ -145,8 +141,7 @@
                         }
                         catch (Exception exception2)
                         {
-                            exception = exception2;
-                            ErrorLog.WriteLine(exception);
+                            ErrorLog.WriteLine(exception2);
                         }
                         finally
                         {
@@ -154,9 +149,10 @@
                             {
                                 if (!base.Disposing && !base.IsDisposed)
                                 {
-                                    if (gen2 == null)
+                                    if (curgen2 == null)
                                     {
-                                        gen2 = delegate {
+                                        curgen2 = delegate
+                                        {
                                             try
                                             {
                                                 base.Close();
@@ -167,13 +163,12 @@
                                             }
                                         };
                                     }
-                                    base.Invoke(gen2);
+                                    base.Invoke(curgen2);
                                 }
                             }
                             catch (Exception exception3)
                             {
-                                exception = exception3;
-                                ErrorLog.WriteLine(exception);
+                                ErrorLog.WriteLine(exception3);
                             }
                         }
                     };
@@ -184,8 +179,7 @@
             }
             catch (Exception exception3)
             {
-                exception = exception3;
-                ErrorLog.WriteLine(exception);
+                ErrorLog.WriteLine(exception3);
                 try
                 {
                     base.Close();

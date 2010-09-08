@@ -648,7 +648,7 @@
                                 {
                                     if (new DlgTermsOfService(this, queryData[0]["url"]).ShowDialog() == DialogResult.OK)
                                     {
-                                        ThreadQueue.Quazal.Enqueue(delegate {
+                                        ThreadQueue.Quazal.Enqueue((VGen0)delegate {
                                             DataAccess.ExecuteQuery("SetTOSPrompt", new object[] { 0 });
                                         }, new object[0]);
                                         this.ContinueLoading = true;
@@ -887,7 +887,7 @@
 
         private void AbortChallenge(string senderName, string custommessage)
         {
-            base.Invoke(delegate {
+            base.Invoke((VGen0)delegate {
                 this.mCanDirectChallenge = true;
                 if (custommessage == "Standard")
                 {
@@ -1415,7 +1415,7 @@
         private void BeginLogout()
         {
             ThreadQueue.Quazal.Enqueue(typeof(User), "Logout", this, "EndLogout", new object[0]);
-            Thread thread = new Thread(delegate {
+            Thread thread = new Thread((ThreadStart)delegate {
                 Thread.Sleep(0x2710);
                 ErrorLog.WriteLine("Forced to kill process to quit.", new object[0]);
                 Process.GetCurrentProcess().Kill();
@@ -2720,7 +2720,7 @@
         private void ClearParticipants()
         {
             Chatroom.GatheringParticipants.Clear();
-            this.ChatroomQueue.Enqueue(delegate {
+            this.ChatroomQueue.Enqueue((VGen0)delegate {
                 this.pnlUserListChat.ClearData();
             }, new object[0]);
         }
@@ -3336,7 +3336,6 @@
         private void DownloadPatch(object url)
         {
             ThreadQueue.QueueUserWorkItem(delegate (object p) {
-                Exception exception;
                 VGen1 method = null;
                 bool isCurrent = false;
                 string text = "";
@@ -3386,9 +3385,8 @@
                 }
                 catch (Exception exception1)
                 {
-                    exception = exception1;
                     GPG.Logging.EventLog.WriteLine("GPGnet patching failed.", new object[0]);
-                    ErrorLog.WriteLine(exception);
+                    ErrorLog.WriteLine(exception1);
                 }
                 if (!isCurrent)
                 {
@@ -3431,8 +3429,7 @@
                         }
                         catch (Exception exception2)
                         {
-                            exception = exception2;
-                            ErrorLog.WriteLine(exception);
+                            ErrorLog.WriteLine(exception2);
                             isCurrent = true;
                         }
                     }
@@ -3801,10 +3798,10 @@
 
         private void FrmMain_Friends()
         {
-            ThreadQueue.Quazal.Enqueue(delegate {
+            ThreadQueue.Quazal.Enqueue((OGen0)delegate {
                 this.FriendRequests = DataAccess.GetObjects<FriendRequest>("GetFriendRequests", new object[0]);
                 return null;
-            }, delegate (object o) {
+            }, (VGen1)delegate (object o) {
                 this.RefreshFriendInvites();
             }, new object[0]);
             ThreadQueue.QueueUserWorkItem(delegate (object none) {
@@ -3824,7 +3821,7 @@
                         {
                             flag = true;
                             this.FriendRequests.RemoveByIndex("name", user.Name);
-                            ThreadQueue.Quazal.Enqueue(delegate (object o) {
+                            ThreadQueue.Quazal.Enqueue((VGen1)delegate (object o) {
                                 DataAccess.ExecuteQuery("RemoveFriendRequest", new object[] { o });
                             }, new object[] { user.ID });
                         }
@@ -3841,7 +3838,7 @@
                         this.RefreshFriendInvites();
                     }
                 });
-                base.Invoke(delegate {
+                base.Invoke((VGen0)delegate {
                     VGen0 method = null;
                     VGen0 gen2 = null;
                     if (friends.Count > 0)
@@ -4008,7 +4005,7 @@
                                 ThreadQueue.Quazal.Enqueue(typeof(DataAccess), "GetQueryData", this, "OnRefreshGatherings", new object[] { "GetPersistentRooms2", new object[] { GameInformation.SelectedGame.GameID } });
                             }
                             string mainChatroom = this.MainChatroom;
-                            base.BeginInvoke(delegate (object ochatroom) {
+                            base.BeginInvoke((VGen1)delegate (object ochatroom) {
                                 this.JoinChat(ochatroom.ToString());
                                 this.textBoxMsg.Select();
                             }, new object[] { mainChatroom });
@@ -7785,7 +7782,7 @@
                         ToolStripMenuItem current;
                         string str2 = strArray[i];
                         bool flag = false;
-                        using (IEnumerator enumerator2 = items.GetEnumerator())
+                        using (IEnumerator<object> enumerator2 = (IEnumerator<object>)items.GetEnumerator())
                         {
                             while (enumerator2.MoveNext())
                             {
@@ -8134,7 +8131,7 @@
                     else if (this.CanJoinChannel(chatroom))
                     {
                         string newchat = chatroom;
-                        this.Invoke(delegate {
+                        this.Invoke((VGen0)delegate {
                             this.skinGatheringDisplayChat.Enabled = false;
                             if ((chatroom == null) || (chatroom.Trim() == ""))
                             {
@@ -8217,7 +8214,7 @@
                                     {
                                         persistentRooms = new QuazalQuery("GetPersistentRooms2", new object[] { GameInformation.SelectedGame.GameID }).GetObjects<Chatroom>();
                                     }
-                                    base.Invoke(delegate {
+                                    base.Invoke((VGen0)delegate {
                                         this.GatheringDisplaycontrol.RefreshGatherings(persistentRooms, true);
                                     });
                                 }
@@ -8855,7 +8852,7 @@
                         {
                             bool doupdate = false;
                             string playername = record["name"];
-                            base.Invoke(delegate {
+                            base.Invoke((VGen0)delegate {
                                 DlgYesNo no = new DlgYesNo(this, Loc.Get("<LOC>Consolidate Account"), Loc.Get("<LOC>Would you like to consolidate the CD key attached to this account to {0}?  Ratings and other information from this account will not transfer with your key, and this account will still exist.").Replace("{0}", playername));
                                 if (no.ShowDialog() == DialogResult.Yes)
                                 {
@@ -8866,7 +8863,7 @@
                             if (doupdate)
                             {
                                 DataAccess.ExecuteQuery("Consolidate CDKey", new object[] { playername });
-                                base.Invoke(delegate {
+                                base.Invoke((VGen0)delegate {
                                     GameInformation.LoadGamesFromDB();
                                     GameInformation.SelectedGame = GameInformation.GPGNetChat;
                                 });
@@ -9426,7 +9423,7 @@
                             {
                                 persistentRooms = new QuazalQuery("GetPersistentRooms2", new object[] { GameInformation.SelectedGame.GameID }).GetObjects<Chatroom>();
                             }
-                            base.Invoke(delegate {
+                            base.Invoke((VGen0)delegate {
                                 this.GatheringDisplaycontrol.RefreshGatherings(persistentRooms, true);
                             });
                         };
@@ -9712,7 +9709,7 @@
                                 MappedObjectList<User> data = DataAccess.GetObjects<User>("GatheringPlayers", new object[] { Chatroom.CurrentName });
                                 this.tabChatroom.Text = Chatroom.CurrentName;
                                 this.ChatroomQueue.Suspend();
-                                this.ChatroomQueue.Enqueue(delegate {
+                                this.ChatroomQueue.Enqueue((VGen0)delegate {
                                     this.pnlUserListChat.AddUsers(data);
                                 }, new object[0]);
                                 this.ChatroomQueue.Resume();
@@ -9883,7 +9880,7 @@
                                         {
                                             persistentRooms = new QuazalQuery("GetPersistentRooms2", new object[] { GameInformation.SelectedGame.GameID }).GetObjects<Chatroom>();
                                         }
-                                        base.Invoke(delegate {
+                                        base.Invoke((VGen0)delegate {
                                             this.GatheringDisplaycontrol.RefreshGatherings(persistentRooms, true);
                                         });
                                     }
@@ -11029,7 +11026,7 @@
                         this.mChatLines = new BindingList<ChatLine>();
                         this.gpgChatGrid.DataSource = this.mChatLines;
                     }
-                    ThreadQueue.Quazal.Enqueue(delegate {
+                    ThreadQueue.Quazal.Enqueue((VGen0)delegate {
                         DataList queryData = DataAccess.GetQueryData("GetIgnoredPlayers", new object[0]);
                         foreach (DataRecord record in queryData)
                         {
@@ -11381,7 +11378,7 @@
                     if (handler19 == null)
                     {
                         handler19 = delegate (object s, EventArgs e) {
-                            this.ChatroomQueue.Enqueue(delegate {
+                            this.ChatroomQueue.Enqueue((VGen0)delegate {
                             }, new object[0]);
                         };
                     }
@@ -13316,7 +13313,7 @@
                 if (this.FriendRequests.ContainsIndex("name", user.Name))
                 {
                     this.FriendRequests.RemoveByIndex("name", user.Name);
-                    ThreadQueue.Quazal.Enqueue(delegate (object o) {
+                    ThreadQueue.Quazal.Enqueue((VGen1)delegate (object o) {
                         DataAccess.ExecuteQuery("RemoveFriendRequest", new object[] { o });
                     }, new object[] { user.ID });
                 }
@@ -13897,13 +13894,14 @@
                     this.HistoryIndex = -1;
                     if (this.textBoxMsg.Text.StartsWith("/"))
                     {
+                        UserAction action;
                         string[] sourceArray = this.textBoxMsg.Text.TrimEnd(new char[] { ' ' }).Split(new char[] { ' ' });
                         this.textBoxMsg.Text = "";
                         if (sourceArray[0] == "/?")
                         {
-                            foreach (UserAction action in UserAction.AllActions)
+                            foreach (UserAction curaction in UserAction.AllActions)
                             {
-                                this.SystemMessage(action.ToString(), new object[0]);
+                                this.SystemMessage(curaction.ToString(), new object[0]);
                             }
                         }
                         else if (!UserAction.TryGetByPartialName(sourceArray[0], out action))
@@ -14008,13 +14006,14 @@
                     this.HistoryIndex = -1;
                     if (msg.StartsWith("/"))
                     {
+                        UserAction action;
                         string[] sourceArray = msg.TrimEnd(new char[] { ' ' }).Split(new char[] { ' ' });
                         msg = "";
                         if (sourceArray[0] == "/?")
                         {
-                            foreach (UserAction action in UserAction.AllActions)
+                            foreach (UserAction curaction in UserAction.AllActions)
                             {
-                                this.SystemMessage(action.ToString(), new object[0]);
+                                this.SystemMessage(curaction.ToString(), new object[0]);
                             }
                         }
                         else if (!UserAction.TryGetByPartialName(sourceArray[0], out action))
@@ -14292,7 +14291,7 @@
                             if (method == null)
                             {
                                 method = delegate {
-                                    FrmSimpleMessage.DoNotification(Loc.Get("<LOC>Friends"), string.Format(Loc.Get("<LOC>{0} is online."), playerName), delegate (object sender) {
+                                    FrmSimpleMessage.DoNotification(Loc.Get("<LOC>Friends"), string.Format(Loc.Get("<LOC>{0} is online."), playerName), (VGen1)delegate (object sender) {
                                         this.OnSendWhisper((string) sender, null);
                                     }, new object[] { playerName });
                                 };
@@ -14322,7 +14321,7 @@
                             if (gen3 == null)
                             {
                                 gen3 = delegate {
-                                    FrmSimpleMessage.DoNotification(Loc.Get("<LOC>Clan Login"), string.Format(Loc.Get("<LOC>{0} is online."), playerName), delegate (object sender) {
+                                    FrmSimpleMessage.DoNotification(Loc.Get("<LOC>Clan Login"), string.Format(Loc.Get("<LOC>{0} is online."), playerName), (VGen1)delegate (object sender) {
                                         this.OnSendWhisper((string) sender, null);
                                     }, new object[] { playerName });
                                 };
@@ -14368,7 +14367,7 @@
         {
             this.mIsSupComPatching = false;
             this.SupComPatchThread = null;
-            base.BeginInvoke(delegate {
+            base.BeginInvoke((VGen0)delegate {
                 this.btnFeedback.Enabled = true;
                 this.btnHostGame.Enabled = true;
                 this.btnJoinGame.Enabled = true;
@@ -14667,7 +14666,7 @@
                 UserStatus status2 = UserStatus.FindByDescription(status);
                 line.StatusIcon = status2.Icon;
             }
-            this.ChatroomQueue.Enqueue(delegate {
+            this.ChatroomQueue.Enqueue((VGen0)delegate {
                 this.pnlUserListChat.RefreshData();
             }, new object[0]);
         }
@@ -16429,9 +16428,7 @@
                     if (start2 == null)
                     {
                         start2 = delegate {
-                            Exception exception;
                             string str;
-                            Exception exception3;
                             EventHandler handler = null;
                             OGen0 gen3 = null;
                             OGen0 gen4 = null;
@@ -16487,8 +16484,7 @@
                                 }
                                 catch (Exception exception1)
                                 {
-                                    exception = exception1;
-                                    ErrorLog.WriteLine(exception);
+                                    ErrorLog.WriteLine(exception1);
                                 }
                             Label_0E15:
                                 while (flag2 || ((count < 0) || (num3 < count)))
@@ -16522,8 +16518,8 @@
                                         foreach (DataRecord record2 in list2)
                                         {
                                             IOException exception2;
-                                            VGen0 gen = null;
-                                            VGen0 gen2 = null;
+                                            VGen0 curgen = null;
+                                            VGen0 curgen2 = null;
                                             string uri;
                                             bool flag3 = false;
                                             bool flag4 = false;
@@ -16595,8 +16591,7 @@
                                                     }
                                                     catch (Exception exception5)
                                                     {
-                                                        exception = exception5;
-                                                        ErrorLog.WriteLine(exception);
+                                                        ErrorLog.WriteLine(exception5);
                                                         this.SetStatus("<LOC>Invalid patch file exists and cannot be deleted. Please restart program.", new object[0]);
                                                         Thread.Sleep(0xbb8);
                                                         return;
@@ -16610,13 +16605,14 @@
                                                 bool finished = false;
                                                 dlClient = new WebClient();
                                                 bool downloading = true;
-                                                if (gen == null)
+                                                if (curgen == null)
                                                 {
-                                                    gen = delegate {
+                                                    curgen = delegate
+                                                    {
                                                         dlg = new DlgDownloadProgress(uri, dlClient);
                                                     };
                                                 }
-                                                base.Invoke(gen);
+                                                base.Invoke(curgen);
                                                 dlClient.DownloadProgressChanged += delegate (object s, System.Net.DownloadProgressChangedEventArgs e) {
                                                     if ((e.ProgressPercentage == 100) && (e.BytesReceived == e.TotalBytesToReceive))
                                                     {
@@ -16646,14 +16642,15 @@
                                                     }
                                                 }
                                                 this.SetStatus("<LOC>Downloading {0} update...", new object[] { GameInformation.SelectedGame.GameDescription });
-                                                if (gen2 == null)
+                                                if (curgen2 == null)
                                                 {
-                                                    gen2 = delegate {
+                                                    curgen2 = delegate
+                                                    {
                                                         dlg.Show();
                                                         dlg.BringToFront();
                                                     };
                                                 }
-                                                base.BeginInvoke(gen2);
+                                                base.BeginInvoke(curgen2);
                                                 if (!flag)
                                                 {
                                                     this.ShowPatchMessage();
@@ -16689,7 +16686,7 @@
                                                 num3++;
                                                 continue;
                                             }
-                                            base.BeginInvoke(delegate {
+                                            base.BeginInvoke((VGen0)delegate {
                                                 if ((((dlg != null) && !dlg.Disposing) && !dlg.IsDisposed) && dlg.Visible)
                                                 {
                                                     try
@@ -16727,8 +16724,7 @@
                                                     }
                                                     catch (Exception exception7)
                                                     {
-                                                        exception3 = exception7;
-                                                        ErrorLog.WriteLine(exception3);
+                                                        ErrorLog.WriteLine(exception7);
                                                     }
                                                 }
                                                 Thread.Sleep(0x7d0);
@@ -16880,8 +16876,7 @@
                                     }
                                     catch (Exception exception11)
                                     {
-                                        exception = exception11;
-                                        ErrorLog.WriteLine(exception);
+                                        ErrorLog.WriteLine(exception11);
                                         num++;
                                         this.SetStatus("<LOC>Patch failed, retrying...", new object[0]);
                                         Thread.Sleep(0x7d0);
@@ -16894,8 +16889,7 @@
                             }
                             catch (Exception exception12)
                             {
-                                exception = exception12;
-                                ErrorLog.WriteLine(exception);
+                                ErrorLog.WriteLine(exception12);
                             }
                             finally
                             {
@@ -16913,8 +16907,7 @@
                                         }
                                         catch (Exception exception13)
                                         {
-                                            exception3 = exception13;
-                                            ErrorLog.WriteLine(exception3);
+                                            ErrorLog.WriteLine(exception13);
                                         }
                                     }
                                 }
@@ -16948,8 +16941,7 @@
                                     }
                                     catch (Exception exception14)
                                     {
-                                        exception = exception14;
-                                        ErrorLog.WriteLine(exception);
+                                        ErrorLog.WriteLine(exception14);
                                     }
                                 }
                                 this.mIsSupComPatching = false;

@@ -164,7 +164,7 @@
                                     }
                                     DataAccess.ExecuteQuery("Tournament Register", new object[] { this.mSelectedRecord["tournament_id"] });
                                     DataAccess.ExecuteQuery("Tournament Player Count", new object[] { this.mSelectedRecord["tournament_id"] });
-                                    base.Invoke(delegate {
+                                    base.Invoke((VGen0)delegate {
                                         this.mSelectedRecord.SetValue("registered", "1");
                                         int result = 0;
                                         if (int.TryParse(this.mSelectedRecord["player_count"], out result))
@@ -210,7 +210,7 @@
                             {
                                 DataAccess.ExecuteQuery("Tournament Unregister", new object[] { this.mSelectedRecord["tournament_id"] });
                                 DataAccess.ExecuteQuery("Tournament Player Count", new object[] { this.mSelectedRecord["tournament_id"] });
-                                base.Invoke(delegate {
+                                base.Invoke((VGen0)delegate {
                                     this.mSelectedRecord.SetValue("registered", "0");
                                     int result = 0;
                                     if (int.TryParse(this.mSelectedRecord["player_count"], out result))

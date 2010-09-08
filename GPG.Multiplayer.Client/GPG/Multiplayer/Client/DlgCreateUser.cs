@@ -130,7 +130,7 @@
                 string postal = this.gpgTextBoxPostal.Text;
                 object state = this.gpgDropDownListState.SelectedValue;
                 object country = this.gpgDropDownListCountries.SelectedValue;
-                ThreadQueue.Quazal.Enqueue(delegate {
+                ThreadQueue.Quazal.Enqueue((VGen0)delegate {
                     if (!DataAccess.ExecuteQuery("CreatePrincipalInfo", new object[] { firstname, lastname, addr1, addr2, postal, state, country, mailer }))
                     {
                         ErrorLog.WriteLine("Error creating principal_info for {0}", new object[] { User.Current });

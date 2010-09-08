@@ -803,7 +803,7 @@
                         MenuItem current;
                         string str2 = strArray[i];
                         bool flag = false;
-                        using (IEnumerator enumerator2 = menuItems.GetEnumerator())
+                        using (IEnumerator<object> enumerator2 = (IEnumerator<object>)menuItems.GetEnumerator())
                         {
                             while (enumerator2.MoveNext())
                             {
@@ -991,19 +991,19 @@
                     {
                         category.SetBounds(top);
                         top += category.Height + num;
-                        foreach (UserListRow row in category)
+                        foreach (UserListRow currow in category)
                         {
                             if (category.IsExpanded)
                             {
-                                row.SetBounds(top);
-                                row.PreviousRow = row2;
-                                row.NextRow = null;
+                                currow.SetBounds(top);
+                                currow.PreviousRow = row2;
+                                currow.NextRow = null;
                                 if (row2 != null)
                                 {
-                                    row2.NextRow = row;
+                                    row2.NextRow = currow;
                                 }
-                                row2 = row;
-                                top += row.Height + num;
+                                row2 = currow;
+                                top += currow.Height + num;
                             }
                         }
                     }

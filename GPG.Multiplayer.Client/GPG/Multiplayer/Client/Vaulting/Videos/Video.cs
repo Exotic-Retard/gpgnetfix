@@ -427,9 +427,9 @@
                         this.mPreviewImage50 = null;
                         this.mPreviewImage128 = Image.FromStream(stream);
                     }
-                    if (_PreviewImageLoaded != null)
+                    if (PreviewImageLoaded != null)
                     {
-                        _PreviewImageLoaded(this, EventArgs.Empty);
+                        PreviewImageLoaded(this, EventArgs.Empty);
                     }
                 }
             }

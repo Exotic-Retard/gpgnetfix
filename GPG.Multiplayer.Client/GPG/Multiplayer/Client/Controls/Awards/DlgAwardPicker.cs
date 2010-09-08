@@ -70,7 +70,7 @@
                             if (award.Value != null)
                             {
                                 Image awardImage = award.Value.LargeImage;
-                                base.Invoke(delegate {
+                                base.Invoke((VGen0)delegate {
                                     PictureBox box = new PictureBox {
                                         Cursor = Cursors.Hand,
                                         Size = new Size(0x30, 0x30),
@@ -82,7 +82,6 @@
                                     };
                                     this.gpgPanelAwards.Controls.Add(box);
                                     box.Click += delegate (object s1, EventArgs e1) {
-                                        PictureBox box = s1 as PictureBox;
                                         KeyValuePair<AwardSet, Award> tag = (KeyValuePair<AwardSet, Award>) (s1 as Control).Tag;
                                         this.mSelectedAward = tag.Value;
                                         this.DialogResult = DialogResult.OK;
@@ -90,7 +89,7 @@
                                     };
                                     box.MouseEnter += delegate (object s1, EventArgs e1) {
                                         int awardDegree;
-                                        PictureBox box = s1 as PictureBox;
+                                        PictureBox curbox = s1 as PictureBox;
                                         KeyValuePair<AwardSet, Award> tag = (KeyValuePair<AwardSet, Award>) (s1 as Control).Tag;
                                         if (tag.Value == null)
                                         {
@@ -101,7 +100,7 @@
                                             awardDegree = tag.Value.AwardDegree;
                                         }
                                         DlgAwardSetDetails.Singleton.BindToAward(tag.Key, awardDegree);
-                                        Point point = this.gpgPanelAwards.PointToScreen(box.Location);
+                                        Point point = this.gpgPanelAwards.PointToScreen(curbox.Location);
                                         point.Offset(0, -(DlgAwardSetDetails.Singleton.Height + 4));
                                         DlgAwardSetDetails.Singleton.Location = point;
                                         DlgAwardSetDetails.Singleton.Show();

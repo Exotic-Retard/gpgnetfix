@@ -25,9 +25,9 @@
             set
             {
                 this.mShowAvatars = value;
-                if (this.mShowAvatarsChanged != null)
+                if (this.ShowAvatarsChanged != null)
                 {
-                    this.mShowAvatarsChanged(this, new PropertyChangedEventArgs("ShowAvatars"));
+                    this.ShowAvatarsChanged(this, new PropertyChangedEventArgs("ShowAvatars"));
                 }
             }
         }
@@ -42,9 +42,9 @@
             set
             {
                 this.mShowAwards = value;
-                if (this.mShowAwardsChanged != null)
+                if (this.ShowAwardsChanged != null)
                 {
-                    this.mShowAwardsChanged(this, new PropertyChangedEventArgs("ShowAwards"));
+                    this.ShowAwardsChanged(this, new PropertyChangedEventArgs("ShowAwards"));
                 }
             }
         }

@@ -45,13 +45,13 @@
             set
             {
                 this.mOtherColor = value;
-                if (this.mOtherColorChanged != null)
+                if (this.OtherColorChanged != null)
                 {
-                    this.mOtherColorChanged(this, new PropertyChangedEventArgs("OtherColor"));
+                    this.OtherColorChanged(this, new PropertyChangedEventArgs("OtherColor"));
                 }
-                if (this.mAppearanceChanged != null)
+                if (this.AppearanceChanged != null)
                 {
-                    this.mAppearanceChanged(this, new PropertyChangedEventArgs("OtherColor"));
+                    this.AppearanceChanged(this, new PropertyChangedEventArgs("OtherColor"));
                 }
             }
         }
@@ -71,13 +71,13 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mOtherFont = value;
-                if (this.mOtherFontChanged != null)
+                if (this.OtherFontChanged != null)
                 {
-                    this.mOtherFontChanged(this, new PropertyChangedEventArgs("OtherFont"));
+                    this.OtherFontChanged(this, new PropertyChangedEventArgs("OtherFont"));
                 }
-                if (this.mAppearanceChanged != null)
+                if (this.AppearanceChanged != null)
                 {
-                    this.mAppearanceChanged(this, new PropertyChangedEventArgs("OtherFont"));
+                    this.AppearanceChanged(this, new PropertyChangedEventArgs("OtherFont"));
                 }
             }
         }
@@ -92,13 +92,13 @@
             set
             {
                 this.mSelfColor = value;
-                if (this.mSelfColorChanged != null)
+                if (this.SelfColorChanged != null)
                 {
-                    this.mSelfColorChanged(this, new PropertyChangedEventArgs("SelfColor"));
+                    this.SelfColorChanged(this, new PropertyChangedEventArgs("SelfColor"));
                 }
-                if (this.mAppearanceChanged != null)
+                if (this.AppearanceChanged != null)
                 {
-                    this.mAppearanceChanged(this, new PropertyChangedEventArgs("SelfColor"));
+                    this.AppearanceChanged(this, new PropertyChangedEventArgs("SelfColor"));
                 }
             }
         }
@@ -118,13 +118,13 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mSelfFont = value;
-                if (this.mSelfFontChanged != null)
+                if (this.SelfFontChanged != null)
                 {
-                    this.mSelfFontChanged(this, new PropertyChangedEventArgs("SelfFont"));
+                    this.SelfFontChanged(this, new PropertyChangedEventArgs("SelfFont"));
                 }
-                if (this.mAppearanceChanged != null)
+                if (this.AppearanceChanged != null)
                 {
-                    this.mAppearanceChanged(this, new PropertyChangedEventArgs("SelfFont"));
+                    this.AppearanceChanged(this, new PropertyChangedEventArgs("SelfFont"));
                 }
             }
         }

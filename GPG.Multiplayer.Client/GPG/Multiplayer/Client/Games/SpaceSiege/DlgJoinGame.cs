@@ -6,6 +6,7 @@
     using DevExpress.XtraEditors.Repository;
     using DevExpress.XtraGrid.Columns;
     using DevExpress.XtraGrid.Views.Grid;
+    using DevExpress.XtraGrid.Views.Base;
     using GPG;
     using GPG.DataAccess;
     using GPG.Logging;
@@ -474,7 +475,7 @@
             this.gpgGameGrid.RefreshDataSource();
             ThreadQueue.QueueUserWorkItem(delegate (object state) {
                 MappedObjectList<HostedGame> data = new QuazalQuery("GetHostedSpaceSiegeGames", new object[0]).GetObjects<HostedGame>();
-                base.BeginInvoke(delegate {
+                base.BeginInvoke((VGen0)delegate {
                     this.gpgGameGrid.DataSource = data;
                     this.skinButtonRefresh.Enabled = true;
                     if (data.Count > 0)

@@ -513,7 +513,7 @@
                     this.OnLaunchGame(this, EventArgs.Empty);
                 }
                 EventLog.WriteLine("AutomatchConfirm: Game has been hosted: " + gamename, LogCategory.Get("Automatch"), new object[0]);
-                Thread thread = new Thread(new ThreadStart(delegate {
+                Thread thread = new Thread(new ThreadStart(((VGen0)delegate {
                     try
                     {
                         EventLog.WriteLine("AutomatchConfirm: Entered poll for lobby thread.", LogCategory.Get("Automatch"), new object[0]);
@@ -558,7 +558,7 @@
                     {
                         ErrorLog.WriteLine(exception);
                     }
-                }.Invoke));
+                }).Invoke));
                 thread.IsBackground = true;
                 thread.Start();
             }

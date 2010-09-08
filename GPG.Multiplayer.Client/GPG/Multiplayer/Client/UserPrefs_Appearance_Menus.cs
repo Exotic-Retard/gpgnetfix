@@ -50,9 +50,9 @@
             set
             {
                 this.mContextItemColor = value;
-                if (this.mContextItemColorChanged != null)
+                if (this.ContextItemColorChanged != null)
                 {
-                    this.mContextItemColorChanged(this, new PropertyChangedEventArgs("ContextItemColor"));
+                    this.ContextItemColorChanged(this, new PropertyChangedEventArgs("ContextItemColor"));
                 }
             }
         }
@@ -72,9 +72,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mContextItemFont = value;
-                if (this.mContextItemFontChanged != null)
+                if (this.ContextItemFontChanged != null)
                 {
-                    this.mContextItemFontChanged(this, new PropertyChangedEventArgs("ContextItemFont"));
+                    this.ContextItemFontChanged(this, new PropertyChangedEventArgs("ContextItemFont"));
                 }
             }
         }
@@ -89,9 +89,9 @@
             set
             {
                 this.mContextItemHeight = value;
-                if (this.mContextItemHeightChanged != null)
+                if (this.ContextItemHeightChanged != null)
                 {
-                    this.mContextItemHeightChanged(this, new PropertyChangedEventArgs("ContextItemHeight"));
+                    this.ContextItemHeightChanged(this, new PropertyChangedEventArgs("ContextItemHeight"));
                 }
             }
         }
@@ -106,9 +106,9 @@
             set
             {
                 this.mContextItemWidth = value;
-                if (this.mContextItemWidthChanged != null)
+                if (this.ContextItemWidthChanged != null)
                 {
-                    this.mContextItemWidthChanged(this, new PropertyChangedEventArgs("ContextItemWidth"));
+                    this.ContextItemWidthChanged(this, new PropertyChangedEventArgs("ContextItemWidth"));
                 }
             }
         }
@@ -131,9 +131,9 @@
             set
             {
                 this.mDropDownItemColor = value;
-                if (this.mDropDownItemColorChanged != null)
+                if (this.DropDownItemColorChanged != null)
                 {
-                    this.mDropDownItemColorChanged(this, new PropertyChangedEventArgs("DropDownItemColor"));
+                    this.DropDownItemColorChanged(this, new PropertyChangedEventArgs("DropDownItemColor"));
                 }
             }
         }
@@ -153,9 +153,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mDropDownItemFont = value;
-                if (this.mDropDownItemFontChanged != null)
+                if (this.DropDownItemFontChanged != null)
                 {
-                    this.mDropDownItemFontChanged(this, new PropertyChangedEventArgs("DropDownItemFont"));
+                    this.DropDownItemFontChanged(this, new PropertyChangedEventArgs("DropDownItemFont"));
                 }
             }
         }
@@ -170,9 +170,9 @@
             set
             {
                 this.mDropDownItemHeight = value;
-                if (this.mDropDownItemHeightChanged != null)
+                if (this.DropDownItemHeightChanged != null)
                 {
-                    this.mDropDownItemHeightChanged(this, new PropertyChangedEventArgs("DropDownItemHeight"));
+                    this.DropDownItemHeightChanged(this, new PropertyChangedEventArgs("DropDownItemHeight"));
                 }
             }
         }
@@ -187,9 +187,9 @@
             set
             {
                 this.mDropDownItemWidth = value;
-                if (this.mDropDownItemWidthChanged != null)
+                if (this.DropDownItemWidthChanged != null)
                 {
-                    this.mDropDownItemWidthChanged(this, new PropertyChangedEventArgs("DropDownItemWidth"));
+                    this.DropDownItemWidthChanged(this, new PropertyChangedEventArgs("DropDownItemWidth"));
                 }
             }
         }

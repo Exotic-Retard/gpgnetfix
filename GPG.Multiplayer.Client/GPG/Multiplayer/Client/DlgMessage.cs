@@ -167,9 +167,9 @@
                 }
                 if (!((((sFrmMain == null) || !sFrmMain.InvokeRequired) || sFrmMain.Disposing) || sFrmMain.IsDisposed))
                 {
-                    return (DialogResult) sFrmMain.Invoke(delegate (object objform, object objmessage) {
-                        DlgMessage message = new DlgMessage((FrmMain) objform, objmessage.ToString());
-                        return message.ShowDialog();
+                    return (DialogResult) sFrmMain.Invoke((OGen2)delegate (object objform, object objmessage) {
+                        DlgMessage curmessage = new DlgMessage((FrmMain) objform, objmessage.ToString());
+                        return curmessage.ShowDialog();
                     }, new object[] { sFrmMain, message });
                 }
                 if ((sFrmMain == null) || (!sFrmMain.Disposing && !sFrmMain.IsDisposed))

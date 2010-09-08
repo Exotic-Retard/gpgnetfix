@@ -3,6 +3,7 @@
     using GPG;
     using System;
     using System.Collections.Generic;
+    using GPG.Multiplayer.Client.Vaulting;
 
     [Serializable]
     public class UserPrefs_Content

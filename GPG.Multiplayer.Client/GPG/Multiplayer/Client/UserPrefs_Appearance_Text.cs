@@ -76,9 +76,9 @@
             set
             {
                 this.mDescriptorColor = value;
-                if (this.mDescriptorColorChanged != null)
+                if (this.DescriptorColorChanged != null)
                 {
-                    this.mDescriptorColorChanged(this, new PropertyChangedEventArgs("DescriptorColor"));
+                    this.DescriptorColorChanged(this, new PropertyChangedEventArgs("DescriptorColor"));
                 }
             }
         }
@@ -98,9 +98,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mDescriptorFont = value;
-                if (this.mDescriptorFontChanged != null)
+                if (this.DescriptorFontChanged != null)
                 {
-                    this.mDescriptorFontChanged(this, new PropertyChangedEventArgs("DescriptorFont"));
+                    this.DescriptorFontChanged(this, new PropertyChangedEventArgs("DescriptorFont"));
                 }
             }
         }
@@ -115,9 +115,9 @@
             set
             {
                 this.mErrorColor = value;
-                if (this.mErrorColorChanged != null)
+                if (this.ErrorColorChanged != null)
                 {
-                    this.mErrorColorChanged(this, new PropertyChangedEventArgs("ErrorColor"));
+                    this.ErrorColorChanged(this, new PropertyChangedEventArgs("ErrorColor"));
                 }
             }
         }
@@ -137,9 +137,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mErrorFont = value;
-                if (this.mErrorFontChanged != null)
+                if (this.ErrorFontChanged != null)
                 {
-                    this.mErrorFontChanged(this, new PropertyChangedEventArgs("ErrorFont"));
+                    this.ErrorFontChanged(this, new PropertyChangedEventArgs("ErrorFont"));
                 }
             }
         }
@@ -154,9 +154,9 @@
             set
             {
                 this.mInfoColor = value;
-                if (this.mInfoColorChanged != null)
+                if (this.InfoColorChanged != null)
                 {
-                    this.mInfoColorChanged(this, new PropertyChangedEventArgs("InfoColor"));
+                    this.InfoColorChanged(this, new PropertyChangedEventArgs("InfoColor"));
                 }
             }
         }
@@ -176,9 +176,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mInfoFont = value;
-                if (this.mInfoFontChanged != null)
+                if (this.InfoFontChanged != null)
                 {
-                    this.mInfoFontChanged(this, new PropertyChangedEventArgs("InfoFont"));
+                    this.InfoFontChanged(this, new PropertyChangedEventArgs("InfoFont"));
                 }
             }
         }
@@ -193,9 +193,9 @@
             set
             {
                 this.mLinkColor = value;
-                if (this.mLinkColorChanged != null)
+                if (this.LinkColorChanged != null)
                 {
-                    this.mLinkColorChanged(this, new PropertyChangedEventArgs("LinkColor"));
+                    this.LinkColorChanged(this, new PropertyChangedEventArgs("LinkColor"));
                 }
             }
         }
@@ -215,9 +215,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mLinkFont = value;
-                if (this.mLinkFontChanged != null)
+                if (this.LinkFontChanged != null)
                 {
-                    this.mLinkFontChanged(this, new PropertyChangedEventArgs("LinkFont"));
+                    this.LinkFontChanged(this, new PropertyChangedEventArgs("LinkFont"));
                 }
             }
         }
@@ -232,9 +232,9 @@
             set
             {
                 this.mMasterColor = value;
-                if (this.mMasterColorChanged != null)
+                if (this.MasterColorChanged != null)
                 {
-                    this.mMasterColorChanged(this, new PropertyChangedEventArgs("MasterColor"));
+                    this.MasterColorChanged(this, new PropertyChangedEventArgs("MasterColor"));
                 }
             }
         }
@@ -254,9 +254,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mMasterFont = value;
-                if (this.mMasterFontChanged != null)
+                if (this.MasterFontChanged != null)
                 {
-                    this.mMasterFontChanged(this, new PropertyChangedEventArgs("MasterFont"));
+                    this.MasterFontChanged(this, new PropertyChangedEventArgs("MasterFont"));
                 }
             }
         }
@@ -271,9 +271,9 @@
             set
             {
                 this.mStatusColor = value;
-                if (this.mStatusColorChanged != null)
+                if (this.StatusColorChanged != null)
                 {
-                    this.mStatusColorChanged(this, new PropertyChangedEventArgs("StatusColor"));
+                    this.StatusColorChanged(this, new PropertyChangedEventArgs("StatusColor"));
                 }
             }
         }
@@ -293,9 +293,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mStatusFont = value;
-                if (this.mStatusFontChanged != null)
+                if (this.StatusFontChanged != null)
                 {
-                    this.mStatusFontChanged(this, new PropertyChangedEventArgs("StatusFont"));
+                    this.StatusFontChanged(this, new PropertyChangedEventArgs("StatusFont"));
                 }
             }
         }
@@ -310,9 +310,9 @@
             set
             {
                 this.mTitleColor = value;
-                if (this.mTitleColorChanged != null)
+                if (this.TitleColorChanged != null)
                 {
-                    this.mTitleColorChanged(this, new PropertyChangedEventArgs("TitleColor"));
+                    this.TitleColorChanged(this, new PropertyChangedEventArgs("TitleColor"));
                 }
             }
         }
@@ -332,9 +332,9 @@
                     value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                 }
                 this.mTitleFont = value;
-                if (this.mTitleFontChanged != null)
+                if (this.TitleFontChanged != null)
                 {
-                    this.mTitleFontChanged(this, new PropertyChangedEventArgs("TitleFont"));
+                    this.TitleFontChanged(this, new PropertyChangedEventArgs("TitleFont"));
                 }
             }
         }

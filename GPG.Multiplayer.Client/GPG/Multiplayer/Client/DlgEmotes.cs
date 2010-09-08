@@ -559,7 +559,7 @@
             PictureBox current;
             EventHandler handler = null;
             MouseEventHandler handler2 = null;
-            using (IEnumerator enumerator = this.gpgPanelIcons.Controls.GetEnumerator())
+            using (IEnumerator<object> enumerator = (IEnumerator<object>)this.gpgPanelIcons.Controls.GetEnumerator())
             {
                 while (enumerator.MoveNext())
                 {

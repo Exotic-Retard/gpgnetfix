@@ -1402,7 +1402,7 @@
                                         {
                                             return;
                                         }
-                                        base.Invoke(delegate {
+                                        base.Invoke((VGen0)delegate {
                                             siblings.Add(node);
                                             if (node.Parent != null)
                                             {
@@ -1421,7 +1421,7 @@
                                 {
                                     return;
                                 }
-                                base.Invoke(delegate {
+                                base.Invoke((VGen0)delegate {
                                     lastNode.Nodes.Add(listNode);
                                     if (listNode.Parent != null)
                                     {

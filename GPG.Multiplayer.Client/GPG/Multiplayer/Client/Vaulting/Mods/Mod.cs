@@ -158,7 +158,7 @@
                 if ((this.Guid == null) || (this.Guid.Length < 1))
                 {
                     bool resolved = false;
-                    Program.MainForm.Invoke(delegate {
+                    Program.MainForm.Invoke((VGen0)delegate {
                         if (new DlgYesNo(Program.MainForm, "<LOC>Unique ID", "<LOC>This mod does not contain the required Unique ID field, GPGnet can create one for you or you can use the Guid generation tool included in the GPGnet install directory. Would you like GPGnet to generate a UID for you?").ShowDialog() == DialogResult.Yes)
                         {
                             this.Guid = System.Guid.NewGuid().ToString();
@@ -179,7 +179,7 @@
                 catch
                 {
                     bool resolved = false;
-                    Program.MainForm.Invoke(delegate {
+                    Program.MainForm.Invoke((VGen0)delegate {
                         if (new DlgYesNo(Program.MainForm, "<LOC>Unique ID", "<LOC>The Unique ID field for this mod is not the correct Guid format, GPGnet can create one for you or you can use the Guid generation tool included in the GPGnet install directory. Would you like GPGnet to generate a UID for you?").ShowDialog() == DialogResult.Yes)
                         {
                             this.Guid = System.Guid.NewGuid().ToString();
@@ -840,9 +840,9 @@
                     {
                         this.mPreviewImage50 = Image.FromStream(stream);
                     }
-                    if (_PreviewImageLoaded != null)
+                    if (PreviewImageLoaded != null)
                     {
-                        _PreviewImageLoaded(this, EventArgs.Empty);
+                        PreviewImageLoaded(this, EventArgs.Empty);
                     }
                     if (Program.Settings.Content.Download.CachePreviewImages)
                     {

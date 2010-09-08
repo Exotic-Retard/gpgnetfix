@@ -121,7 +121,7 @@
 
         protected override void OnClick(EventArgs e)
         {
-            base.Invoke(delegate {
+            base.Invoke((VGen0)delegate {
                 if (base.Enabled)
                 {
                     base.Focus();

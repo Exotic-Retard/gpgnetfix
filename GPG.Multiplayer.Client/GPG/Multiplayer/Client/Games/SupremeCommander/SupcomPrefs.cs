@@ -144,9 +144,9 @@
             set
             {
                 this.mAutoDetectExe = value;
-                if (this.mAutoDetectExeChanged != null)
+                if (this.AutoDetectExeChanged != null)
                 {
-                    this.mAutoDetectExeChanged(this, new PropertyChangedEventArgs("AutoDetectExe"));
+                    this.AutoDetectExeChanged(this, new PropertyChangedEventArgs("AutoDetectExe"));
                 }
             }
         }
@@ -166,9 +166,9 @@
             {
                 this.mCommandLineArgs = value;
                 SupComGameManager.GameArgs = this.mCommandLineArgs;
-                if (this.mCommandLineArgsChanged != null)
+                if (this.CommandLineArgsChanged != null)
                 {
-                    this.mCommandLineArgsChanged(this, new PropertyChangedEventArgs("CommandLineArgs"));
+                    this.CommandLineArgsChanged(this, new PropertyChangedEventArgs("CommandLineArgs"));
                 }
             }
         }
@@ -235,9 +235,9 @@
             set
             {
                 this.mGamePort = value;
-                if (this.mGamePortChanged != null)
+                if (this.GamePortChanged != null)
                 {
-                    this.mGamePortChanged(this, new PropertyChangedEventArgs("GamePort"));
+                    this.GamePortChanged(this, new PropertyChangedEventArgs("GamePort"));
                 }
                 SupcomStdInOut.GamePort = this.mGamePort;
             }
@@ -266,9 +266,9 @@
             set
             {
                 this.mRecordStats = value;
-                if (this.mRecordStatsChanged != null)
+                if (this.RecordStatsChanged != null)
                 {
-                    this.mRecordStatsChanged(this, new PropertyChangedEventArgs("RecordStats"));
+                    this.RecordStatsChanged(this, new PropertyChangedEventArgs("RecordStats"));
                 }
                 StatsWatcher.SaveStats = this.mRecordStats;
             }
@@ -297,9 +297,9 @@
             set
             {
                 this.mSaveLiveReplay = value;
-                if (this.mSaveLiveReplayChanged != null)
+                if (this.SaveLiveReplayChanged != null)
                 {
-                    this.mSaveLiveReplayChanged(this, new PropertyChangedEventArgs("SaveLiveReplay"));
+                    this.SaveLiveReplayChanged(this, new PropertyChangedEventArgs("SaveLiveReplay"));
                     SupComGameManager.sLiveReplayMode = this.mSaveLiveReplay;
                 }
             }
@@ -315,9 +315,9 @@
             set
             {
                 this.mShowPatchMsg = value;
-                if (this.mShowPatchMsgChanged != null)
+                if (this.ShowPatchMsgChanged != null)
                 {
-                    this.mShowPatchMsgChanged(this, new PropertyChangedEventArgs("ShowPatchMsg"));
+                    this.ShowPatchMsgChanged(this, new PropertyChangedEventArgs("ShowPatchMsg"));
                 }
             }
         }
@@ -332,9 +332,9 @@
             set
             {
                 this.mStatsDir = value;
-                if (this.mStatsDirChanged != null)
+                if (this.StatsDirChanged != null)
                 {
-                    this.mStatsDirChanged(this, new PropertyChangedEventArgs("StatsDir"));
+                    this.StatsDirChanged(this, new PropertyChangedEventArgs("StatsDir"));
                 }
                 StatsWatcher.StatsLocation = this.mStatsDir;
             }

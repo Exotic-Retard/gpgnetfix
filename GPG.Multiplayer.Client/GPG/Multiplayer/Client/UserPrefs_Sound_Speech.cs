@@ -33,9 +33,9 @@
             set
             {
                 this.mEnableSpeech = value;
-                if (this.mEnableSpeechChanged != null)
+                if (this.EnableSpeechChanged != null)
                 {
-                    this.mEnableSpeechChanged(this, new PropertyChangedEventArgs("EnableSpeech"));
+                    this.EnableSpeechChanged(this, new PropertyChangedEventArgs("EnableSpeech"));
                 }
             }
         }
@@ -50,9 +50,9 @@
             set
             {
                 this.mSpeechRate = value;
-                if (this.mSpeechRateChanged != null)
+                if (this.SpeechRateChanged != null)
                 {
-                    this.mSpeechRateChanged(this, new PropertyChangedEventArgs("SpeechRate"));
+                    this.SpeechRateChanged(this, new PropertyChangedEventArgs("SpeechRate"));
                 }
             }
         }
@@ -67,9 +67,9 @@
             set
             {
                 this.mVoice = value;
-                if (this.mVoiceChanged != null)
+                if (this.VoiceChanged != null)
                 {
-                    this.mVoiceChanged(this, new PropertyChangedEventArgs("Voice"));
+                    this.VoiceChanged(this, new PropertyChangedEventArgs("Voice"));
                 }
             }
         }
@@ -84,9 +84,9 @@
             set
             {
                 this.mVolume = value;
-                if (this.mVolumeChanged != null)
+                if (this.VolumeChanged != null)
                 {
-                    this.mVolumeChanged(this, new PropertyChangedEventArgs("Volume"));
+                    this.VolumeChanged(this, new PropertyChangedEventArgs("Volume"));
                 }
             }
         }

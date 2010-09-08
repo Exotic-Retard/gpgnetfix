@@ -124,9 +124,9 @@
             set
             {
                 this.mFaction = value;
-                if (this.mFactionChanged != null)
+                if (this.FactionChanged != null)
                 {
-                    this.mFactionChanged(this, new PropertyChangedEventArgs("Faction"));
+                    this.FactionChanged(this, new PropertyChangedEventArgs("Faction"));
                 }
             }
         }
@@ -141,9 +141,9 @@
             set
             {
                 this.mMaps = value;
-                if (this.mMapsChanged != null)
+                if (this.MapsChanged != null)
                 {
-                    this.mMapsChanged(this, new PropertyChangedEventArgs("Maps"));
+                    this.MapsChanged(this, new PropertyChangedEventArgs("Maps"));
                 }
             }
         }

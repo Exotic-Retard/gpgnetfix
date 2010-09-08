@@ -2,6 +2,7 @@
 {
     using DevExpress.XtraGrid.Columns;
     using DevExpress.XtraGrid.Views.Grid;
+    using DevExpress.XtraGrid.Views.Base;
     using GPG;
     using GPG.DataAccess;
     using GPG.Logging;
@@ -402,7 +403,7 @@
             sFrmMain = main;
             if (!(main.IsDisposed || main.Disposing))
             {
-                main.Invoke(delegate {
+                main.Invoke((VGen0)delegate {
                     Create();
                 });
             }
@@ -422,7 +423,7 @@
                             {
                                 if ((((sLeader == "") && !sIsHosting) && !sIsJoining) && !(main.IsDisposed || main.Disposing))
                                 {
-                                    main.BeginInvoke(delegate (object objname, object objmain) {
+                                    main.BeginInvoke((VGen2)delegate (object objname, object objmain) {
                                         FrmMain mainForm = (FrmMain) objmain;
                                         if (((new DlgYesNo(mainForm, Loc.Get("<LOC>Arranged Team Request"), objname.ToString() + Loc.Get("<LOC> has invited you to play in a rated team game.  Do you wish to join?")).ShowDialog() == DialogResult.Yes) && (SupcomAutomatch.GetSupcomAutomatch().State == SupcomAutoState.Unavailable)) && !((!(sLeader == "") || sIsHosting) || sIsJoining))
                                         {
@@ -439,7 +440,7 @@
                                             sLeader = objname.ToString();
                                             ThreadPool.QueueUserWorkItem(delegate (object o) {
                                                 Thread.Sleep(ConfigSettings.GetInt("TeamJoinTimeout", 0x1388));
-                                                cancel.BeginInvoke(delegate (object ocancel) {
+                                                cancel.BeginInvoke((VGen1)delegate (object ocancel) {
                                                     if (!sIsConfirmed && (ocancel is SkinStatusButton))
                                                     {
                                                         (ocancel as SkinStatusButton).PerformClick();
@@ -508,7 +509,7 @@
                         }
                         if (SupcomAutomatch.GetSupcomAutomatch().State != SupcomAutoState.Unavailable)
                         {
-                            sDlgSupcom.BeginInvoke(delegate {
+                            sDlgSupcom.BeginInvoke((VGen0)delegate {
                                 sDlgSupcom.AbortGame();
                             });
                         }
@@ -521,7 +522,7 @@
                                 sIsJoining = false;
                                 if (!(main.IsDisposed || main.Disposing))
                                 {
-                                    main.BeginInvoke(delegate (object objname, object objmain) {
+                                    main.BeginInvoke((VGen2)delegate (object objname, object objmain) {
                                         FrmMain mainForm = (FrmMain) objmain;
                                         DlgMessage.Show(mainForm, Loc.Get("<LOC>The team leader has canceled the arranged team game."));
                                         mainForm.ClearStatus();
@@ -539,13 +540,13 @@
                                 }
                                 else if (!(main.IsDisposed || main.Disposing))
                                 {
-                                    main.BeginInvoke(delegate (object objname, object objmain, object objargs) {
-                                        FrmMain main = (FrmMain) objmain;
+                                    main.BeginInvoke((VGen3)delegate (object objname, object objmain, object objargs) {
+                                        FrmMain curmain = (FrmMain) objmain;
                                         if (objargs.ToString().IndexOf("launch") >= 0)
                                         {
-                                            main.ClearStatus();
+                                            curmain.ClearStatus();
                                         }
-                                        main.SetStatus(Loc.Get(objargs.ToString()), new object[0]);
+                                        curmain.SetStatus(Loc.Get(objargs.ToString()), new object[0]);
                                     }, new object[] { str, main, strArray[0] });
                                 }
                                 break;

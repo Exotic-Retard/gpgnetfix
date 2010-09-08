@@ -60,14 +60,14 @@
             this.ShowAppCloseWarning = false;
             this.AppCloseWarning = "";
             this.RetrievingChunk = false;
-            this.mProgressChanged = null;
-            this.mFinished = null;
-            this.mStatusChanged = null;
+            this.ProgressChanged = null;
+            this.Finished = null;
+            this.StatusChanged = null;
             this.mIsDisposed = false;
             this.mLastStatus = "<LOC>Idle";
             this.mIsProgressFinished = false;
             this.mIsOperationFinished = false;
-            this.mOperationFinished = null;
+            this.OperationFinished = null;
             this.mContent = content;
             this.mPosition = position;
             ActiveOperations.Insert(0, this);
@@ -135,9 +135,9 @@
             {
                 this.SetStatus("<LOC>An error occurred while downloading file, please try again.", 0xbb8, new object[0]);
                 this.mIsOperationFinished = true;
-                if (this.mOperationFinished != null)
+                if (this.OperationFinished != null)
                 {
-                    this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
+                    this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
                 }
             }
             else if (!new QuazalQuery("DownloadContent", new object[] { this.Content.ID, DataAccess.FormatDate(DateTime.Now.ToUniversalTime()) }).ExecuteNonQuery())
@@ -145,9 +145,9 @@
                 ErrorLog.WriteLine("Unable to create download record of content {0}.", new object[] { this.Content.Name });
                 this.SetStatus("<LOC>An error occurred while downloading file, please try again.", 0xbb8, new object[0]);
                 this.mIsOperationFinished = true;
-                if (this.mOperationFinished != null)
+                if (this.OperationFinished != null)
                 {
-                    this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
+                    this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
                 }
             }
             else
@@ -158,9 +158,9 @@
                 this.SetStatus("<LOC>Download Complete.", 0xbb8, new object[0]);
                 Program.MainForm.FormClosing -= new FormClosingEventHandler(this.MainForm_FormClosing);
                 this.mIsOperationFinished = true;
-                if (this.mOperationFinished != null)
+                if (this.OperationFinished != null)
                 {
-                    this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, true, new object[0]));
+                    this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, true, new object[0]));
                 }
             }
         }
@@ -220,7 +220,7 @@
         public void SetStatus(string status, int timeout, params object[] args)
         {
             VGen0 method = null;
-            if (this.mStatusChanged != null)
+            if (this.StatusChanged != null)
             {
                 if ((args != null) && (args.Length > 0))
                 {
@@ -232,14 +232,14 @@
                     if (method == null)
                     {
                         method = delegate {
-                            this.mStatusChanged(this, status);
+                            this.StatusChanged(this, status);
                         };
                     }
                     Program.MainForm.BeginInvoke(method);
                 }
                 else if (!(Program.MainForm.Disposing || Program.MainForm.IsDisposed))
                 {
-                    this.mStatusChanged(this, status);
+                    this.StatusChanged(this, status);
                 }
             }
         }
@@ -291,9 +291,9 @@
             this.ShowAppCloseWarning = false;
             Program.MainForm.FormClosing -= new FormClosingEventHandler(this.MainForm_FormClosing);
             this.mIsOperationFinished = true;
-            if (this.mOperationFinished != null)
+            if (this.OperationFinished != null)
             {
-                this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
+                this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
             }
         }
 
@@ -344,18 +344,18 @@
                         if (e.Result.IsEOF)
                         {
                             this.mIsProgressFinished = true;
-                            if (this.mFinished != null)
+                            if (this.Finished != null)
                             {
-                                this.mFinished(this, EventArgs.Empty);
+                                this.Finished(this, EventArgs.Empty);
                             }
                             this.OnDownloadComplete();
                         }
                         else
                         {
                             this.Progress = (int) ((((float) length) / ((float) (this.Content.DownloadSize * 0x400))) * 100f);
-                            if (this.mProgressChanged != null)
+                            if (this.ProgressChanged != null)
                             {
-                                this.mProgressChanged(this, this.Progress);
+                                this.ProgressChanged(this, this.Progress);
                             }
                             this.GetNextChunk();
                         }

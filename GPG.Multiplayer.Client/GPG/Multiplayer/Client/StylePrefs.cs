@@ -486,9 +486,9 @@
             set
             {
                 this.mDialogMenuLeft = value;
-                if (this.mDialogMenuLeftChanged != null)
+                if (this.DialogMenuLeftChanged != null)
                 {
-                    this.mDialogMenuLeftChanged(this, new PropertyChangedEventArgs("DialogMenuLeft"));
+                    this.DialogMenuLeftChanged(this, new PropertyChangedEventArgs("DialogMenuLeft"));
                 }
             }
         }
@@ -503,9 +503,9 @@
             set
             {
                 this.mDialogMenuTop = value;
-                if (this.mDialogMenuTopChanged != null)
+                if (this.DialogMenuTopChanged != null)
                 {
-                    this.mDialogMenuTopChanged(this, new PropertyChangedEventArgs("DialogMenuTop"));
+                    this.DialogMenuTopChanged(this, new PropertyChangedEventArgs("DialogMenuTop"));
                 }
             }
         }
@@ -520,9 +520,9 @@
             set
             {
                 this.mFormBorderCurve = value;
-                if (this.mFormBorderCurveChanged != null)
+                if (this.FormBorderCurveChanged != null)
                 {
-                    this.mFormBorderCurveChanged(this, new PropertyChangedEventArgs("FormBorderCurve"));
+                    this.FormBorderCurveChanged(this, new PropertyChangedEventArgs("FormBorderCurve"));
                 }
             }
         }
@@ -539,9 +539,9 @@
                 if (value != Color.Transparent)
                 {
                     this.mHighlightColor1 = value;
-                    if (this.mHighlightColor1Changed != null)
+                    if (this.HighlightColor1Changed != null)
                     {
-                        this.mHighlightColor1Changed(this, new PropertyChangedEventArgs("HighlightColor1"));
+                        this.HighlightColor1Changed(this, new PropertyChangedEventArgs("HighlightColor1"));
                     }
                 }
             }
@@ -559,9 +559,9 @@
                 if (value != Color.Transparent)
                 {
                     this.mHighlightColor2 = value;
-                    if (this.mHighlightColor2Changed != null)
+                    if (this.HighlightColor2Changed != null)
                     {
-                        this.mHighlightColor2Changed(this, new PropertyChangedEventArgs("HighlightColor2"));
+                        this.HighlightColor2Changed(this, new PropertyChangedEventArgs("HighlightColor2"));
                     }
                 }
             }
@@ -579,9 +579,9 @@
                 if (value != Color.Transparent)
                 {
                     this.mHighlightColor3 = value;
-                    if (this.mHighlightColor3Changed != null)
+                    if (this.HighlightColor3Changed != null)
                     {
-                        this.mHighlightColor3Changed(this, new PropertyChangedEventArgs("HighlightColor3"));
+                        this.HighlightColor3Changed(this, new PropertyChangedEventArgs("HighlightColor3"));
                     }
                 }
             }
@@ -599,9 +599,9 @@
                 if (value != Color.Transparent)
                 {
                     this.mMasterBackColor = value;
-                    if (this.mMasterBackColorChanged != null)
+                    if (this.MasterBackColorChanged != null)
                     {
-                        this.mMasterBackColorChanged(this, new PropertyChangedEventArgs("MasterBackColor"));
+                        this.MasterBackColorChanged(this, new PropertyChangedEventArgs("MasterBackColor"));
                     }
                 }
             }
@@ -624,9 +624,9 @@
                         value = new Font(value.FontFamily, emSize, value.Style, GraphicsUnit.Point);
                     }
                     this.mMasterFont = value;
-                    if (this.mMasterFontChanged != null)
+                    if (this.MasterFontChanged != null)
                     {
-                        this.mMasterFontChanged(this, new PropertyChangedEventArgs("MasterFont"));
+                        this.MasterFontChanged(this, new PropertyChangedEventArgs("MasterFont"));
                     }
                 }
             }
@@ -642,9 +642,9 @@
             set
             {
                 this.mMasterForeColor = value;
-                if (this.mMasterForeColorChanged != null)
+                if (this.MasterForeColorChanged != null)
                 {
-                    this.mMasterForeColorChanged(this, new PropertyChangedEventArgs("MasterForeColor"));
+                    this.MasterForeColorChanged(this, new PropertyChangedEventArgs("MasterForeColor"));
                 }
             }
         }
@@ -665,9 +665,9 @@
                 if (value != null)
                 {
                     this.mMenuFont = value;
-                    if (this.mMenuFontChanged != null)
+                    if (this.MenuFontChanged != null)
                     {
-                        this.mMenuFontChanged(this, new PropertyChangedEventArgs("MenuFont"));
+                        this.MenuFontChanged(this, new PropertyChangedEventArgs("MenuFont"));
                     }
                 }
             }
@@ -683,9 +683,9 @@
             set
             {
                 this.mMenuForeColor = value;
-                if (this.mMenuForeColorChanged != null)
+                if (this.MenuForeColorChanged != null)
                 {
-                    this.mMenuForeColorChanged(this, new PropertyChangedEventArgs("MenuForeColor"));
+                    this.MenuForeColorChanged(this, new PropertyChangedEventArgs("MenuForeColor"));
                 }
             }
         }
@@ -700,9 +700,9 @@
             set
             {
                 this.mMenuLeft = value;
-                if (this.mMenuLeftChanged != null)
+                if (this.MenuLeftChanged != null)
                 {
-                    this.mMenuLeftChanged(this, new PropertyChangedEventArgs("MenuLeft"));
+                    this.MenuLeftChanged(this, new PropertyChangedEventArgs("MenuLeft"));
                 }
             }
         }
@@ -717,9 +717,9 @@
             set
             {
                 this.mMenuTop = value;
-                if (this.mMenuTopChanged != null)
+                if (this.MenuTopChanged != null)
                 {
-                    this.mMenuTopChanged(this, new PropertyChangedEventArgs("MenuTop"));
+                    this.MenuTopChanged(this, new PropertyChangedEventArgs("MenuTop"));
                 }
             }
         }
@@ -734,9 +734,9 @@
             set
             {
                 this.mNavInsetFromRight = value;
-                if (this.mNavInsetFromRightChanged != null)
+                if (this.NavInsetFromRightChanged != null)
                 {
-                    this.mNavInsetFromRightChanged(this, new PropertyChangedEventArgs("NavInsetFromRight"));
+                    this.NavInsetFromRightChanged(this, new PropertyChangedEventArgs("NavInsetFromRight"));
                 }
             }
         }
@@ -751,9 +751,9 @@
             set
             {
                 this.mNavTop = value;
-                if (this.mNavTopChanged != null)
+                if (this.NavTopChanged != null)
                 {
-                    this.mNavTopChanged(this, new PropertyChangedEventArgs("NavTop"));
+                    this.NavTopChanged(this, new PropertyChangedEventArgs("NavTop"));
                 }
             }
         }

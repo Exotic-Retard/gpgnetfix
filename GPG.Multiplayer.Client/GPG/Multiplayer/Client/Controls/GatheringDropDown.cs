@@ -92,16 +92,6 @@
             }
         }
 
-        void IGatheringDisplay.add_Popup(EventHandler handler1)
-        {
-            base.Popup += handler1;
-        }
-
-        void IGatheringDisplay.remove_Popup(EventHandler handler1)
-        {
-            base.Popup -= handler1;
-        }
-
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

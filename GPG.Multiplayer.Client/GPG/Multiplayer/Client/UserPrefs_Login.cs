@@ -56,9 +56,9 @@
             set
             {
                 this.mAutoLogin = value;
-                if (this.mAutoLoginChanged != null)
+                if (this.AutoLoginChanged != null)
                 {
-                    this.mAutoLoginChanged(this, new PropertyChangedEventArgs("AutoLogin"));
+                    this.AutoLoginChanged(this, new PropertyChangedEventArgs("AutoLogin"));
                 }
             }
         }
@@ -76,7 +76,7 @@
             }
         }
 
-        [Browsable(false), SaveLoadFormatter(typeof(SaveLoad_DefaultPassword))]
+        [Browsable(false), ProgramSettings.SaveLoadFormatter(typeof(SaveLoad_DefaultPassword))]
         public string DefaultPassword
         {
             get
@@ -142,9 +142,9 @@
             set
             {
                 this.mDefaultUsername = value;
-                if (this.mDefaultUsernameChanged != null)
+                if (this.DefaultUsernameChanged != null)
                 {
-                    this.mDefaultUsernameChanged(this, new PropertyChangedEventArgs("DefaultUsername"));
+                    this.DefaultUsernameChanged(this, new PropertyChangedEventArgs("DefaultUsername"));
                 }
             }
         }
@@ -159,9 +159,9 @@
             set
             {
                 this.mIgnoreAutolaunch = value;
-                if (this.mIgnoreAutolaunchChanged != null)
+                if (this.IgnoreAutolaunchChanged != null)
                 {
-                    this.mIgnoreAutolaunchChanged(this, new PropertyChangedEventArgs("IgnoreAutolaunch"));
+                    this.IgnoreAutolaunchChanged(this, new PropertyChangedEventArgs("IgnoreAutolaunch"));
                 }
             }
         }
@@ -176,9 +176,9 @@
             set
             {
                 this.mRememberCredentials = value;
-                if (this.mRememberCredentialsChanged != null)
+                if (this.RememberCredentialsChanged != null)
                 {
-                    this.mRememberCredentialsChanged(this, new PropertyChangedEventArgs("RememberCredentials"));
+                    this.RememberCredentialsChanged(this, new PropertyChangedEventArgs("RememberCredentials"));
                 }
             }
         }

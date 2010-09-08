@@ -59,7 +59,7 @@
                 {
                     start = delegate {
                         Thread.Sleep(0x7d0);
-                        main.Invoke(delegate (object objmain) {
+                        main.Invoke((VGen1)delegate (object objmain) {
                             ((FrmMain) objmain).btnChat.PerformClick();
                         }, new object[] { main });
                     };

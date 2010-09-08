@@ -5,6 +5,7 @@
     using GPG.Multiplayer.Client;
     using System;
     using System.Collections;
+    using System.Collections.Generic;
     using System.ComponentModel;
     using System.Data;
     using System.Data.Odbc;
@@ -33,7 +34,7 @@
             this.mConnection.Open();
             OdbcDataReader reader = new OdbcCommand("SELECT * FROM units_player", this.mConnection).ExecuteReader();
             DataTable table = new DataTable();
-            using (IEnumerator enumerator = reader.GetSchemaTable().Rows.GetEnumerator())
+            using (IEnumerator<object> enumerator = (IEnumerator<object>)reader.GetSchemaTable().Rows.GetEnumerator())
             {
                 while (enumerator.MoveNext())
                 {

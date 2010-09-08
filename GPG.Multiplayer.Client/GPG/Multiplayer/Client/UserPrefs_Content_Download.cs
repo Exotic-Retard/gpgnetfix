@@ -33,9 +33,9 @@
             set
             {
                 this.mCachePreviewImages = value;
-                if (this.mCachePreviewImagesChanged != null)
+                if (this.CachePreviewImagesChanged != null)
                 {
-                    this.mCachePreviewImagesChanged(this, new PropertyChangedEventArgs("CachePreviewImages"));
+                    this.CachePreviewImagesChanged(this, new PropertyChangedEventArgs("CachePreviewImages"));
                 }
             }
         }
@@ -50,9 +50,9 @@
             set
             {
                 this.mGetLatestVersion = value;
-                if (this.mGetLatestVersionChanged != null)
+                if (this.GetLatestVersionChanged != null)
                 {
-                    this.mGetLatestVersionChanged(this, new PropertyChangedEventArgs("GetLatestVersion"));
+                    this.GetLatestVersionChanged(this, new PropertyChangedEventArgs("GetLatestVersion"));
                 }
             }
         }
@@ -67,9 +67,9 @@
             set
             {
                 this.mMyDownloads = value;
-                if (this.mMyDownloadsChanged != null)
+                if (this.MyDownloadsChanged != null)
                 {
-                    this.mMyDownloadsChanged(this, new PropertyChangedEventArgs("MyDownloads"));
+                    this.MyDownloadsChanged(this, new PropertyChangedEventArgs("MyDownloads"));
                 }
             }
         }
@@ -84,9 +84,9 @@
             set
             {
                 this.mSearchType = value;
-                if (this.mSearchTypeChanged != null)
+                if (this.SearchTypeChanged != null)
                 {
-                    this.mSearchTypeChanged(this, new PropertyChangedEventArgs("SearchType"));
+                    this.SearchTypeChanged(this, new PropertyChangedEventArgs("SearchType"));
                 }
             }
         }

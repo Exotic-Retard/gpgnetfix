@@ -36,7 +36,7 @@
         {
             this.mDownloading = false;
             this.mWebClient = new WebClient();
-            this.mOperationFinished = null;
+            this.OperationFinished = null;
             this.mLastStatus = "";
             this.mContent = content;
             this.mPosition = position;
@@ -91,18 +91,18 @@
             if (!this.Content.SaveDownload(this))
             {
                 this.SetStatus("<LOC>An error occurred while downloading file, please try again.", 0xbb8, new object[0]);
-                if (this.mOperationFinished != null)
+                if (this.OperationFinished != null)
                 {
-                    this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
+                    this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
                 }
             }
             else if (!new QuazalQuery("DownloadContent", new object[] { this.Content.ID, DataAccess.FormatDate(DateTime.Now.ToUniversalTime()) }).ExecuteNonQuery())
             {
                 ErrorLog.WriteLine("Unable to create download record of content {0}.", new object[] { this.Content.Name });
                 this.SetStatus("<LOC>An error occurred while downloading file, please try again.", 0xbb8, new object[0]);
-                if (this.mOperationFinished != null)
+                if (this.OperationFinished != null)
                 {
-                    this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
+                    this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, false, new object[0]));
                 }
             }
             else
@@ -111,9 +111,9 @@
                 content.Downloads++;
                 new QuazalQuery("IncrementContentDownload", new object[] { this.Content.ID }).ExecuteNonQueryAsync();
                 this.SetStatus("<LOC>Download Complete.", 0xbb8, new object[0]);
-                if (this.mOperationFinished != null)
+                if (this.OperationFinished != null)
                 {
-                    this.mOperationFinished(new ContentOperationCallbackArgs(this.Content, this, true, new object[0]));
+                    this.OperationFinished(new ContentOperationCallbackArgs(this.Content, this, true, new object[0]));
                 }
             }
         }

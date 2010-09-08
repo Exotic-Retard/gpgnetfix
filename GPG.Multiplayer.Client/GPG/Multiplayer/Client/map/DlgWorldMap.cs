@@ -307,20 +307,20 @@
                                 method = delegate (object objbitmap, object objpos) {
                                     if ((map.pbTicker.Width > 0) && (map.pbTicker.Height > 0))
                                     {
-                                        int num = (int) objpos;
+                                        int curnum = (int) objpos;
                                         Bitmap image = (Bitmap) objbitmap;
                                         if ((map.pbTicker.Image == null) || (map.pbTicker.Image.Width != map.pbTicker.Width))
                                         {
                                             map.pbTicker.Image = new Bitmap(map.pbTicker.Width, map.pbTicker.Height);
                                         }
                                         Graphics graphics = Graphics.FromImage(map.pbTicker.Image);
-                                        Brush brush = new SolidBrush(Color.Black);
+                                        Brush curbrush = new SolidBrush(Color.Black);
                                         Rectangle rect = new Rectangle(0, 0, map.pbTicker.Width, map.pbTicker.Height);
                                         Rectangle srcRect = new Rectangle(position, 0, map.pbTicker.Width, map.pbTicker.Height);
-                                        graphics.FillRectangle(brush, rect);
+                                        graphics.FillRectangle(curbrush, rect);
                                         graphics.DrawImage(image, rect, srcRect, GraphicsUnit.Pixel);
-                                        brush.Dispose();
-                                        brush.Dispose();
+                                        curbrush.Dispose();
+                                        curbrush.Dispose();
                                         graphics.Dispose();
                                         map.pbTicker.Invalidate();
                                     }
@@ -953,7 +953,6 @@
             {
                 string[] strArray;
                 uint num;
-                Exception exception;
                 float num2;
                 float num3;
                 MapLocation location;
@@ -1002,8 +1001,7 @@
                         }
                         catch (Exception exception1)
                         {
-                            exception = exception1;
-                            ErrorLog.WriteLine(exception);
+                            ErrorLog.WriteLine(exception1);
                             continue;
                         }
                         num2 = 0f;
@@ -1089,8 +1087,7 @@
                                 }
                                 catch (Exception exception5)
                                 {
-                                    exception = exception5;
-                                    ErrorLog.WriteLine(exception);
+                                    ErrorLog.WriteLine(exception5);
                                     continue;
                                 }
                                 if (map.FindLocation(num, out num2, out num3, out num6) && ((num2 != 0f) && (num3 != 0f)))
@@ -1177,8 +1174,7 @@
                     }
                     catch (Exception exception6)
                     {
-                        exception = exception6;
-                        ErrorLog.WriteLine(exception);
+                        ErrorLog.WriteLine(exception6);
                     }
                 }
                 if (User.Current.IsAdmin)
@@ -1204,8 +1200,7 @@
                                 }
                                 catch (Exception exception7)
                                 {
-                                    exception = exception7;
-                                    ErrorLog.WriteLine(exception);
+                                    ErrorLog.WriteLine(exception7);
                                     continue;
                                 }
                                 stream.Write(BitConverter.GetBytes(num), 0, 4);
@@ -1272,8 +1267,7 @@
                     }
                     catch (Exception exception8)
                     {
-                        exception = exception8;
-                        ErrorLog.WriteLine(exception);
+                        ErrorLog.WriteLine(exception8);
                     }
                 }
                 queryDataSafe = DataAccess.GetQueryDataSafe("GetFriendsIPAddresses", new object[0]);
@@ -1292,8 +1286,7 @@
                         }
                         catch (Exception exception9)
                         {
-                            exception = exception9;
-                            ErrorLog.WriteLine(exception);
+                            ErrorLog.WriteLine(exception9);
                             continue;
                         }
                         map.FindLocation(num, out num2, out num3);
@@ -1344,8 +1337,7 @@
                         }
                         catch (Exception exception10)
                         {
-                            exception = exception10;
-                            ErrorLog.WriteLine(exception);
+                            ErrorLog.WriteLine(exception10);
                             continue;
                         }
                         map.FindLocation(num, out num2, out num3);
@@ -1404,8 +1396,7 @@
                         }
                         catch (Exception exception11)
                         {
-                            exception = exception11;
-                            ErrorLog.WriteLine(exception);
+                            ErrorLog.WriteLine(exception11);
                             continue;
                         }
                         num2 = 0f;
@@ -1490,8 +1481,7 @@
                         }
                         catch (Exception exception12)
                         {
-                            exception = exception12;
-                            ErrorLog.WriteLine(exception);
+                            ErrorLog.WriteLine(exception12);
                             continue;
                         }
                         map.FindLocation(num, out num2, out num3);

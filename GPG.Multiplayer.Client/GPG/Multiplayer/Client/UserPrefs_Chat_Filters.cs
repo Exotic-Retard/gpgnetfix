@@ -73,13 +73,13 @@
             set
             {
                 this.mFilterAdmin = value;
-                if (this.mFilterAdminChanged != null)
+                if (this.FilterAdminChanged != null)
                 {
-                    this.mFilterAdminChanged(this, new PropertyChangedEventArgs("FilterAdmin"));
+                    this.FilterAdminChanged(this, new PropertyChangedEventArgs("FilterAdmin"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterAdmin"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterAdmin"));
                 }
             }
         }
@@ -94,13 +94,13 @@
             set
             {
                 this.mFilterClan = value;
-                if (this.mFilterClanChanged != null)
+                if (this.FilterClanChanged != null)
                 {
-                    this.mFilterClanChanged(this, new PropertyChangedEventArgs("FilterClan"));
+                    this.FilterClanChanged(this, new PropertyChangedEventArgs("FilterClan"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterClan"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterClan"));
                 }
             }
         }
@@ -115,13 +115,13 @@
             set
             {
                 this.mFilterFriends = value;
-                if (this.mFilterFriendsChanged != null)
+                if (this.FilterFriendsChanged != null)
                 {
-                    this.mFilterFriendsChanged(this, new PropertyChangedEventArgs("FilterFriends"));
+                    this.FilterFriendsChanged(this, new PropertyChangedEventArgs("FilterFriends"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterFriends"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterFriends"));
                 }
             }
         }
@@ -136,13 +136,13 @@
             set
             {
                 this.mFilterGameMessages = value;
-                if (this.mFilterGameMessagesChanged != null)
+                if (this.FilterGameMessagesChanged != null)
                 {
-                    this.mFilterGameMessagesChanged(this, new PropertyChangedEventArgs("FilterGameMessages"));
+                    this.FilterGameMessagesChanged(this, new PropertyChangedEventArgs("FilterGameMessages"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterGameMessages"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterGameMessages"));
                 }
             }
         }
@@ -157,13 +157,13 @@
             set
             {
                 this.mFilterOther = value;
-                if (this.mFilterOtherChanged != null)
+                if (this.FilterOtherChanged != null)
                 {
-                    this.mFilterOtherChanged(this, new PropertyChangedEventArgs("FilterOther"));
+                    this.FilterOtherChanged(this, new PropertyChangedEventArgs("FilterOther"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterOther"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterOther"));
                 }
             }
         }
@@ -178,13 +178,13 @@
             set
             {
                 this.mFilterSelf = value;
-                if (this.mFilterSelfChanged != null)
+                if (this.FilterSelfChanged != null)
                 {
-                    this.mFilterSelfChanged(this, new PropertyChangedEventArgs("FilterSelf"));
+                    this.FilterSelfChanged(this, new PropertyChangedEventArgs("FilterSelf"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterSelf"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterSelf"));
                 }
             }
         }
@@ -199,13 +199,13 @@
             set
             {
                 this.mFilterSystemErrors = value;
-                if (this.mFilterSystemErrorsChanged != null)
+                if (this.FilterSystemErrorsChanged != null)
                 {
-                    this.mFilterSystemErrorsChanged(this, new PropertyChangedEventArgs("FilterSystemErrors"));
+                    this.FilterSystemErrorsChanged(this, new PropertyChangedEventArgs("FilterSystemErrors"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterSystemErrors"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterSystemErrors"));
                 }
             }
         }
@@ -220,13 +220,13 @@
             set
             {
                 this.mFilterSystemEvents = value;
-                if (this.mFilterSystemEventsChanged != null)
+                if (this.FilterSystemEventsChanged != null)
                 {
-                    this.mFilterSystemEventsChanged(this, new PropertyChangedEventArgs("FilterSystemEvents"));
+                    this.FilterSystemEventsChanged(this, new PropertyChangedEventArgs("FilterSystemEvents"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterSystemEvents"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterSystemEvents"));
                 }
             }
         }
@@ -241,13 +241,13 @@
             set
             {
                 this.mFilterSystemMessages = value;
-                if (this.mFilterSystemMessagesChanged != null)
+                if (this.FilterSystemMessagesChanged != null)
                 {
-                    this.mFilterSystemMessagesChanged(this, new PropertyChangedEventArgs("FilterSystemMessages"));
+                    this.FilterSystemMessagesChanged(this, new PropertyChangedEventArgs("FilterSystemMessages"));
                 }
-                if (this.mFilterChanged != null)
+                if (this.FilterChanged != null)
                 {
-                    this.mFilterChanged(this, new PropertyChangedEventArgs("FilterSystemMessages"));
+                    this.FilterChanged(this, new PropertyChangedEventArgs("FilterSystemMessages"));
                 }
             }
         }

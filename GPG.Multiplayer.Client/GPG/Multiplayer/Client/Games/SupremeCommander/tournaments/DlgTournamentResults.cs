@@ -203,7 +203,7 @@
                             }
                         }
                     }
-                    this.Invoke(delegate {
+                    this.Invoke((VGen0)delegate {
                         this.lbParticipants.Items.AddRange(this.Players.ToArray());
                     });
                 };

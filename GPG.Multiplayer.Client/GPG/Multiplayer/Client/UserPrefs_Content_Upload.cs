@@ -36,9 +36,9 @@
             set
             {
                 this.mMyUploads = value;
-                if (this.mMyUploadsChanged != null)
+                if (this.MyUploadsChanged != null)
                 {
-                    this.mMyUploadsChanged(this, new PropertyChangedEventArgs("MyUploads"));
+                    this.MyUploadsChanged(this, new PropertyChangedEventArgs("MyUploads"));
                 }
             }
         }
@@ -53,9 +53,9 @@
             set
             {
                 this.mUploadPaths = value;
-                if (this.mUploadPathsChanged != null)
+                if (this.UploadPathsChanged != null)
                 {
-                    this.mUploadPathsChanged(this, new PropertyChangedEventArgs("UploadPaths"));
+                    this.UploadPathsChanged(this, new PropertyChangedEventArgs("UploadPaths"));
                 }
             }
         }

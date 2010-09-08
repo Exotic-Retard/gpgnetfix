@@ -453,7 +453,7 @@
                     }
                     FileUtil.CreateShortcut(Path.Combine(unzipPath, this.ExeName), Path.Combine(this.GetDownloadPath(), base.Name.Trim(Path.GetInvalidPathChars())));
                 }
-                Program.MainForm.BeginInvoke(delegate {
+                Program.MainForm.BeginInvoke((VGen0)delegate {
                     if (new DlgYesNo(Program.MainForm, "<LOC>Create Shortcut?", "<LOC>Would you like to create a desktop shortcut this tool?").ShowDialog() == DialogResult.Yes)
                     {
                         string str = string.Format("{0} v{1}", this.Name, this.Version).Trim(Path.GetInvalidPathChars());
