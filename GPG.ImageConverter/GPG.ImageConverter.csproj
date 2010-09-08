@@ -1,42 +1,175 @@
-<VisualStudioProject>
-  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="3ecae66b-a2fa-49f3-b17d-5c0923aa5728">
-    <Build>
-      <Settings AssemblyName="GPG.ImageConverter" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
-        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
-        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
-      </Settings>
-      <References>
-        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
-        <Reference Name="GPG" AssemblyName="GPG" />
-      </References>
-    </Build>
-    <Files>
-      <Include>
-        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\RGBQUAD.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\RGBTRIPLE.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FIRGB16.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FIRGBA16.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FIRGBF.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FIRGBAF.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FICOMPLEX.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\ICCFlags.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FIICCPROFILE.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\LoadSaveFlags.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_FORMAT.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_TYPE.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_COLOR_TYPE.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_QUANTIZE.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_DITHER.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_JPEG_OPERATION.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_TMO.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_FILTER.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FREE_IMAGE_COLOR_CHANNEL.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FreeImage_OutputMessageFunction.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="FreeImageAPI\FreeImage.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\ImageConverter\ConvertDDS.cs" SubType="Code" BuildAction="Compile" />
-      </Include>
-    </Files>
-  </CSHARP>
-</VisualStudioProject>
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C36A0E0-7B15-4938-849F-5B7DC5DD315F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>GPG.ImageConverter</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GPG">
+      <Name>GPG</Name>
+      <HintPath>..\GPG\bin\Debug\GPG.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FICOMPLEX.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FIICCPROFILE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FIRGB16.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FIRGBA16.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FIRGBAF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FIRGBF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FreeImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FreeImage_OutputMessageFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_COLOR_CHANNEL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_COLOR_TYPE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_DITHER.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_FILTER.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_FORMAT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_JPEG_OPERATION.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_QUANTIZE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_TMO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\FREE_IMAGE_TYPE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\ICCFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\LoadSaveFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\RGBQUAD.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeImageAPI\RGBTRIPLE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\ImageConverter\ConvertDDS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
