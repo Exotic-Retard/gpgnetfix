@@ -12,14 +12,15 @@
     public class ThreadQueue : IDisposable
     {
         private bool _Disposed;
-        private static ThreadQueue _Quazal = CreateQueue(true);
-        private Queue InnerQueue = Queue.Synchronized(new Queue());
-        public static bool LoggingOut = false;
         private bool mIsSuspended;
         private bool mRunning;
+        private Thread WorkerThread;
+
+        public static bool LoggingOut = false;
         public static int QueueThreadID = 0;
         private static ThreadQueue sQueue = null;
-        private Thread WorkerThread;
+        private static ThreadQueue _Quazal = CreateQueue(true);
+        private Queue InnerQueue = Queue.Synchronized(new Queue());
 
         public event EventHandler Emptied;
 
