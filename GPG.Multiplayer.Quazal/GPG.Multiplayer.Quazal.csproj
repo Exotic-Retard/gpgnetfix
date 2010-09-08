@@ -1,0 +1,123 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="014cad46-b61f-4006-9316-0b06e5c4b1e1">
+    <Build>
+      <Settings AssemblyName="GPG.Multiplayer.Quazal" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="GPG" AssemblyName="GPG" />
+        <Reference Name="System.Web.Services" AssemblyName="System.Web.Services" />
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="GPGnetCommunicationsLib" AssemblyName="GPGnetCommunicationsLib" />
+        <Reference Name="System.Xml" AssemblyName="System.Xml" />
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+        <Reference Name="GPGnetClientLib" AssemblyName="GPGnetClientLib" />
+        <Reference Name="Interop.NATUPNPLib" AssemblyName="Interop.NATUPNPLib" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\PlayerRating.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\MessageEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Security\Hash.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\DirectSQLHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\AuthenticationHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\IUser.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\User.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\URLInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Security\AccessControlListMember.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\MatchmakingHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SNatMessagePtr.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SNatMessage.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\NatMessageDelegate.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Security\Crypto.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Security\ProgressDelegate.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\Service.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\ChunkUploadResult.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\ChunkDownloadResult.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\ContentUploadResult.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\SubmitContentChunkCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\SubmitContentChunkCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\FinalizeUploadCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\FinalizeUploadCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\CancelUploadCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\RequestContentCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\RequestContentCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\GetPreviewImageCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\GetPreviewImageCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\vault\DeleteContentCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SupComStatsInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SupcomStatUnitInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\PersistTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\FileDownloadHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\PersistentStoreHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\AuthenticationEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Properties\Settings.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\CompetitionHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ResultsInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Chatroom.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\Service.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\HelloWorldCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\HelloWorldCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\SubmitGameReportCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\SubmitGameReportCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Security\AccessControlList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Security\AccessControlListTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Security\InclusionTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\QuazalError.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\QuazalErrorCodes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ISqlExec.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\Service.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\SolutionListItem.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\ServerStat.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\PlayerRanking.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\HelloWorldCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\HelloWorldCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\SLKeywordSearchCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\SLKeywordSearchCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\GetSolutionDetailsCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\GetSolutionDetailsCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\GetRankingsCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\GetRankingsCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\GetServerStatsCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\SolutionsLib\GetServerStatsCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\GameHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ConfigSettings.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ConfigSetting.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\replay\Service.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\replay\HelloWorldCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\replay\HelloWorldCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\replay\SubmitGameCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\replay\SubmitGameCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\replay\SubmitGPGNetDataCompletedEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\com\gaspowered\gpgnet\replay\SubmitGPGNetDataCompletedEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\PlayerHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ConnectionType.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ConnectionInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\PlayerInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\EventTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ChatroomHelper.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\MessageEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\UserLocation.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Messaging.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\NetTransfer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\DataAccess.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\QuazalQuery.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\CustomCommands.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Lobby.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\IGPGnetProtocol.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\GPGnetProtocol.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\GameItem.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\CustomRoom.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\ReservedPrefix.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\LobbyExtension.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\Game.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\Quazal\UPnP.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
