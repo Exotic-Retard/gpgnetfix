@@ -1,6 +1,7 @@
 ﻿namespace GPG
 {
     using System;
+    using System.Reflection;
 
     [Serializable]
     public class SettingDeclarationAttribute : Attribute
