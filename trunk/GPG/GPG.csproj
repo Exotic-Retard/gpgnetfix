@@ -58,9 +58,11 @@
   <ItemGroup>
     <Reference Include="Interop.IWshRuntimeLibrary">
       <Name>Interop.IWshRuntimeLibrary</Name>
+      <HintPath>..\libraries\Interop.IWshRuntimeLibrary.DLL</HintPath>
     </Reference>
     <Reference Include="Interop.SpeechLib">
       <Name>Interop.SpeechLib</Name>
+      <HintPath>..\libraries\Interop.SpeechLib.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -79,6 +81,7 @@
     </Reference>
     <Reference Include="vjslib">
       <Name>vjslib</Name>
+      <HintPath>..\libraries\vjslib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
