@@ -298,8 +298,7 @@
                         if (allParticipants[0].IsAutomatch && allParticipants[1].IsAutomatch)
                         {
                             int num6;
-                            string str4 = dictionary3[num6];
-                            (dictionary3 = dictionary2)[num6 = list2[0].LadderInstanceID] = str4 + str3 + allParticipants[0].EntityID.ToString() + "," + allParticipants[1].EntityID.ToString();
+                            (dictionary3 = dictionary2)[num6 = list2[0].LadderInstanceID] = dictionary3[num6] + str3 + allParticipants[0].EntityID.ToString() + "," + allParticipants[1].EntityID.ToString();
                             string str5 = str2;
                             str2 = str5 + str3 + allParticipants[0].EntityID.ToString() + "," + allParticipants[1].EntityID.ToString();
                         }
@@ -344,8 +343,7 @@
                             {
                                 Dictionary<int, string> dictionary6;
                                 int num18;
-                                string str6 = dictionary6[num18];
-                                (dictionary6 = dictionary2)[num18 = list2[0].LadderInstanceID] = str6 + str3 + reportArray2[0].EntityID.ToString() + "," + reportArray2[1].EntityID.ToString();
+                                (dictionary6 = dictionary2)[num18 = list2[0].LadderInstanceID] = dictionary6[num18] + str3 + reportArray2[0].EntityID.ToString() + "," + reportArray2[1].EntityID.ToString();
                                 string str7 = str2;
                                 str2 = str7 + str3 + reportArray2[0].EntityID.ToString() + "," + reportArray2[1].EntityID.ToString();
                             }
