@@ -194,22 +194,15 @@
                 return GetQueryData(queryName, args);
             }
             string key = Guid.NewGuid().ToString();
-            object signal = new object();
-            lock (signal)
-            {
-                ThreadQueue.QueueUserWorkItem(delegate(object o)
-                {
-                    object[] objArray = o as object[];
-                    mSafeResult.Add(objArray[1].ToString(), GetQueryData(objArray[0].ToString(), objArray[2] as object[]));
-                    lock (signal)
-                    {
-                        Monitor.Pulse(signal);
-                    }
-                }, new object[] { queryName, key, args });
-                if (!Monitor.Wait(signal, ConfigSettings.GetInt("SafeTimeout", 200) * 100))
-                    return null;
-                return (mSafeResult[key] as DataList);
-            }
+            EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
+            ThreadQueue.QueueUserWorkItem(delegate (object o) {
+                object[] objArray = o as object[];
+                mSafeResult.Add(objArray[1].ToString(), GetQueryData(objArray[0].ToString(), objArray[2] as object[]));
+                signal.Set();
+            }, new object[] { queryName, key, args });
+            if (!signal.WaitOne(ConfigSettings.GetInt("SafeTimeout", 200) * 100))
+                return null;
+            return (mSafeResult[key] as DataList);
         }
 
         public static DataList GetQueryDataSet(string queryName, bool? useMaster, params object[] args)
