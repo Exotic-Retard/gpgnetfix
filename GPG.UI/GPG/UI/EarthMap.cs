@@ -1242,9 +1242,9 @@
             set
             {
                 this.mShowBorders = value;
-                if (this.mShowBordersChanged != null)
+                if (this.ShowBordersChanged != null)
                 {
-                    this.mShowBordersChanged(this, new PropertyChangedEventArgs("ShowBorders"));
+                    this.ShowBordersChanged(this, new PropertyChangedEventArgs("ShowBorders"));
                 }
             }
         }

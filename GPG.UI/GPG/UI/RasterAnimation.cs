@@ -176,7 +176,7 @@
         {
             this.mPaused = false;
             this.mIsRunning = false;
-            base.Invoke(delegate {
+            base.Invoke((VGen0)delegate {
                 if (this.Frames.Count >= 1)
                 {
                     base.Image = this.Frames[0].Image;
