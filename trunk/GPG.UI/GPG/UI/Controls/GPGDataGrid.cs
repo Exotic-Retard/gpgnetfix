@@ -156,9 +156,9 @@
             set
             {
                 this.mCustomizeStyle = value;
-                if (this.mCustomizeStyleChanged != null)
+                if (this.CustomizeStyleChanged != null)
                 {
-                    this.mCustomizeStyleChanged(this, new PropertyChangedEventArgs("CustomizeStyle"));
+                    this.CustomizeStyleChanged(this, new PropertyChangedEventArgs("CustomizeStyle"));
                 }
             }
         }

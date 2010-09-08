@@ -23,9 +23,9 @@
 
         internal void OnClick()
         {
-            if (this.mClick != null)
+            if (this.Click != null)
             {
-                this.mClick(this, EventArgs.Empty);
+                this.Click(this, EventArgs.Empty);
             }
         }
 
