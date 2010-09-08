@@ -38,7 +38,7 @@
         private static User mCurrent;
         private static MappedObjectList<User> mCurrentFriends = new MappedObjectList<User>();
         [FieldMap("custom_data")]
-        private string mCustomData;
+        private string mCustomData = "";
         [NotTransferred, FieldMap("description")]
         private string mDescription;
         private string mEmail;
@@ -46,7 +46,7 @@
         private static User mEvent;
         private static User mGame;
         [FieldMap("groups")]
-        private int mGroups;
+        private int mGroups = -1;
         [FieldMap("id")]
         private int mID;
         private static List<int> mIgnoredPlayers = new List<int>();
@@ -59,22 +59,22 @@
         private bool mIsDND;
         [FieldMap("friend")]
         private bool mIsFriend;
-        public bool? mIsModerator;
+        public bool? mIsModerator = null;
         private bool mIsSystem;
         [FieldMap("name")]
         private string mName;
         [FieldMap("online")]
-        private bool mOnline;
+        private bool mOnline = true;
         private int mPingTime;
         private Image mPlayerIcon;
         private int mPort;
         [FieldMap("rank")]
-        private int mRank;
+        private int mRank = -1;
         private PlayerRating mRating_1v1;
         private static User mSystem;
         private static User mUnknown;
-        private bool mVisible;
-        private System.Net.NetworkInformation.Ping Ping;
+        private bool mVisible = true;
+        private System.Net.NetworkInformation.Ping Ping = new System.Net.NetworkInformation.Ping();
         private const int PingTimeout = 0x1388;
         private const int PingWait = 0x3e8;
 
@@ -86,35 +86,14 @@
 
         public User()
         {
-            this.mGroups = -1;
-            this.mOnline = true;
-            this.mVisible = true;
-            this.mRank = -1;
-            this.mCustomData = "";
-            this.mIsModerator = null;
-            this.Ping = new System.Net.NetworkInformation.Ping();
         }
 
         public User(DataRecord record) : base(record)
         {
-            this.mGroups = -1;
-            this.mOnline = true;
-            this.mVisible = true;
-            this.mRank = -1;
-            this.mCustomData = "";
-            this.mIsModerator = null;
-            this.Ping = new System.Net.NetworkInformation.Ping();
         }
 
         internal User(int id, string name)
         {
-            this.mGroups = -1;
-            this.mOnline = true;
-            this.mVisible = true;
-            this.mRank = -1;
-            this.mCustomData = "";
-            this.mIsModerator = null;
-            this.Ping = new System.Net.NetworkInformation.Ping();
             this.mID = id;
             this.mName = name;
             if (id < 0)

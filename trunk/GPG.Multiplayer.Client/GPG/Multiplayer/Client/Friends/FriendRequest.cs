@@ -8,32 +8,22 @@
     public class FriendRequest : MappedObject, IUserRequest
     {
         [FieldMap("reciever_id")]
-        private int mRecieverID;
+        private int mRecieverID = -1;
         [FieldMap("reciever_name")]
-        private string mRecieverName;
+        private string mRecieverName = null;
         [FieldMap("request_date")]
-        private DateTime mRequestDate;
+        private DateTime mRequestDate = DateTime.MinValue;
         [FieldMap("requestor_id")]
-        private int mRequestorID;
+        private int mRequestorID = -1;
         [FieldMap("requestor_name")]
-        private string mRequestorName;
+        private string mRequestorName = null;
 
         public FriendRequest(DataRecord record) : base(record)
         {
-            this.mRequestorID = -1;
-            this.mRequestorName = null;
-            this.mRecieverID = -1;
-            this.mRecieverName = null;
-            this.mRequestDate = DateTime.MinValue;
         }
 
         public FriendRequest(int reqId, string reqName, int recId, string recName, DateTime date)
         {
-            this.mRequestorID = -1;
-            this.mRequestorName = null;
-            this.mRecieverID = -1;
-            this.mRecieverName = null;
-            this.mRequestDate = DateTime.MinValue;
             this.mRequestorID = reqId;
             this.mRequestorName = reqName;
             this.mRecieverID = recId;

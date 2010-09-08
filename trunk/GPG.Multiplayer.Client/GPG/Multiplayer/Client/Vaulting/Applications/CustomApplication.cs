@@ -24,8 +24,8 @@
     [Serializable]
     public class CustomApplication : AdditionalContent, IAdditionalContent, IContentTypeProvider, IFTPInfo
     {
-        private int mAmt;
-        private int mBlockCount;
+        private int mAmt = 0;
+        private int mBlockCount = 0;
         [FieldMap("build")]
         private string mBuild;
         [FieldMap("build_result")]
@@ -59,12 +59,12 @@
         [FieldMap("gpgnet_game_id")]
         private int mGameID;
         [NonSerialized]
-        private GameInformation mGameInfo;
+        private GameInformation mGameInfo = null;
         [FieldMap("install_check")]
         private string mInstallCheck;
         [FieldMap("install_uri")]
         private string mInstallURI;
-        private bool mIsFTPUpload;
+        private bool mIsFTPUpload = false;
         [NonSerialized]
         private string mLocalUploadDir;
         [FieldMap("gpgnet_patch_algorithm")]
@@ -77,31 +77,17 @@
         private string mRelativeAppDirectory;
         [FieldMap("relative_version_file")]
         private string mRelativeVersionFile;
-        private IStatusProvider mStatusProvider;
-        private string mUploadFile;
+        private IStatusProvider mStatusProvider = null;
+        private string mUploadFile = "";
         [FieldMap("version_kind")]
-        private string mVersionKind;
+        private string mVersionKind = "INSTALL";
 
         private CustomApplication()
         {
-            this.mVersionKind = "INSTALL";
-            this.mGameInfo = null;
-            this.mUploadFile = "";
-            this.mStatusProvider = null;
-            this.mAmt = 0;
-            this.mBlockCount = 0;
-            this.mIsFTPUpload = false;
         }
 
         public CustomApplication(DataRecord record) : base(record)
         {
-            this.mVersionKind = "INSTALL";
-            this.mGameInfo = null;
-            this.mUploadFile = "";
-            this.mStatusProvider = null;
-            this.mAmt = 0;
-            this.mBlockCount = 0;
-            this.mIsFTPUpload = false;
             foreach (GameInformation information in GameInformation.Games)
             {
                 if (this.GameID == information.GameID)

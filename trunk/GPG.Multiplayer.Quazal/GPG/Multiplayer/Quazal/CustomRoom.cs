@@ -6,25 +6,22 @@
     public class CustomRoom : MappedObject
     {
         [FieldMap("start")]
-        private DateTime mCreated;
+        private DateTime mCreated = DateTime.MinValue;
         [FieldMap("description")]
         private string mDescription;
         [FieldMap("is_public")]
         private bool mIsPublic;
         [FieldMap("max_populate")]
-        private int mMaxPopulation;
+        private int mMaxPopulation = -1;
         [FieldMap("owner")]
         private string mOwner;
         [FieldMap("pwd")]
         private string mPassword;
         [FieldMap("population")]
-        private int mPopulation;
+        private int mPopulation = -1;
 
         public CustomRoom(DataRecord record) : base(record)
         {
-            this.mMaxPopulation = -1;
-            this.mPopulation = -1;
-            this.mCreated = DateTime.MinValue;
         }
 
         public DateTime Created

@@ -14,7 +14,7 @@
     public class Award : MappedObject
     {
         private static object AllAwardsMutex = new object();
-        private object LargeImageMutex;
+        private object LargeImageMutex = new object();
         [FieldMap("achievement_description")]
         private string mAchievementDescription;
         [FieldMap("achievement_query")]
@@ -30,12 +30,10 @@
         private bool mIsLocalResource;
         private Image mLargeImage;
         private Image mSmallImage;
-        private object SmallImageMutex;
+        private object SmallImageMutex = new object();
 
         public Award(DataRecord record) : base(record)
         {
-            this.SmallImageMutex = new object();
-            this.LargeImageMutex = new object();
         }
 
         public static void ClearCachedData()

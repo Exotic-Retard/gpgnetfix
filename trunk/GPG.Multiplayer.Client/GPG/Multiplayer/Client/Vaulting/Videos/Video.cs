@@ -27,7 +27,7 @@
     public class Video : AdditionalContent, IAdditionalContent, IContentTypeProvider
     {
         [NonSerialized]
-        private Service _WS;
+        private Service _WS = new Service();
         [NonSerialized]
         private static GridView BoundGridView = null;
         [FieldMap("length_hours")]
@@ -37,8 +37,8 @@
         [FieldMap("length_seconds")]
         private int mLengthSeconds;
         private string mLocalPreviewImagePath;
-        private Image mPreviewImage128;
-        private Image mPreviewImage50;
+        private Image mPreviewImage128 = null;
+        private Image mPreviewImage50 = null;
         [FieldMap("quality")]
         private string mQuality;
         [FieldMap("format")]
@@ -49,16 +49,10 @@
 
         private Video()
         {
-            this.mPreviewImage50 = null;
-            this._WS = new Service();
-            this.mPreviewImage128 = null;
         }
 
         public Video(DataRecord record) : base(record)
         {
-            this.mPreviewImage50 = null;
-            this._WS = new Service();
-            this.mPreviewImage128 = null;
         }
 
         public IAdditionalContent CreateEmptyInstance()

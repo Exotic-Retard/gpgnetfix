@@ -29,10 +29,10 @@
         [FieldMap("exe_name")]
         private string mExeName;
         [FieldMap("extract_to_supcom")]
-        private bool mExtractToSupcom;
+        private bool mExtractToSupcom = false;
         [FieldMap("num_files")]
         private int mNumberOfFiles;
-        private PackagingMethods mPackagingMethod;
+        private PackagingMethods mPackagingMethod = PackagingMethods.TargetDirectoryRecursive;
         [FieldMap("quality")]
         private string mQuality;
         [FieldMap("website")]
@@ -40,14 +40,10 @@
 
         public Tool()
         {
-            this.mExtractToSupcom = false;
-            this.mPackagingMethod = PackagingMethods.TargetDirectoryRecursive;
         }
 
         public Tool(DataRecord record) : base(record)
         {
-            this.mExtractToSupcom = false;
-            this.mPackagingMethod = PackagingMethods.TargetDirectoryRecursive;
         }
 
         public IAdditionalContent CreateEmptyInstance()

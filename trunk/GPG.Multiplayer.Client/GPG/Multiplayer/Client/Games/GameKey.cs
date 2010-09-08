@@ -9,20 +9,16 @@
     {
         private static MappedObjectList<GameKey> mBetaKeys = null;
         [FieldMap("description")]
-        private string mGameName;
+        private string mGameName = null;
         [FieldMap("key_chars")]
-        private string mKeyCharacters;
+        private string mKeyCharacters = null;
 
         public GameKey(DataRecord record) : base(record)
         {
-            this.mKeyCharacters = null;
-            this.mGameName = null;
         }
 
         public GameKey(string key, string gameName)
         {
-            this.mKeyCharacters = null;
-            this.mGameName = null;
             this.mKeyCharacters = key;
             this.mGameName = gameName;
         }

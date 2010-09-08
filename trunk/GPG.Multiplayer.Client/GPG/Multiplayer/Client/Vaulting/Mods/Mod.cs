@@ -33,13 +33,13 @@
     public class Mod : AdditionalContent, IAdditionalContent, IContentTypeProvider
     {
         [NonSerialized]
-        private Service _WS;
+        private Service _WS = new Service();
         [NonSerialized]
         private static GridView BoundGridView = null;
         private static Dictionary<int, string> CachedImageLocations = new Dictionary<int, string>();
         internal static Dictionary<string, Mod> CachedModLookups = new Dictionary<string, Mod>();
         [FieldMap("conflicts")]
-        private string mConflicts;
+        private string mConflicts = "";
         [FieldMap("copyright")]
         private string mCopyright;
         [FieldMap("developer")]
@@ -56,13 +56,13 @@
         private string mModName;
         [FieldMap("number_of_files")]
         private int mNumberOfFiles;
-        private Image mPreviewImage50;
+        private Image mPreviewImage50 = null;
         [FieldMap("requirement_names")]
-        private string mRequirementNames;
+        private string mRequirementNames = "";
         [FieldMap("requirements")]
-        private string mRequirements;
+        private string mRequirements = "";
         [FieldMap("ui_only")]
-        private bool? mUIOnly;
+        private bool? mUIOnly = false;
         [FieldMap("website")]
         private string mWebsite;
         private static Image Random50 = null;
@@ -72,22 +72,10 @@
 
         private Mod()
         {
-            this.mUIOnly = false;
-            this.mRequirements = "";
-            this.mRequirementNames = "";
-            this.mConflicts = "";
-            this._WS = new Service();
-            this.mPreviewImage50 = null;
         }
 
         public Mod(DataRecord record) : base(record)
         {
-            this.mUIOnly = false;
-            this.mRequirements = "";
-            this.mRequirementNames = "";
-            this.mConflicts = "";
-            this._WS = new Service();
-            this.mPreviewImage50 = null;
         }
 
         public IAdditionalContent CreateEmptyInstance()

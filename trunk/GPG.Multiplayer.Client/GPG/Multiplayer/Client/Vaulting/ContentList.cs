@@ -25,18 +25,16 @@
         private int mOwnerID;
         [FieldMap("owner_name")]
         private string mOwnerName;
-        private QuazalQuery mQuery;
+        private QuazalQuery mQuery = null;
         [FieldMap("tag")]
         private string Tag;
 
         private ContentList()
         {
-            this.mQuery = null;
         }
 
         public ContentList(DataRecord record) : base(record)
         {
-            this.mQuery = null;
         }
 
         public string Category

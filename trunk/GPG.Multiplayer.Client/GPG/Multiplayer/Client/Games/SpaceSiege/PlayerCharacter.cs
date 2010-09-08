@@ -9,13 +9,13 @@
     public class PlayerCharacter : MappedObject
     {
         [FieldMap("character_color")]
-        private int mCharacterColor;
+        private int mCharacterColor = Color.Red.ToArgb();
         [FieldMap("character_name")]
-        private string mCharacterName;
+        private string mCharacterName = "new_character";
         private string mFilePath;
         [FieldMap("guid")]
         private string mGuid;
-        private int mHead;
+        private int mHead = 1;
         [FieldMap("space_siege_character_id")]
         private int mID;
         [FieldMap("player_id")]
@@ -23,29 +23,19 @@
         [FieldMap("player_name")]
         private string mPlayerName;
         [FieldMap("robot_color")]
-        private int mRobotColor;
+        private int mRobotColor = Color.Red.ToArgb();
         [FieldMap("time_played")]
-        private string mTimePlayed;
-        private int mUpgrades;
+        private string mTimePlayed = "0";
+        private int mUpgrades = 0;
 
         public PlayerCharacter()
         {
-            this.mCharacterName = "new_character";
-            this.mUpgrades = 0;
-            this.mHead = 1;
-            this.mTimePlayed = "0";
-            this.mCharacterColor = Color.Red.ToArgb();
-            this.mRobotColor = Color.Red.ToArgb();
+
         }
 
         public PlayerCharacter(DataRecord record) : base(record)
         {
-            this.mCharacterName = "new_character";
-            this.mUpgrades = 0;
-            this.mHead = 1;
-            this.mTimePlayed = "0";
-            this.mCharacterColor = Color.Red.ToArgb();
-            this.mRobotColor = Color.Red.ToArgb();
+
         }
 
         public static PlayerCharacter FromString(string data)
