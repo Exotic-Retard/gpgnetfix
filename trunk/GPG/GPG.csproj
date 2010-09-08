@@ -1,106 +1,364 @@
-<VisualStudioProject>
-  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="a14b7661-bf45-454d-9558-106596349a3f">
-    <Build>
-      <Settings AssemblyName="GPG" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
-        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
-        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
-      </Settings>
-      <References>
-        <Reference Name="System" AssemblyName="System" />
-        <Reference Name="vjslib" AssemblyName="vjslib" />
-        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
-        <Reference Name="Interop.SpeechLib" AssemblyName="Interop.SpeechLib" />
-        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
-        <Reference Name="Interop.IWshRuntimeLibrary" AssemblyName="Interop.IWshRuntimeLibrary" />
-        <Reference Name="System.Management" AssemblyName="System.Management" />
-        <Reference Name="System.Web" AssemblyName="System.Web" />
-      </References>
-    </Build>
-    <Files>
-      <Include>
-        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Threading\ThreadItem.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Threading\ThreadCallback.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\INetData.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\FileUtil.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Threading\MethodInvocationHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Logging\IStatusProvider.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Logging\StatusProviderEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\GlobalHook.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\HookProc.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\HookInvoke.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\HookTypes.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\HookEventArgs.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Encryption.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\EncodingMethods.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\StringEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\StringEventHandler2.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\Node.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\IIndexTable!1.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\GPGDataAccessAttribute.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\FieldMapAttribute.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Compression.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\SettingDeclarationAttribute.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\ProgramSettings.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Threading\ThreadQueue.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\TextUtil.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Speech.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Logging\ErrorLog.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Logging\LogEvent.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Logging\AuditLog.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\DataRecord.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\ILocalizable.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DelegateUtil.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\DataList.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Loc.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\MappedObject.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\IProgressMonitor.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\WebDownloadMonitor.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\TranslateUtil.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\GPGnetSelectedGame.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\ProgressChangeEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\NotTransferredAttribute.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\MappedObjectList!1.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Threading\ControlInvocationHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\SystemRating.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\IPingMonitor.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\MultiVal!2.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\MultiVal!3.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\NetFile.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\StateTimer.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\IActivityMonitor.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\IndexMapAttribute.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\NetDataEventHandler.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\DataAccess\FieldIndex.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\BabelTranslate.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Logging\EventLog.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Logging\LogCategory.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\GlobalMouse.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OptionsRootAttribute.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\IGameInformation.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\GenericDelegate.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\GenericDelegate!1.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen0.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen1.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen2.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen3.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen4.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen5.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\VGen6.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OGen.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OGen0.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OGen1.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OGen2.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OGen3.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OGen4.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\OGen5.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Sound.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\SoundFlags.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG\Network\NetUtil.cs" SubType="Code" BuildAction="Compile" />
-        <File RelPath="GPG.StateTimer.resources" BuildAction="EmbeddedResource" />
-      </Include>
-    </Files>
-  </CSHARP>
-</VisualStudioProject>
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>GPG</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.IWshRuntimeLibrary">
+      <Name>Interop.IWshRuntimeLibrary</Name>
+    </Reference>
+    <Reference Include="Interop.SpeechLib">
+      <Name>Interop.SpeechLib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="vjslib">
+      <Name>vjslib</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\BabelTranslate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Compression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\DataList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\DataRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\FieldIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\FieldMapAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\GPGDataAccessAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\IIndexTable!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\IndexMapAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\MappedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\MappedObjectList!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DataAccess\NotTransferredAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\DelegateUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\EncodingMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Encryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\FileUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\GenericDelegate!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\GenericDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\GlobalHook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\GlobalMouse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\GPGnetSelectedGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\HookEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\HookInvoke.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\HookProc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\HookTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\IGameInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\ILocalizable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Loc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Logging\AuditLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Logging\ErrorLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Logging\EventLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Logging\IStatusProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Logging\LogCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Logging\LogEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Logging\StatusProviderEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\MultiVal!2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\MultiVal!3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\IActivityMonitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\INetData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\IPingMonitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\IProgressMonitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\NetDataEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\NetFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\NetUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\Node.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\ProgressChangeEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Network\WebDownloadMonitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OGen0.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OGen1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OGen2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OGen3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OGen4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OGen5.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\OptionsRootAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\ProgramSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\SettingDeclarationAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Sound.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\SoundFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Speech.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\StateTimer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPG\StringEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\StringEventHandler2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\SystemRating.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\TextUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Threading\ControlInvocationHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Threading\MethodInvocationHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Threading\ThreadCallback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Threading\ThreadItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\Threading\ThreadQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\TranslateUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen0.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen5.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GPG\VGen6.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="GPG.StateTimer.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
