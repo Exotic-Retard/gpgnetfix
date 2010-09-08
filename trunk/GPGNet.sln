@@ -30,6 +30,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPG.Multiplayer.Game", "GPG
 		{3DA403D0-064A-4E1B-B810-11A6D804159C} = {3DA403D0-064A-4E1B-B810-11A6D804159C}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPG.Multiplayer.Statistics", "GPG.Multiplayer.Statistics\GPG.Multiplayer.Statistics.csproj", "{1EB9BEB4-FCE3-4F95-A275-9DE6D642E47D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E} = {6636B74B-0DDC-4E91-B5D7-4FF5AEB71C2E}
+		{3DA403D0-064A-4E1B-B810-11A6D804159C} = {3DA403D0-064A-4E1B-B810-11A6D804159C}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +70,10 @@ Global
 		{86243ACD-DF5A-4D85-B58D-4408F78745A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86243ACD-DF5A-4D85-B58D-4408F78745A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86243ACD-DF5A-4D85-B58D-4408F78745A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB9BEB4-FCE3-4F95-A275-9DE6D642E47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB9BEB4-FCE3-4F95-A275-9DE6D642E47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB9BEB4-FCE3-4F95-A275-9DE6D642E47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB9BEB4-FCE3-4F95-A275-9DE6D642E47D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
