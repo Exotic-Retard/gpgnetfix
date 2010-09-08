@@ -1,0 +1,156 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="56747d89-b0e4-4455-aaf9-d450205a7d77">
+    <Build>
+      <Settings AssemblyName="GPG.UI" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+        <Reference Name="DevExpress.XtraEditors.v6.3" AssemblyName="DevExpress.XtraEditors.v6.3" />
+        <Reference Name="GPG" AssemblyName="GPG" />
+        <Reference Name="DevExpress.XtraCharts.v6.3.UI" AssemblyName="DevExpress.XtraCharts.v6.3.UI" />
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="DevExpress.XtraBars.v6.3" AssemblyName="DevExpress.XtraBars.v6.3" />
+        <Reference Name="DevExpress.XtraGrid.v6.3" AssemblyName="DevExpress.XtraGrid.v6.3" />
+        <Reference Name="DevExpress.XtraTreeList.v6.3" AssemblyName="DevExpress.XtraTreeList.v6.3" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="DevExpress.XtraVerticalGrid.v6.3" AssemblyName="DevExpress.XtraVerticalGrid.v6.3" />
+        <Reference Name="DevExpress.Utils.v6.3" AssemblyName="DevExpress.Utils.v6.3" />
+        <Reference Name="GPG.Multiplayer.Quazal" AssemblyName="GPG.Multiplayer.Quazal" />
+        <Reference Name="GPG.Multiplayer.Statistics" AssemblyName="GPG.Multiplayer.Statistics" />
+        <Reference Name="DevExpress.Data.v6.3" AssemblyName="DevExpress.Data.v6.3" />
+        <Reference Name="DevExpress.BonusSkins.v6.3" AssemblyName="DevExpress.BonusSkins.v6.3" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\GPGResources.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\ITextEffect.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\GPGDropList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\IStyledControl.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGTextList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGRadioGroup.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGPictureBox.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\IWdnProcControl.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\UI\Controls\GPGLabel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\UI\Controls\GrowDirections.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGDragList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGCheckBox.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\IDockableContainer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\ITextVal.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextVal.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\ITextVal!1.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextVal!1.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\IText.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextLine.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\RasterAnimation.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Skinning\ISkinResourceConsumer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Skinning\SkinnablePanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\ProgressBarImages.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGWebBrowser.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGRadioButton.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGOptionsEditor.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGLinkLabel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGChartControl.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGBorderPanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockSnapshotForm.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockAnchor.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextContainer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextContainer!1.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGScrollLabel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGPopupMenu.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGGridView.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\TabButton.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\ChatLine.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextSegment.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\EarthMap.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\ZoomInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\LocationTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\MapLocation.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGPanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGScrollPanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGDropDownList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGCalendar.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockSkinnedButton.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\CallOutEffect.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\IFilterControl.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGTreeList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\NodeDelegate.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGTextArea.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGTabControl.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGStatRow.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGGroupBox.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGComboBox.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockContainerRootPanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextValEventArgs.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Skinning\SkinResourceHierarchy.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockTabGroup.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\ProgressMeter.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockTitleBar.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\UI\Controls\ChatDisplay.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockStyleEventHandler.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockSplitter.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockContainerTitleBar.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\StrippedChatLine.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\UI\Controls\GPGButton.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockController.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGMenuStrip.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\DevExLocalizer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGDataGrid.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGBracketGrid.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\TabOrientations.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\PackagedFile.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\FileData.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGChatGrid.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockContainerForm.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\BoundContainerList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\BoundContainerList!1.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextLineList.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\TextStyles.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\ISelfPaint.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\ResizeDirections.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGTreeView.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\UI\Controls\DevExControlLocalizer.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\Multiplayer\UI\Controls\GPGTextBox.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGContextMenu.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGComboBoxPanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\PingIndicator.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGButtonPanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockRes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockPanel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGDragItem.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGMatchup.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGBorderStyle.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\RasterAnimationFrame.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\RasterAnimationFrameCollection.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\FontColorEffect.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\DrawUtil.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Skinning\SkinResourceTypes.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockStyles.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGRichLabel.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\PanelButton.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Docking\DockingSettings.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\Skinning\SkinManager.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGTreeNode.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\GPGDragState.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG\UI\Controls\CalendarDate.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="GPG.UI.GPGResources.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.Docking.DockRes.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.Docking.DockTabGroup.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.Docking.DockSnapshotForm.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.Docking.DockPanel.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.dll.licenses" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.GPGOptionsEditor.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.Docking.DockContainerForm.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.ProgressBarImages.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.GPGScrollLabel.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.GPGTextList.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.Docking.DockContainerTitleBar.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="GPG.UI.Controls.Docking.DockTitleBar.resources" BuildAction="EmbeddedResource" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
