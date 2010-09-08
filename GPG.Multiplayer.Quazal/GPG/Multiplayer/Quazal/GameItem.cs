@@ -16,7 +16,7 @@
         private string mBuffer;
         [FieldMap("description")]
         private string mDescription;
-        private Hashtable mFileLocs;
+        private Hashtable mFileLocs = new Hashtable();
         [FieldMap("type")]
         private string mGatheringType;
         [FieldMap("id")]
@@ -25,7 +25,7 @@
         private int mIPOptOut;
         [FieldMap("maxparticipants")]
         private string mMaxParticipants;
-        private int mMaxPlayers;
+        private int mMaxPlayers = -1;
         private bool mNeedsDownload;
         [FieldMap("NumOfPlayers")]
         private string mNumberOfPlayers;
@@ -33,24 +33,20 @@
         private int mOwnerID;
         [FieldMap("PlayerName")]
         private string mPlayerName;
-        private string mSize;
+        private string mSize = "Unknown";
         [FieldMap("start")]
         private string mStartTime;
         [FieldMap("state")]
         private string mState;
         [FieldMap("url")]
         private string mURL;
-        private int mVersion;
+        private int mVersion = -1;
         private static Hashtable sMapImages = Hashtable.Synchronized(new Hashtable());
         private static string sSupcomExe;
         private static string sSupcomPath;
 
         public GameItem(DataRecord record) : base(record)
         {
-            this.mFileLocs = new Hashtable();
-            this.mVersion = -1;
-            this.mSize = "Unknown";
-            this.mMaxPlayers = -1;
         }
 
         public static string CustomMapDir()

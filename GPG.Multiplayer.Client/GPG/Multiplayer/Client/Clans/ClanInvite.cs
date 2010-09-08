@@ -8,7 +8,7 @@
     public class ClanInvite : MappedObject, IUserRequest
     {
         [FieldMap("clan_abbr")]
-        private string mClanAbbreviation;
+        private string mClanAbbreviation = null;
         [FieldMap("clan_id")]
         private int mClanID;
         [FieldMap("clan_name")]
@@ -26,12 +26,10 @@
 
         public ClanInvite(DataRecord record) : base(record)
         {
-            this.mClanAbbreviation = null;
         }
 
         public ClanInvite(int reqId, string reqName, int recId, string recName, int clanId, string clanName, DateTime date)
         {
-            this.mClanAbbreviation = null;
             this.mRequestorID = reqId;
             this.mRequestorName = reqName;
             this.mRecieverID = recId;

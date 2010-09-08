@@ -35,7 +35,7 @@
     public class CustomMap : AdditionalContent, IAdditionalContent, IContentTypeProvider
     {
         [NonSerialized]
-        private Service _WS;
+        private Service _WS = new Service();
         [NonSerialized]
         private static GridView BoundGridView = null;
         private static Dictionary<int, string> CachedImageLocations = new Dictionary<int, string>();
@@ -44,31 +44,31 @@
         [NonSerialized]
         private static DateTime LastPreviewClose;
         [FieldMap("has_custom_ruleset")]
-        private bool? mHasCustomRuleset;
+        private bool? mHasCustomRuleset = null;
         [FieldMap("has_water")]
-        private bool? mHasWater;
+        private bool? mHasWater = null;
         [FieldMap("height")]
         private int mHeight;
         [FieldMap("is_mission")]
-        private bool? mIsMission;
+        private bool? mIsMission = null;
         [FieldMap("is_rush")]
-        private bool? mIsRushMap;
+        private bool? mIsRushMap = null;
         [FieldMap("is_separated")]
-        private bool? mIsSeparated;
+        private bool? mIsSeparated = null;
         [FieldMap("map_description")]
-        private string mMapDescription;
+        private string mMapDescription = null;
         [FieldMap("map_name")]
         private string mMapName;
-        private string mMaxPlayerComparisonType;
+        private string mMaxPlayerComparisonType = "=";
         [FieldMap("max_players")]
         private int mMaxPlayers;
-        private string mNonPackagedFiles;
-        private Image mPreviewImage128;
-        private Image mPreviewImage256;
-        private Image mPreviewImage50;
+        private string mNonPackagedFiles = ConfigSettings.GetString("VaultNonUploadFiles", ".exe,.bat,preview.png");
+        private Image mPreviewImage128 = null;
+        private Image mPreviewImage256 = null;
+        private Image mPreviewImage50 = null;
         [FieldMap("size")]
         private int mSize;
-        private string mSizeComparisonType;
+        private string mSizeComparisonType = "=";
         [FieldMap("terrain_type")]
         private string mTerrainType;
         [FieldMap("width")]
@@ -111,36 +111,11 @@
 
         private CustomMap()
         {
-            this.mHasWater = null;
-            this.mIsSeparated = null;
-            this.mIsRushMap = null;
-            this.mHasCustomRuleset = null;
-            this.mIsMission = null;
-            this.mMapDescription = null;
-            this.mPreviewImage50 = null;
-            this.mPreviewImage128 = null;
-            this._WS = new Service();
-            this.mPreviewImage256 = null;
-            this.mSizeComparisonType = "=";
-            this.mMaxPlayerComparisonType = "=";
-            this.mNonPackagedFiles = ConfigSettings.GetString("VaultNonUploadFiles", ".exe,.bat,preview.png");
+
         }
 
         public CustomMap(DataRecord record) : base(record)
         {
-            this.mHasWater = null;
-            this.mIsSeparated = null;
-            this.mIsRushMap = null;
-            this.mHasCustomRuleset = null;
-            this.mIsMission = null;
-            this.mMapDescription = null;
-            this.mPreviewImage50 = null;
-            this.mPreviewImage128 = null;
-            this._WS = new Service();
-            this.mPreviewImage256 = null;
-            this.mSizeComparisonType = "=";
-            this.mMaxPlayerComparisonType = "=";
-            this.mNonPackagedFiles = ConfigSettings.GetString("VaultNonUploadFiles", ".exe,.bat,preview.png");
         }
 
         public IAdditionalContent CreateEmptyInstance()

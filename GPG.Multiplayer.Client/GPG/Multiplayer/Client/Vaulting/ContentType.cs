@@ -11,12 +11,12 @@
     {
         private static ContentType[] mAll;
         [FieldMap("download_acl")]
-        private int mDownloadACL;
+        private int mDownloadACL = 0;
         [FieldMap("file_extensions")]
         private string mFileExtensions;
         [FieldMap("gpgnet_type")]
         private string mGPGnetType;
-        private bool? mHasVolunteeredForUploads;
+        private bool? mHasVolunteeredForUploads = null;
         [FieldMap("content_type_id")]
         private int mID;
         [FieldMap("image_index")]
@@ -26,16 +26,12 @@
         [FieldMap("singular_name")]
         private string mSingularName;
         [FieldMap("upload_acl")]
-        private int mUploadACL;
+        private int mUploadACL = 0;
         [FieldMap("ul_volunteer_effort")]
-        private string mUploadVolunteerEffort;
+        private string mUploadVolunteerEffort = null;
 
         public ContentType(DataRecord record) : base(record)
         {
-            this.mDownloadACL = 0;
-            this.mUploadACL = 0;
-            this.mUploadVolunteerEffort = null;
-            this.mHasVolunteeredForUploads = null;
         }
 
         public static bool Assign(AdditionalContent content)

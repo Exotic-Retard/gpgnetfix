@@ -14,7 +14,7 @@
         public static readonly Chatroom Game = new Chatroom(Loc.Get("<LOC>In Game"), -1);
         public const int MaxNameLength = 0x20;
         [FieldMap("clan_id")]
-        private int mClanID;
+        private int mClanID = -1;
         private static Chatroom mCurrent;
         [FieldMap("room_desc")]
         private string mDescription;
@@ -22,7 +22,7 @@
         private string mDynamicRoot;
         private static MappedObjectList<User> mGatheringParticipants = new MappedObjectList<User>();
         [FieldMap("gpgnet_game_id")]
-        private int mGPGnetGameID;
+        private int mGPGnetGameID = -1;
         private int mHiddenPlayers;
         [FieldMap("is_dynamic")]
         private bool mIsDynamic;
@@ -32,7 +32,7 @@
         private static string mMainChatNames = null;
         private static int mMaxRoomSize = -1;
         [FieldMap("count")]
-        private int mPopulation;
+        private int mPopulation = -1;
         private static string mRoomOperator = null;
         private static int mRoomRolloverSize = -1;
         public static readonly Chatroom None = new Chatroom(Loc.Get("<LOC>Not in a chatroom"), -1);
@@ -43,24 +43,15 @@
 
         public Chatroom(DataRecord record) : base(record)
         {
-            this.mPopulation = -1;
-            this.mClanID = -1;
-            this.mGPGnetGameID = -1;
         }
 
         public Chatroom(string name, int population)
         {
-            this.mPopulation = -1;
-            this.mClanID = -1;
-            this.mGPGnetGameID = -1;
             this.Construct(name, population, false);
         }
 
         public Chatroom(string name, int population, bool isPersistent)
         {
-            this.mPopulation = -1;
-            this.mClanID = -1;
-            this.mGPGnetGameID = -1;
             this.Construct(name, population, isPersistent);
         }
 

@@ -13,11 +13,10 @@
         [FieldMap("name")]
         private string mName;
         [FieldMap("sort_order")]
-        private int mSortOrder;
+        private int mSortOrder = -1;
 
         public AwardCategory(DataRecord record) : base(record)
         {
-            this.mSortOrder = -1;
         }
 
         public static void ClearCachedData()

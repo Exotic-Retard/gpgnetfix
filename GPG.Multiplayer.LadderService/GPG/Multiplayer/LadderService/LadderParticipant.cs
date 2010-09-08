@@ -22,7 +22,7 @@
         [FieldMap("entity_name")]
         private string mEntityName;
         [FieldMap("online")]
-        private bool mIsOnline;
+        private bool mIsOnline = true;
         [FieldMap("join_date")]
         private DateTime mJoinDate;
         [FieldMap("ladder_instance_id")]
@@ -62,7 +62,6 @@
 
         public LadderParticipant(DataRecord record) : base(record)
         {
-            this.mIsOnline = true;
         }
 
         public bool AcceptingChallenges

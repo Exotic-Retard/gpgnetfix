@@ -16,7 +16,7 @@
     public class Avatar : MappedObject
     {
         private static object AllAvatarsMutex = new object();
-        private object ImageMutex;
+        private object ImageMutex = new object();
         [FieldMap("achievement_query")]
         private string mAchievementQuery;
         private static Dictionary<int, Avatar> mAllAvatars = null;
@@ -27,20 +27,16 @@
         private int mID;
         private Bitmap mImage;
         [FieldMap("is_local_resource")]
-        private bool mIsLocalResource;
+        private bool mIsLocalResource = true;
         [FieldMap("resource_key")]
         private string mResourceKey;
 
         private Avatar()
         {
-            this.mIsLocalResource = true;
-            this.ImageMutex = new object();
         }
 
         public Avatar(DataRecord record) : base(record)
         {
-            this.mIsLocalResource = true;
-            this.ImageMutex = new object();
         }
 
         public static void CalculateAvatars()

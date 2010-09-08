@@ -9,37 +9,28 @@
     [IndexMap(new string[] { "mName", "mID", "mAbbreviation" }, new string[] { "name", "id", "abbr" })]
     public class Clan : MappedObject
     {
-        private int LastCache;
+        private int LastCache = 0;
         [FieldMap("abbreviation")]
-        private string mAbbreviation;
+        private string mAbbreviation=null;
         [FieldMap("date_founded")]
-        private DateTime mCreateDate;
+        private DateTime mCreateDate = DateTime.MinValue;
         private static Clan mCurrent = null;
         private static MappedObjectList<ClanMember> mCurrentMembers = new MappedObjectList<ClanMember>();
         [FieldMap("description")]
-        private string mDescription;
+        private string mDescription=null;
         [FieldMap("embed_website")]
         private bool mEmbedWebsite;
         [FieldMap("clan_id")]
-        private int mID;
-        private System.Drawing.Image mImage;
+        private int mID=-1;
+        private System.Drawing.Image mImage = null;
         [FieldMap("name")]
-        private string mName;
-        private PlayerRating mRating;
+        private string mName=null;
+        private PlayerRating mRating = null;
         [FieldMap("website")]
-        private string mWebsite;
+        private string mWebsite = null;
 
         public Clan(DataRecord record) : base(record)
         {
-            this.mID = -1;
-            this.mName = null;
-            this.mAbbreviation = null;
-            this.mDescription = null;
-            this.mCreateDate = DateTime.MinValue;
-            this.mWebsite = null;
-            this.mImage = null;
-            this.LastCache = 0;
-            this.mRating = null;
         }
 
         public override bool Equals(object obj)

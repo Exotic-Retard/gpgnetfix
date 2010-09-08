@@ -25,68 +25,49 @@
     {
         private static Dictionary<Guid, string> ActiveDownloads = new Dictionary<Guid, string>();
         [FieldMap("create_date")]
-        private string mCreateDate;
+        private string mCreateDate = "";
         [FieldMap("downloads")]
-        private int mDownloads;
+        private int mDownloads = 0;
         [FieldMap("description")]
-        private string mGameInfo;
+        private string mGameInfo = "";
         [FieldMap("game_length")]
-        private int mGameLength;
+        private int mGameLength = 0;
         [FieldMap("game_type")]
-        private int mGameType;
+        private int mGameType = 0;
         [FieldMap("replay_id")]
-        private int mID;
+        private int mID = 0;
         [FieldMap("keywords")]
-        private string mKeywords;
+        private string mKeywords = "";
         [FieldMap("location")]
-        private string mLocation;
+        private string mLocation = "";
         [FieldMap("mapname")]
-        private string mMapName;
+        private string mMapName = "";
         [FieldMap("opponent")]
-        private string mOpponent;
+        private string mOpponent = "";
         [FieldMap("opponent_faction")]
-        private int mOpponentFaction;
+        private int mOpponentFaction = 0;
         [FieldMap("player_faction")]
-        private int mPlayerFaction;
+        private int mPlayerFaction = 0;
         [FieldMap("principal_id")]
-        private int mPlayerID;
+        private int mPlayerID = -1;
         [FieldMap("name")]
-        private string mPlayerName;
-        private Image mRatimgImage;
+        private string mPlayerName = "";
+        private Image mRatimgImage = null;
         [FieldMap("rating_count")]
-        private int mRatingCount;
+        private int mRatingCount = 0;
         [FieldMap("rating_total")]
-        private float mRatingTotal;
+        private float mRatingTotal = 0f;
         [FieldMap("title")]
-        private string mTitle;
+        private string mTitle = "";
         [FieldMap("version")]
-        private string mVersion;
+        private string mVersion = "";
 
         [field: NonSerialized]
-        public event EventHandler DownloadsChanged;
+        public event EventHandler DownloadsChanged = null;
 
         public ReplayInfo(DataRecord record) : base(record)
         {
-            this.mID = 0;
-            this.mLocation = "";
-            this.mMapName = "";
-            this.mOpponent = "";
-            this.mGameType = 0;
-            this.mTitle = "";
-            this.mGameInfo = "";
-            this.mKeywords = "";
-            this.mPlayerID = -1;
-            this.mPlayerName = "";
-            this.mCreateDate = "";
-            this.mVersion = "";
-            this.DownloadsChanged = null;
-            this.mDownloads = 0;
-            this.mRatingTotal = 0f;
-            this.mRatingCount = 0;
-            this.mRatimgImage = null;
-            this.mGameLength = 0;
-            this.mPlayerFaction = 0;
-            this.mOpponentFaction = 0;
+
         }
 
         private static void client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)

@@ -8,30 +8,24 @@
     public class ClanMember : MappedObject, IUser
     {
         [FieldMap("clan_id")]
-        private int mClanID;
+        private int mClanID = -1;
         private static ClanMember mCurrent;
         [FieldMap("date_joined")]
-        private DateTime mDateJoined;
+        private DateTime mDateJoined = DateTime.MinValue;
         [FieldMap("clan_principal_id")]
-        private int mID;
+        private int mID = -1;
         [FieldMap("is_dnd")]
-        private bool mIsDND;
+        private bool mIsDND = false;
         [FieldMap("name")]
-        private string mName;
+        private string mName = null;
         [FieldMap("online")]
-        private bool mOnline;
+        private bool mOnline = false;
         [FieldMap("rank")]
-        private int mRank;
+        private int mRank = -1;
 
         public ClanMember(DataRecord record) : base(record)
         {
-            this.mID = -1;
-            this.mName = null;
-            this.mClanID = -1;
-            this.mRank = -1;
-            this.mOnline = false;
-            this.mIsDND = false;
-            this.mDateJoined = DateTime.MinValue;
+
         }
 
         public bool CanTargetAbility(ClanAbility ability, ClanMember target)

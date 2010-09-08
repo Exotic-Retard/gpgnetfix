@@ -28,54 +28,54 @@
         internal static Dictionary<int, IAdditionalContent> DependencyLookupCache = new Dictionary<int, IAdditionalContent>();
         private static bool mCheckingForUpdates;
         [FieldMap("dependencies")]
-        internal string mContentDependencies;
-        private GPG.Multiplayer.Client.Vaulting.ContentType mContentType;
+        internal string mContentDependencies = null;
+        private GPG.Multiplayer.Client.Vaulting.ContentType mContentType = null;
         [FieldMap("current_version")]
-        private int mCurrentVersion;
+        private int mCurrentVersion = -1;
         private static bool mDeletingMyContent = false;
         private static bool mDeletingMyUpload = false;
         [FieldMap("description")]
-        private string mDescription;
+        private string mDescription = null;
         [FieldMap("download_acl")]
-        private int mDownloadACL;
+        private int mDownloadACL = 0;
         [FieldMap("downloads")]
-        private int mDownloads;
+        private int mDownloads = 0;
         [FieldMap("download_size")]
         private int mDownloadSize;
         private static IAdditionalContent mDownloadTarget = null;
         [FieldMap("dl_volunteer_effort")]
         private string mDownloadVolunteerEffort;
         [FieldMap("enabled")]
-        private bool mEnabled;
-        private bool? mHasVolunteeredForDownload;
+        private bool mEnabled = true;
+        private bool? mHasVolunteeredForDownload = null;
         [FieldMap("content_id")]
-        private int mID;
-        private string mLocalFilePath;
+        private int mID = 0;
+        private string mLocalFilePath = null;
         private static List<IAdditionalContent> mMyContent = null;
         [FieldMap("name")]
-        private string mName;
+        private string mName = null;
         [FieldMap("owner_id")]
-        private int mOwnerID;
+        private int mOwnerID = 0;
         [FieldMap("owner_name")]
-        private string mOwnerName;
-        private Image mRatimgImageFull;
-        private Image mRatimgImageSmall;
+        private string mOwnerName = null;
+        private Image mRatimgImageFull = null;
+        private Image mRatimgImageSmall = null;
         [FieldMap("rating_count")]
-        private int mRatingCount;
-        private Image mRatingImageLarge;
+        private int mRatingCount = 0;
+        private Image mRatingImageLarge = null;
         [FieldMap("rating_total")]
-        private float mRatingTotal;
+        private float mRatingTotal = 0f;
         [FieldMap("search_keywords")]
-        private string mSearchKeywords;
+        private string mSearchKeywords = null;
         [FieldMap("type_id")]
-        private int mTypeID;
+        private int mTypeID = 0;
         private static bool mUploadingContent = false;
         [FieldMap("version")]
-        private int mVersion;
+        private int mVersion = 0;
         [FieldMap("version_chksum")]
-        private string mVersionCheck;
+        private string mVersionCheck = null;
         [FieldMap("version_date")]
-        private DateTime mVersionDate;
+        private DateTime mVersionDate = DateTime.MinValue;
         [FieldMap("version_notes")]
         private string mVersionNotes;
         private static object MyContentMutex = new object();
@@ -103,56 +103,11 @@
 
         protected AdditionalContent()
         {
-            this.mID = 0;
-            this.mTypeID = 0;
-            this.mName = null;
-            this.mDescription = null;
-            this.mOwnerName = null;
-            this.mOwnerID = 0;
-            this.mDownloads = 0;
-            this.mSearchKeywords = null;
-            this.mRatingTotal = 0f;
-            this.mRatingCount = 0;
-            this.mEnabled = true;
-            this.mDownloadACL = 0;
-            this.mHasVolunteeredForDownload = null;
-            this.mRatimgImageSmall = null;
-            this.mRatingImageLarge = null;
-            this.mRatimgImageFull = null;
-            this.mVersion = 0;
-            this.mVersionDate = DateTime.MinValue;
-            this.mVersionCheck = null;
-            this.mCurrentVersion = -1;
-            this.mContentDependencies = null;
-            this.mContentType = null;
-            this.mLocalFilePath = null;
+
         }
 
         public AdditionalContent(DataRecord record) : base(record)
         {
-            this.mID = 0;
-            this.mTypeID = 0;
-            this.mName = null;
-            this.mDescription = null;
-            this.mOwnerName = null;
-            this.mOwnerID = 0;
-            this.mDownloads = 0;
-            this.mSearchKeywords = null;
-            this.mRatingTotal = 0f;
-            this.mRatingCount = 0;
-            this.mEnabled = true;
-            this.mDownloadACL = 0;
-            this.mHasVolunteeredForDownload = null;
-            this.mRatimgImageSmall = null;
-            this.mRatingImageLarge = null;
-            this.mRatimgImageFull = null;
-            this.mVersion = 0;
-            this.mVersionDate = DateTime.MinValue;
-            this.mVersionCheck = null;
-            this.mCurrentVersion = -1;
-            this.mContentDependencies = null;
-            this.mContentType = null;
-            this.mLocalFilePath = null;
         }
 
         public static void AddDependency(IAdditionalContent content, int dependency)
