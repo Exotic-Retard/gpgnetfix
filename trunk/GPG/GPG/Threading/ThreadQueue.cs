@@ -171,7 +171,6 @@
             }
             while ((this.Running && !this.Disposed) && !LoggingOut)
             {
-                bool bEmptied = false;
                 if ((this.InnerQueue.Count > 0) && !this.IsSuspended)
                 {
                     ThreadItem item = this.InnerQueue.Dequeue() as ThreadItem;
@@ -239,19 +238,16 @@
                         ErrorLog.WriteLine("An error occured while invoking the following item:\r\n{0}", new object[] { item });
                         ErrorLog.WriteLine(exception);
                     }
-                    bEmptied = true;
+                    if ((this.InnerQueue.Count < 1) || this.IsSuspended)
+                    {
+                        this.OnEmptied();
+                    }
                 }
                 else
                 {
                     this.EventQueue.WaitOne();
                 }
-                if ((this.InnerQueue.Count < 1) || this.IsSuspended)
-                {
-                    if (bEmptied)
-                    {
-                        this.OnEmptied();
-                    }
-                }
+                
             }
         }
 
