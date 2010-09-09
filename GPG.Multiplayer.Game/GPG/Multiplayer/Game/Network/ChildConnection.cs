@@ -11,6 +11,7 @@
         public int LocalPort = -1;
         public UdpClient LocalUdp;
         private ConnectionManager mConnections;
+        private EventWaitHandle mEventQueue = new EventWaitHandle(false, EventResetMode.AutoReset);
         private System.Collections.Queue mPacketQueue = System.Collections.Queue.Synchronized(new System.Collections.Queue());
         private bool mProcessing;
         public string RemoteAddr = "Unassigned";
@@ -33,12 +34,12 @@
             this.SetUpReceive();
             while (this.mProcessing)
             {
+                mEventQueue.WaitOne();
                 while (this.mPacketQueue.Count > 0)
                 {
                     PacketData data = (PacketData) this.mPacketQueue.Dequeue();
                     this.LocalUdp.Send(data.data, data.data.Length, data.address, data.port);
                 }
-                Thread.Sleep(20);
             }
         }
 
@@ -59,6 +60,7 @@
                 port = port
             };
             this.mPacketQueue.Enqueue(data2);
+            mEventQueue.Set();
         }
 
         private void SetUpReceive()

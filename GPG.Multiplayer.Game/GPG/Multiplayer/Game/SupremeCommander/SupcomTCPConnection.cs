@@ -164,17 +164,13 @@
 
         private void CheckIsRunning()
         {
-            try
-            {
-                while (!this.mProcess.HasExited)
-                {
-                    Thread.Sleep(0x3e8);
-                }
-            }
-            catch (ThreadInterruptedException exception)
-            {
-                GPG.Logging.EventLog.WriteLine("TCP Check process thread interrupted.", LogCategory.Get("TCP"), new object[] { exception });
-            }
+            EventWaitHandle signal=new EventWaitHandle(false,EventResetMode.ManualReset);
+            EventHandler onClosed=delegate {
+                signal.Set();
+            };
+            this.mProcess.Exited += onClosed;
+            signal.WaitOne();
+            this.mProcess.Exited -= onClosed;
             this.Close();
         }
 
