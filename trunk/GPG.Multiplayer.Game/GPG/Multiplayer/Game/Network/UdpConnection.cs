@@ -13,6 +13,7 @@
         private int mConnectionID = -1;
         private bool mIsBound;
         private Thread mManagerThread;
+        private EventWaitHandle mEventQueue = new EventWaitHandle(false, EventResetMode.AutoReset);
         private System.Collections.Queue mPacketQueue = System.Collections.Queue.Synchronized(new System.Collections.Queue());
         private int mPort = -1;
         private bool mProcessing;
@@ -64,18 +65,11 @@
             this.SetUpReceive();
             while (this.mProcessing)
             {
+                mEventQueue.WaitOne();
                 while (this.mPacketQueue.Count > 0)
                 {
                     PacketData data = (PacketData) this.mPacketQueue.Dequeue();
                     this.mUdpClient.Send(data.data, data.data.Length, data.address, data.port);
-                }
-                try
-                {
-                    Thread.Sleep(0x3e8);
-                }
-                catch (ThreadInterruptedException exception)
-                {
-                    EventLog.WriteLine("The thread was woken up: " + exception.Message, new object[0]);
                 }
             }
             this.mUdpClient.Close();
@@ -108,7 +102,7 @@
                     port = port
                 };
                 this.mPacketQueue.Enqueue(data2);
-                this.mManagerThread.Interrupt();
+                this.mEventQueue.Set();
             }
         }
 

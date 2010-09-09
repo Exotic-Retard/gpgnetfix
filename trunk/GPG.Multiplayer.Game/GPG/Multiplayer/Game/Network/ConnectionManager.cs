@@ -14,6 +14,7 @@
         private Thread mManagerThread;
         private string mName;
         private System.Collections.Queue mPacketQueue;
+        private EventWaitHandle mEventQueue;
         private int mPort;
         private bool mProcessing;
         private UdpClient mRemoteUdp;
@@ -29,6 +30,7 @@
             this.mUserID = -1;
             this.mConnections = Hashtable.Synchronized(new Hashtable());
             this.mPacketQueue = System.Collections.Queue.Synchronized(new System.Collections.Queue());
+            this.mEventQueue = new EventWaitHandle(false, EventResetMode.AutoReset);
             this.mPort = port;
             this.mName = name;
             this.mUserID = uid;
@@ -86,12 +88,12 @@
             this.SetUpReceive();
             while (this.mProcessing)
             {
+                this.mEventQueue.WaitOne();
                 while (this.mPacketQueue.Count > 0)
                 {
                     PacketData data = (PacketData) this.mPacketQueue.Dequeue();
                     this.mRemoteUdp.Send(data.data, data.data.Length, data.address, data.port);
                 }
-                Thread.Sleep(20);
             }
         }
 
@@ -120,6 +122,7 @@
                 port = port
             };
             this.mPacketQueue.Enqueue(data2);
+            this.mEventQueue.Set();
         }
 
         private void SetUpReceive()

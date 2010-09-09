@@ -15,6 +15,7 @@
         private Hashtable mConnectAttempts = new Hashtable();
         private INetConnection mConnection;
         private System.Collections.Queue mMessageQueue = System.Collections.Queue.Synchronized(new System.Collections.Queue());
+        private EventWaitHandle mMessageEvent = new EventWaitHandle(false, EventResetMode.AutoReset);
         private Hashtable mPlayerInfo = Hashtable.Synchronized(new Hashtable());
         private bool mProcessing;
         private Thread mProcessThread;
@@ -211,27 +212,18 @@
             this.mProcessing = true;
             while (this.mProcessing)
             {
-                try
+                if (this.mMessageQueue.Count > 0)
                 {
-                    if (this.mMessageQueue.Count > 0)
+                    NetMessage message = this.mMessageQueue.Dequeue() as NetMessage;
+                    if (message != null)
                     {
-                        NetMessage message = this.mMessageQueue.Dequeue() as NetMessage;
-                        if (message != null)
-                        {
-                            this.mConnection.SendMessage(message.FormatMessage(), message.EndPoint.Address.ToString(), message.EndPoint.Port);
-                            EventLog.WriteLine("Traffic Manager Processed a Message: " + message.EndPoint.ToString() + " " + message.Text, LogCategory.Get("TrafficManager"), new object[0]);
-                        }
+                        this.mConnection.SendMessage(message.FormatMessage(), message.EndPoint.Address.ToString(), message.EndPoint.Port);
+                        EventLog.WriteLine("Traffic Manager Processed a Message: " + message.EndPoint.ToString() + " " + message.Text, LogCategory.Get("TrafficManager"), new object[0]);
                     }
-                    else
-                    {
-                        Thread.Sleep(100);
-                    }
-                    continue;
                 }
-                catch (ThreadInterruptedException exception)
+                else
                 {
-                    EventLog.WriteLine("The thread was woken up: " + exception.Message, LogCategory.Get("TrafficManager"), new object[0]);
-                    continue;
+                    mMessageEvent.WaitOne();
                 }
             }
         }
@@ -239,10 +231,7 @@
         public void QueueMessage(NetMessage message)
         {
             this.mMessageQueue.Enqueue(message);
-            if (this.mProcessing)
-            {
-                this.mProcessThread.Interrupt();
-            }
+            this.mMessageEvent.Set();
         }
 
         public void SetConnection(INetConnection connection)
