@@ -21,6 +21,7 @@
         private static ThreadQueue sQueue = null;
         private static ThreadQueue _Quazal = CreateQueue(true);
         private Queue InnerQueue = Queue.Synchronized(new Queue());
+        private EventWaitHandle EventQueue = new EventWaitHandle(false, EventResetMode.AutoReset);
 
         public event EventHandler Emptied;
 
@@ -54,6 +55,7 @@
         public void Enqueue(ThreadItem item)
         {
             this.InnerQueue.Enqueue(item);
+            this.EventQueue.Set();
             if ((this.Running && (this.WorkerThread != null)) && ((this.WorkerThread.ThreadState & ThreadState.Unstarted) == ThreadState.Unstarted))
             {
                 this.WorkerThread.Start();
@@ -169,7 +171,7 @@
             }
             while ((this.Running && !this.Disposed) && !LoggingOut)
             {
-                bool flag = false;
+                bool bEmptied = false;
                 if ((this.InnerQueue.Count > 0) && !this.IsSuspended)
                 {
                     ThreadItem item = this.InnerQueue.Dequeue() as ThreadItem;
@@ -237,15 +239,18 @@
                         ErrorLog.WriteLine("An error occured while invoking the following item:\r\n{0}", new object[] { item });
                         ErrorLog.WriteLine(exception);
                     }
-                    flag = true;
+                    bEmptied = true;
+                }
+                else
+                {
+                    this.EventQueue.WaitOne();
                 }
                 if ((this.InnerQueue.Count < 1) || this.IsSuspended)
                 {
-                    if (flag)
+                    if (bEmptied)
                     {
                         this.OnEmptied();
                     }
-                    Thread.Sleep(100);
                 }
             }
         }
@@ -260,6 +265,7 @@
         public void Resume()
         {
             this.mIsSuspended = false;
+            this.EventQueue.Set();
         }
 
         public void Start()
@@ -267,6 +273,7 @@
             if (!this.Running)
             {
                 this.mRunning = true;
+                this.EventQueue.Set();
                 ThreadStart start = new ThreadStart(this.ProcessQueue);
                 this.WorkerThread = new Thread(start);
                 this.WorkerThread.IsBackground = true;
@@ -280,6 +287,7 @@
             if (this.Running)
             {
                 this.mRunning = false;
+                this.EventQueue.Set();
                 EventLog.WriteLine("ThreadQueue {0} is no longer running", new object[] { this.ThreadID });
             }
         }
@@ -289,7 +297,7 @@
             this.mIsSuspended = true;
         }
 
-        public static bool WaitUntil(ref bool condition, bool positive, int timeout)
+        /*public static bool WaitUntil(ref bool condition, bool positive, int timeout)
         {
             int tickCount = Environment.TickCount;
             while (!condition.Equals(positive))
@@ -301,7 +309,7 @@
                 }
             }
             return true;
-        }
+        }*/
 
         public void WaitUntilEmpty()
         {
@@ -310,19 +318,17 @@
 
         public bool WaitUntilEmpty(int timeout)
         {
-            int tickCount = Environment.TickCount;
-            while (this.Count > 0)
-            {
-                Thread.Sleep(100);
-                if ((timeout > 0) && ((Environment.TickCount - tickCount) > timeout))
-                {
-                    return false;
-                }
-            }
-            return true;
+            EventWaitHandle signal=new EventWaitHandle(false,EventResetMode.ManualReset);
+            EventHandler emptyCallback=delegate {
+                signal.Set();
+            };
+            this.Emptied += emptyCallback;
+            bool bRetval = signal.WaitOne(timeout);
+            this.Emptied -= emptyCallback;
+            return bRetval;
         }
 
-        public static bool WaitWhile(ref bool condition, bool negative, int timeout)
+        /*public static bool WaitWhile(ref bool condition, bool negative, int timeout)
         {
             int tickCount = Environment.TickCount;
             while (condition.Equals(negative))
@@ -334,7 +340,7 @@
                 }
             }
             return true;
-        }
+        }*/
 
         public int Count
         {
