@@ -29,20 +29,16 @@
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    bool? result = null;
+                    bool result = false;
+                    EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
+
                     ThreadQueue.QueueUserWorkItem(delegate (object s) {
-                        result = new bool?(DataAccess.ExecuteQuery(this.Name, this.Args));
+                        result = DataAccess.ExecuteQuery(this.Name, this.Args);
+                        signal.Set();
                     }, new object[0]);
-                    DateTime now = DateTime.Now;
-                    while (!result.HasValue && ((DateTime.Now - now) < DefaultQueryTimeout))
-                    {
-                        Thread.Sleep(10);
-                    }
-                    if (result.HasValue)
-                    {
-                        return result.Value;
-                    }
-                    return false;
+                    if (!signal.WaitOne(DefaultQueryTimeout))
+                        return false;
+                    return result;
                 }
                 finally
                 {
@@ -78,20 +74,15 @@
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    bool? result = null;
+                    bool result = false;
+                    EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
                     ThreadQueue.QueueUserWorkItem(delegate (object s) {
-                        result = new bool?(DataAccess.GetBool(this.Name, this.Args));
+                        result = DataAccess.GetBool(this.Name, this.Args);
+                        signal.Set();
                     }, new object[0]);
-                    DateTime now = DateTime.Now;
-                    while (!result.HasValue && ((DateTime.Now - now) < DefaultQueryTimeout))
-                    {
-                        Thread.Sleep(10);
-                    }
-                    if (result.HasValue)
-                    {
-                        return result.Value;
-                    }
-                    return false;
+                    if (!signal.WaitOne(DefaultQueryTimeout))
+                        return false;
+                    return result;
                 }
                 finally
                 {
@@ -108,22 +99,15 @@
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    bool resultReturned = false;
+                    EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
                     DataList result = null;
                     ThreadQueue.QueueUserWorkItem(delegate (object s) {
                         result = DataAccess.GetQueryData(this.Name, this.Args);
-                        resultReturned = true;
+                        signal.Set();
                     }, new object[0]);
-                    DateTime now = DateTime.Now;
-                    while (!resultReturned && ((DateTime.Now - now) < DefaultQueryTimeout))
-                    {
-                        Thread.Sleep(10);
-                    }
-                    if (resultReturned)
-                    {
-                        return result;
-                    }
-                    return null;
+                    if (!signal.WaitOne(DefaultQueryTimeout))
+                        return null;
+                    return result;
                 }
                 finally
                 {
@@ -140,20 +124,15 @@
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    int? result = null;
+                    int result = 0;
+                    EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
                     ThreadQueue.QueueUserWorkItem(delegate (object s) {
-                        result = new int?(DataAccess.GetNumber(this.Name, this.Args));
+                        result = DataAccess.GetNumber(this.Name, this.Args);
+                        signal.Set();
                     }, new object[0]);
-                    DateTime now = DateTime.Now;
-                    while (!result.HasValue && ((DateTime.Now - now) < DefaultQueryTimeout))
-                    {
-                        Thread.Sleep(10);
-                    }
-                    if (result.HasValue)
-                    {
-                        return result.Value;
-                    }
-                    return -1;
+                    if (!signal.WaitOne(DefaultQueryTimeout))
+                        return -1;
+                    return result;
                 }
                 finally
                 {
@@ -170,22 +149,15 @@
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    bool resultReturned = false;
+                    EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
                     type result = default(type);
                     ThreadQueue.QueueUserWorkItem(delegate (object s) {
                         result = DataAccess.GetObject<type>(this.Name, this.Args);
-                        resultReturned = true;
+                        signal.Set();
                     }, new object[0]);
-                    DateTime now = DateTime.Now;
-                    while (!resultReturned && ((DateTime.Now - now) < DefaultQueryTimeout))
-                    {
-                        Thread.Sleep(10);
-                    }
-                    if (resultReturned)
-                    {
-                        return result;
-                    }
-                    return default(type);
+                    if (!signal.WaitOne(DefaultQueryTimeout))
+                        return default(type);
+                    return result;
                 }
                 finally
                 {
@@ -208,22 +180,15 @@
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    bool resultReturned = false;
+                    EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
                     MappedObjectList<type> result = null;
                     ThreadQueue.QueueUserWorkItem(delegate (object s) {
                         result = DataAccess.GetObjects<type>(this.Name, this.Args);
-                        resultReturned = true;
+                        signal.Set();
                     }, new object[0]);
-                    DateTime now = DateTime.Now;
-                    while (!resultReturned && ((DateTime.Now - now) < DefaultQueryTimeout))
-                    {
-                        Thread.Sleep(10);
-                    }
-                    if (resultReturned)
-                    {
-                        return result;
-                    }
-                    return null;
+                    if (!signal.WaitOne(DefaultQueryTimeout))
+                        return null;
+                    return result;
                 }
                 finally
                 {
@@ -246,22 +211,15 @@
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    bool resultReturned = false;
+                    EventWaitHandle signal = new EventWaitHandle(false, EventResetMode.ManualReset);
                     string result = null;
                     ThreadQueue.QueueUserWorkItem(delegate (object s) {
                         result = DataAccess.GetString(this.Name, this.Args);
-                        resultReturned = true;
+                        signal.Set();
                     }, new object[0]);
-                    DateTime now = DateTime.Now;
-                    while (!resultReturned && ((DateTime.Now - now) < DefaultQueryTimeout))
-                    {
-                        Thread.Sleep(10);
-                    }
-                    if (resultReturned)
-                    {
-                        return result;
-                    }
-                    return null;
+                    if (!signal.WaitOne(DefaultQueryTimeout))
+                        return null;
+                    return result;
                 }
                 finally
                 {
